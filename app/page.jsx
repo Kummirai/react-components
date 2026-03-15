@@ -1,4 +1,6 @@
 import HeroOne from "@/components/hero-1/HeroOne";
+import HeroTwo from "@/components/hero-2/HeroTwo";
+import SelectView from "@/components/hero-2/ui/SelectView";
 
 export default function Home() {
   return (
@@ -14,11 +16,19 @@ export default function Home() {
           users instantly
         </p>
       </div>
-      <div className="h-screen">
-        <HeroOne />
+      {/* Hero section one  */}
+      <div className="flex flex-col gap-2 ">
+        <SelectView />
+        <div className="h-screen border border-gray-100 rounded-md">
+          <HeroOne />
+        </div>
       </div>
-      <div className="h-screen">
-        <HeroOne />
+      {/* Hero section two */}
+      <div className="flex flex-col gap-2 ">
+        <SelectView />
+        <div className="h-screen border border-gray-100 rounded-md">
+          <HeroTwo />
+        </div>
       </div>
     </div>
   );

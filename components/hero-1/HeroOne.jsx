@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Label from "./Label";
+import Label from "./ui/Label";
 import { TbBrandAdobeIndesign } from "react-icons/tb";
 import { SiTaichigraphics } from "react-icons/si";
 import { IoIosCreate } from "react-icons/io";

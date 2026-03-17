@@ -42,7 +42,7 @@ export default function HeroTwo() {
         <NavbarOne links={links} />
       </div>
 
-      <HeroTwoA />
+      <HeroTwoA img={"/img/hero-img.png"} />
     </section>
   );
 }

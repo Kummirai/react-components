@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function HeroTwoA() {
+export default function HeroTwoA({ img }) {
   const developerStats = [
     {
       id: 1,
@@ -39,14 +39,16 @@ export default function HeroTwoA() {
       <div className="grow grid grid-cols-2">
         {/* developer image */}
         <div className="flex items-center justify-center ">
-          <div className=" relative w-80 h-80 bg-[#0db0eb]  blob-1 overflow-hidden ">
-            <Image
-              src={"/img/milton-1.png"}
-              alt="Developer image"
-              quality={100}
-              fill
-              className="object-center object-cover aspect-square"
-            />
+          <div className="border blob-1  shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
+            <div className=" relative w-80 h-80 bg-[#0db0eb]  blob-1 overflow-hidden">
+              <Image
+                src={img}
+                alt="Developer image"
+                quality={100}
+                fill
+                className="object-top-center object-cover aspect-square"
+              />
+            </div>
           </div>
         </div>
         {/* Developer details */}

@@ -15,12 +15,14 @@ export default function NavbarOne({ links }) {
       <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
-            <span className="text-[#0b344e]">Port</span>
-            <span className="text-[#0abcfa]">folio</span>
+            <Link href={links[0].path}>
+              <span className="text-[#0b344e]">Port</span>
+              <span className="text-[#0abcfa]">folio</span>
+            </Link>
           </h1>
         </div>
-        <button>
-          <IoMenu className="text-3xl sm:hidden text-[#0b344e]" />
+        <button className=" sm:hidden hover:text-[#0abcfa] hover:cursor-pointer">
+          <IoMenu className="text-3xl text-[#0b344e] text-shadow-lg" />
         </button>
         <ul className="hidden sm:flex items-center gap-8">
           {links.map((link) => {

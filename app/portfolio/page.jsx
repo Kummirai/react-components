@@ -28,9 +28,9 @@ export default function page() {
         </div>
       </div>
       {/* Hero section two */}
-      <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col gap-2 min-h-screen">
         <SelectView />
-        <div className="h-screen border flex border-gray-200 rounded-md">
+        <div className="min-h-screen border flex p-5 sm:p-0 border-gray-200 rounded-md">
           <HeroTwo />
         </div>
       </div>

@@ -38,13 +38,14 @@ export default function HeroTwoA() {
     <main className="grow flex max-w-6xl mx-auto">
       <div className="grow grid grid-cols-2">
         {/* developer image */}
-        <div className="relative flex items-center justify-center ">
-          <div className="w-fit h-fitoverflow-hidden ">
+        <div className="flex items-center justify-center ">
+          <div className=" relative w-80 h-80 bg-[#0db0eb]  blob-1 overflow-hidden ">
             <Image
               src={"/img/milton-1.png"}
-              alt=""
+              alt="Developer image"
+              quality={100}
               fill
-              className="object-top object-cover aspect-auto"
+              className="object-center object-cover aspect-square"
             />
           </div>
         </div>

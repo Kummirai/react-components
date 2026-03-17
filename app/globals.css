@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+.blob-1 {
+  border-radius: 61% 39% 44% 56% / 46% 63% 37% 54%;
+}

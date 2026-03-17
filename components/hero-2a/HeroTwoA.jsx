@@ -52,7 +52,7 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* Developer details */}
-        <div className="flex flex-col justify-center gap-6 my-5 sm:my-0">
+        <div className="flex flex-col justify-center gap-5 my-5 sm:my-0">
           <div className="text-[#0b344e] ">
             <h2 className="text-md font-medium text-[#0db0eb] text-shadow-none ">
               Hello, I'm
@@ -68,9 +68,12 @@ export default function HeroTwoA({ img }) {
             </h4>
           </div>
           <p className="text-gray-600 text-shadow-none">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            quasi ut culpa atque laboriosam praesentium! Quod ducimus accusamus
-            exercitationem excepturi.
+            I craft robust web solutions with{" "}
+            <strong>React, Next.js, and Node.js</strong>. Experienced across the
+            full development lifecycle with <strong>JavaScript (ES6+)</strong>,
+            <strong>Express</strong>, and both SQL (<strong>PostgreSQL</strong>)
+            and NoSQL (<strong>MongoDB</strong>) databases. Building responsive,
+            scalable applications that solve real-world problems.
           </p>
           {/* socials */}
           <div className="flex items-center gap-5 text-xl text-[#0b344e]">

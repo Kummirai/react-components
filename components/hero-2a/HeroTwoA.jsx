@@ -52,10 +52,10 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* Developer details */}
-        <div className="flex flex-col justify-center gap-6">
+        <div className="flex flex-col justify-center gap-6 text-shadow-lg ">
           <div className="text-[#0b344e]">
             <h2 className="text-lg font-semibold">Hello, I'm</h2>
-            <h3 className="text-4xl font-bold">Milton Kumirai</h3>
+            <h3 className="text-4xl font-bold ">Milton Kumirai</h3>
             <h4 className="text-2xl font-semibold flex gap-2">
               <span>And I'm a</span>
               <span>Web Developer</span>
@@ -100,7 +100,7 @@ export default function HeroTwoA({ img }) {
                     : "grow flex items-center gap-2"
                 }
               >
-                <h2 className="text-4xl text-[#0b344e] font-bold">
+                <h2 className="text-4xl text-shadow-lg  text-[#0b344e] font-bold">
                   {stat.number}+
                 </h2>
                 <p className="text-xs text-gray-600 font-semibold flex flex-col">

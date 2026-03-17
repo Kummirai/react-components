@@ -13,7 +13,7 @@ export default function NavbarOne({ links }) {
     <header className="pt-10">
       <nav className="max-w-6xl mx-auto flex items- justify-between">
         <div>
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-2xl text-shadow-sm font-bold">
             <span className="text-[#0b344e]">Port</span>
             <span className="text-[#0abcfa]">folio</span>
           </h1>
@@ -25,8 +25,8 @@ export default function NavbarOne({ links }) {
                 key={link.id}
                 className={
                   pathname === link.path
-                    ? "text-[#0abcfa] text-sm font-bold"
-                    : "hover:text-[#4b6c81] text-[#0b344e] text-sm"
+                    ? "text-[#0abcfa] text-sm font-bold text-shadow-xs"
+                    : "hover:text-[#4b6c81] text-[#0b344e] text-sm text-shadow-sm "
                 }
               >
                 <Link href={link.path}>{link.link}</Link>

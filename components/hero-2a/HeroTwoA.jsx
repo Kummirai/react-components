@@ -69,7 +69,7 @@ export default function HeroTwoA({ img }) {
           </div>
           <p className="text-gray-600 text-shadow-none">
             I craft robust web solutions with{" "}
-            <strong>React, Next.js, and Node.js</strong>. Experienced across the
+            <strong>React, Next.js, Tailwind CSS and Node.js</strong>. Experienced across the
             full development lifecycle with <strong>JavaScript (ES6+)</strong>,
             <strong>Express</strong>, and both SQL (<strong>PostgreSQL</strong>)
             and NoSQL (<strong>MongoDB</strong>) databases. Building responsive,

@@ -5,20 +5,24 @@ import React from "react";
 import { FaMoon } from "react-icons/fa6";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import { IoMenu } from "react-icons/io5";
 
 export default function NavbarOne({ links }) {
   const pathname = usePathname();
 
   return (
-    <header className="pt-10">
-      <nav className="max-w-6xl mx-auto flex items- justify-between">
+    <header className="pt-10 px-5 sm:px-0">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <span className="text-[#0b344e]">Port</span>
             <span className="text-[#0abcfa]">folio</span>
           </h1>
         </div>
-        <ul className="flex items-center gap-8">
+        <button>
+          <IoMenu className="text-3xl sm:hidden text-[#0b344e]" />
+        </button>
+        <ul className="hidden sm:flex items-center gap-8">
           {links.map((link) => {
             return (
               <li
@@ -34,7 +38,7 @@ export default function NavbarOne({ links }) {
             );
           })}
         </ul>
-        <div className="flex items-center border-l-4 gap-8 pl-3 border-l-gray-400">
+        <div className="hidden sm:flex items-center border-l-4 gap-8 pl-3 border-l-gray-400">
           <div className="flex gap-2 rounded-full p-1 px-2 border border-gray-200 text-white">
             <FaMoon className="bg-[#0abcfa] rounded-full text-xl p-1" />
             <MdOutlineWbSunny className="text-gray-400 rounded-full text-xl" />

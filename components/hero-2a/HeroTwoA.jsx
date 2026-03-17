@@ -36,7 +36,7 @@ export default function HeroTwoA({ img }) {
 
   return (
     <main className="grow flex max-w-6xl mx-auto">
-      <div className="grow grid grid-cols-2">
+      <div className="grow grid sm:grid-cols-2">
         {/* developer image */}
         <div className="flex items-center justify-center ">
           <div className="border blob-1  shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
@@ -52,7 +52,7 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* Developer details */}
-        <div className="flex flex-col justify-center gap-6 ">
+        <div className="flex flex-col justify-center gap-6 my-5 sm:my-0">
           <div className="text-[#0b344e] ">
             <h2 className="text-md font-medium text-[#0db0eb] text-shadow-none ">
               Hello, I'm
@@ -95,7 +95,8 @@ export default function HeroTwoA({ img }) {
             </Link>
           </div>
         </div>
-        <div className="col-start-1 -col-end-1 flex justify-around gap-2 items-end mb-10">
+        {/* developer stats */}
+        <div className="col-start-1 -col-end-1 grid grid-cols-2 md:grid-cols-4 gap-8 items-end mb-10 mt-10 sm:mt-0">
           {developerStats.map((stat, index) => {
             return (
               <div
@@ -118,7 +119,6 @@ export default function HeroTwoA({ img }) {
           })}
         </div>
       </div>
-      {/* developer stats */}
     </main>
   );
 }

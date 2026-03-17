@@ -52,16 +52,22 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* Developer details */}
-        <div className="flex flex-col justify-center gap-6 text-shadow-lg ">
-          <div className="text-[#0b344e]">
-            <h2 className="text-lg font-semibold">Hello, I'm</h2>
-            <h3 className="text-4xl font-bold ">Milton Kumirai</h3>
+        <div className="flex flex-col justify-center gap-6 ">
+          <div className="text-[#0b344e] ">
+            <h2 className="text-md font-medium text-[#0db0eb] text-shadow-none ">
+              Hello, I'm
+            </h2>
+            <h3 className="text-4xl font-bold text-shadow-lg">
+              Milton Kumirai
+            </h3>
             <h4 className="text-2xl font-semibold flex gap-2">
               <span>And I'm a</span>
-              <span>Web Developer</span>
+              <span className="text-[#0db0eb] font-bold text-shadow-sm">
+                Web Developer
+              </span>
             </h4>
           </div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-shadow-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
             quasi ut culpa atque laboriosam praesentium! Quod ducimus accusamus
             exercitationem excepturi.

@@ -46,7 +46,7 @@ export default function HeroTwoA({ img }) {
                 alt="Developer image"
                 quality={100}
                 fill
-                className="object-top-center object-cover aspect-square"
+                className="object-center object-cover aspect-square"
               />
             </div>
           </div>

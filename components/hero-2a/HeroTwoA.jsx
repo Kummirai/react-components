@@ -41,7 +41,7 @@ export default function HeroTwoA() {
         <div className="relative flex items-center justify-center ">
           <div className="w-fit h-fitoverflow-hidden ">
             <Image
-              src={"/img/hero-3.png"}
+              src={"/img/milton-1.png"}
               alt=""
               fill
               className="object-top object-cover aspect-auto"

@@ -6,7 +6,7 @@ export default function CardOne({}) {
     {
       property_token: "abcdefg0123567",
       name: "Queen Victoria Hotel",
-      image: "/img/hotel.jpg",
+      image: "/img/hotel.webp",
       price: "R 1 200",
       overall_rating: 4.6,
       description:

@@ -31,13 +31,13 @@ export default function RootLayout({ children }) {
     },
     {
       id: 3,
-      link: "Portfolio",
+      link: "Components",
       path: "/portfolio",
     },
     {
       id: 4,
-      link: "Skills",
-      path: "/skills",
+      link: "Projects",
+      path: "/projects",
     },
     {
       id: 5,

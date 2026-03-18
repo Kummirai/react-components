@@ -11,8 +11,8 @@ export default function NavbarOne({ links }) {
   const pathname = usePathname();
 
   return (
-    <header className="pt-10 px-5 sm:px-0">
-      <nav className="max-w-6xl mx-auto flex items-center justify-between">
+    <header className="p-6 sm:px-0">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <Link href={links[0].path}>

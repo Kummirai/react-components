@@ -35,7 +35,7 @@ export default function HeroTwoA({ img }) {
   ];
 
   return (
-    <main className="grow flex max-w-6xl mx-auto">
+    <main className="grow flex max-w-7xl mx-auto">
       <div className="grow grid sm:grid-cols-2">
         {/* developer image */}
         <div className="flex items-center justify-center ">
@@ -44,8 +44,8 @@ export default function HeroTwoA({ img }) {
               <Image
                 src={img}
                 alt="Developer image"
-                quality={100}
-                fill
+                fill={true}
+                loading="eager"
                 className="object-center object-cover aspect-square"
               />
             </div>
@@ -67,7 +67,7 @@ export default function HeroTwoA({ img }) {
               </span>
             </h4>
           </div>
-          <p className="text-gray-600 text-shadow-none">
+          <p className="text-gray-600 text-shadow-none xl:text-[16px] md:text-[9px]">
             I craft robust web solutions with{" "}
             <strong>React, Next.js, Tailwind CSS and Node.js</strong>.
             Experienced across the full development lifecycle with{" "}

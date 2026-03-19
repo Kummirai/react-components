@@ -5,42 +5,16 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import StatsOne from "../stats/StatsOne";
 
 export default function HeroTwoA({ img }) {
-  const developerStats = [
-    {
-      id: 1,
-      top: "Years Of",
-      bottom: "Experience",
-      number: 1,
-    },
-    {
-      id: 2,
-      top: "Projects",
-      bottom: "Completed",
-      number: 3,
-    },
-    {
-      id: 3,
-      top: "Technologies",
-      bottom: "Mastered",
-      number: 5,
-    },
-    {
-      id: 4,
-      top: "Satisfied",
-      bottom: "Clients",
-      number: 1,
-    },
-  ];
-
   return (
-    <main className="grow flex max-w-7xl mx-auto">
-      <div className="grow grid sm:grid-cols-2">
+    <main className="grow flex max-w-6xl mx-auto">
+      <div className="grow grid gap-4 sm:gap-10 sm:grid-cols-2">
         {/* developer image */}
         <div className="flex items-center justify-center ">
-          <div className="border blob-1  shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
-            <div className=" relative w-80 h-80 bg-[#0db0eb]  blob-1 overflow-hidden">
+          <div className="border rounded-full shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
+            <div className=" relative w-50 h-50 sm:w-80 sm:h-80 bg-[#0db0eb]  rounded-full overflow-hidden">
               <Image
                 src={img}
                 alt="Developer image"
@@ -52,8 +26,8 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* Developer details */}
-        <div className="flex flex-col justify-center gap-5 my-5 sm:my-0">
-          <div className="text-[#0b344e] ">
+        <div className="flex flex-col items-center sm:items-start justify-center gap-5 my-5 sm:my-0">
+          <div className="text-[#0b344e] flex flex-col items-center sm:justify-start sm:items-start justify-center ">
             <h2 className="text-md font-medium text-[#0db0eb] text-shadow-none ">
               Hello, I'm
             </h2>
@@ -67,17 +41,20 @@ export default function HeroTwoA({ img }) {
               </span>
             </h4>
           </div>
-          <p className="text-gray-600 text-shadow-none xl:text-[16px] md:text-[9px]">
-            I craft robust web solutions with{" "}
-            <strong>React, Next.js, Tailwind CSS and Node.js</strong>.
-            Experienced across the full development lifecycle with{" "}
-            <strong>JavaScript (ES6+)</strong>,<strong>Express</strong>, and
-            both SQL (<strong>PostgreSQL</strong>) and NoSQL (
-            <strong>MongoDB</strong>) databases. Building responsive, scalable
-            applications that solve real-world problems.
+          <p className="text-gray-600 text-shadow-none text-md font-light font-stretch-expanded text-center sm:text-start">
+            I craft robust web solutions with
+            <span className="font-semibold ml-1">
+              React, Next.js, Tailwind CSS and Node.js
+            </span>
+            . Experienced across the full development lifecycle with
+            <span className="font-semibold ml-1">JavaScript (ES6+)</span>,
+            <span className="font-semibold">Express</span>, and both SQL (
+            <span className="font-semibold">PostgreSQL</span>) and NoSQL (
+            <span className="font-semibold">MongoDB</span>) databases. Building
+            responsive, scalable applications that solve real-world problems.
           </p>
           {/* socials */}
-          <div className="flex items-center gap-5 text-xl text-[#0b344e]">
+          <div className="flex items-center my-2 gap-5 text-2xl text-[#0b344e]">
             <FaFacebook />
             <FaGithub />
             <FaSquareXTwitter />
@@ -100,28 +77,7 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
         {/* developer stats */}
-        <div className="col-start-1 -col-end-1 grid grid-cols-2 md:grid-cols-4 gap-8 items-end mb-10 mt-10 sm:mt-0">
-          {developerStats.map((stat, index) => {
-            return (
-              <div
-                key={stat.id}
-                className={
-                  index >= 1 && index <= 3
-                    ? "border-l-4 border-gray-300 grow flex items-center gap-2 justify-center"
-                    : "grow flex items-center gap-2"
-                }
-              >
-                <h2 className="text-4xl text-shadow-lg  text-[#0b344e] font-bold">
-                  {stat.number}+
-                </h2>
-                <p className="text-xs text-gray-600 font-semibold flex flex-col">
-                  <span>{stat.top}</span>
-                  <span>{stat.bottom}</span>
-                </p>
-              </div>
-            );
-          })}
-        </div>
+        <StatsOne />
       </div>
     </main>
   );

@@ -10,7 +10,7 @@ export default function CardOne({}) {
       price: "R 1 200",
       overall_rating: 4.6,
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nisi, quo assumenda laboriosam iusto molestiae sunt commodi sit accusamus quas",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nisi, quo a",
     },
   ];
 
@@ -46,14 +46,11 @@ export default function CardOne({}) {
           blurDataURL="..."
         />
       </div>
-      <div className=" relative rounded-b-sm grow">
-        <div className="px-5">
-          <div className="flex flex-col items-start justify-between pt-5 ">
-            <p>
-              <span className="text-2xl font-semibold  text-[#10214b] mr-1">
-                {hotel[0].price}
-              </span>
-              <span className="text-sm text-gray-500">/per night</span>
+      <div className="flex rounded-b-sm grow">
+        <div className="px-3 flex flex-col justify-start">
+          <div className="flex flex-col items-start justify-between pt-2 ">
+            <p className="text-[24px] line-clamp-1 pt-1 font-semibold relative bg-linear-to-r from-indigo-800 to-[#885ef0]  bg-clip-text text-transparent">
+              {hotel[0]?.name}
             </p>
             <p className="flex my-1 items-center">
               <span className="mr-1 flex items-center text-yellow-400 text-md">
@@ -65,15 +62,18 @@ export default function CardOne({}) {
             </p>
           </div>
           <div>
-            <p className="text-md line-clamp-1 pt-1 font-semibold relative bg-linear-to-r from-indigo-700 to-[#835de2]  bg-clip-text text-transparent">
-              {hotel[0]?.name}
-            </p>
-            <p className="text-xs mt-1 text-gray-500">
+            <p className="text-[15px] mt-1 text-gray-700">
               {hotel[0]?.description}
             </p>
           </div>
 
-          <div className="absolute bottom-4">
+          <div className="my-5 w-full flex flex-col gap-5 justify-between">
+            <p>
+              <span className="text-2xl font-bold  text-[#10214b] mr-1">
+                {hotel[0].price}
+              </span>
+              <span className="text-sm text-gray-500">/per night</span>
+            </p>
             <ButtonOne />
           </div>
         </div>

@@ -11,8 +11,8 @@ export default function NavbarOne({ links }) {
   const pathname = usePathname();
 
   return (
-    <header className="p-6 sm:px-0">
-      <nav className="max-w-6xl mx-auto flex items-center justify-between">
+    <header className="p-6 sm:max-lg:p-10">
+      <nav className="sm:max-w-3xl lg:max-w-6xl  mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <Link href={links[0].path}>
@@ -21,10 +21,10 @@ export default function NavbarOne({ links }) {
             </Link>
           </h1>
         </div>
-        <button className=" sm:hidden hover:text-[#0abcfa] hover:cursor-pointer">
+        <button className=" lg:hidden hover:text-[#0abcfa] hover:cursor-pointer">
           <IoMenu className="text-3xl text-[#0b344e] text-shadow-lg" />
         </button>
-        <ul className="hidden sm:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center  md:gap-2 xl:gap-8">
           {links.map((link) => {
             return (
               <li
@@ -40,7 +40,7 @@ export default function NavbarOne({ links }) {
             );
           })}
         </ul>
-        <div className="hidden sm:flex items-center border-l-4 gap-8 pl-3 border-l-gray-400">
+        <div className="hidden lg:flex items-center border-l-4 gap-8 pl-3 border-l-gray-400">
           <div className="flex gap-2 rounded-full p-1 px-2 border border-gray-200 text-white">
             <FaMoon className="bg-[#0abcfa] rounded-full text-xl p-1" />
             <MdOutlineWbSunny className="text-gray-400 rounded-full text-xl" />

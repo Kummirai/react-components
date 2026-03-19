@@ -12,13 +12,13 @@ export default function HeroSections() {
       <div className="flex flex-col gap-2 ">
         <SelectView />
         <div className="h-screen shadow-xl rounded-md">
-          {/* <HeroOne /> */}
+          <HeroOne />
         </div>
       </div>
       {/* Hero section two */}
       <div className="flex flex-col gap-2 min-h-screen">
         <SelectView />
-        <div className="min-h-screen shadow-xl flex p-5 sm:p-0  rounded-md">
+        <div className="min-h-screen shadow-xl flex px-10 py-5 rounded-md">
           <HeroTwo />
         </div>
       </div>

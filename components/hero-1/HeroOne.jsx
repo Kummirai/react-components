@@ -55,12 +55,12 @@ export default function HeroOne() {
 
   return (
     // hero section
-    <section className="relative h-full w-full flex flex-col ">
+    <section className="relative h-full w-full flex flex-col">
       <div className="absolute w-full h-full -z-10 bg-radial from-red-200 from-10% to-white "></div>
       <div className="absolute w-full h-full -z-5 blur "></div>
       {/* navigation */}
       <nav className="py-5">
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="flex items-center justify-between max-w-5xl mx-auto">
           <div>
             <h1 className="text-2xl font-bold">Logo</h1>
           </div>
@@ -87,7 +87,7 @@ export default function HeroOne() {
           </div>
         </div>
       </nav>
-      <main className="max-w-6xl grow mx-auto grid grid-cols-2">
+      <main className="max-w-5xl grow mx-auto grid grid-cols-2">
         {/* heading */}
         <div className="flex flex-col h-4/5 my-auto justify-around">
           <h2 className="text-5xl font-semibold flex flex-col gap-1 text-gray-900 ">

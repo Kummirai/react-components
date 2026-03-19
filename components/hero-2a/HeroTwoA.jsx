@@ -14,7 +14,7 @@ export default function HeroTwoA({ img }) {
         {/* developer image */}
         <div className="flex items-center justify-center ">
           <div className="border rounded-full shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
-            <div className=" relative w-50 h-50 sm:w-80 sm:h-80 bg-[#0db0eb]  rounded-full overflow-hidden">
+            <div className=" relative w-50 h-50 sm:w-65 sm:h-65 bg-[#0db0eb]  rounded-full overflow-hidden">
               <Image
                 src={img}
                 alt="Developer image"
@@ -41,7 +41,7 @@ export default function HeroTwoA({ img }) {
               </span>
             </h4>
           </div>
-          <p className="text-gray-600 text-shadow-none text-md font-light font-stretch-expanded text-center sm:text-start">
+          <p className="text-gray-600 text-shadow-none text-md font-light text-center sm:text-start">
             I craft robust web solutions with
             <span className="font-semibold ml-1">
               React, Next.js, Tailwind CSS and Node.js

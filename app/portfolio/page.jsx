@@ -37,7 +37,8 @@ export default function page() {
 
   return (
     <>
-      <div className="grid place-content-center-safe md:grid-cols-5 gap-2 p-5 md:p-0 max-w-7xl mx-auto">
+      <div className="grid place-content-center-safe md:grid-cols-5 gap-2 p-5 md:p-0 max-w-6xl mx-auto">
+        {/* side bar  */}
         <div className="col-start-1 col-end-2 md:border md:border-gray-100 p-2 rounded-md hidden sm:flex flex-col gap-2">
           <h2 className="text-lg px-2 text-gray-500 font-semibold text-shadow-sm">
             Components
@@ -60,6 +61,7 @@ export default function page() {
             })}
           </div>
         </div>
+        {/* main content */}
         <div className="col-start-2 -col-end-1  md:border md:border-gray-100 rounded-md  p-2">
           {components.map((component) => {
             return component.id === currentComponent ? component.component : "";

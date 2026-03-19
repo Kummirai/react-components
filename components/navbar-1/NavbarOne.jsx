@@ -12,7 +12,7 @@ export default function NavbarOne({ links }) {
 
   return (
     <header className="p-6 sm:px-0">
-      <nav className="max-w-6xl mx-auto flex items-center justify-between">
+      <nav className="lg:max-w-6xl sm:max-w-3xl mx-auto flex items-center justify-between">
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <Link href={links[0].path}>
@@ -24,7 +24,7 @@ export default function NavbarOne({ links }) {
         <button className=" sm:hidden hover:text-[#0abcfa] hover:cursor-pointer">
           <IoMenu className="text-3xl text-[#0b344e] text-shadow-lg" />
         </button>
-        <ul className="hidden sm:flex items-center gap-8">
+        <ul className="hidden sm:flex items-center  md:gap-2 xl:gap-8">
           {links.map((link) => {
             return (
               <li

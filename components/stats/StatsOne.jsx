@@ -29,7 +29,7 @@ export default function StatsOne() {
   ];
 
   return (
-    <div className="col-start-1 -col-end-1 grid grid-cols-2 md:grid-cols-4 gap-10 items-end my-3 sm:my-10">
+    <div className="col-start-1 -col-end-1 grid grid-cols-2 md:grid-cols-4 gap-10 items-end my-3 sm:my-10 sm:max-lg:max-w-3xl mx-auto">
       {developerStats.map((stat, index) => {
         return (
           <div

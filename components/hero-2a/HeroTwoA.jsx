@@ -14,7 +14,7 @@ export default function HeroTwoA({ img }) {
         {/* developer image */}
         <div className="flex items-center justify-center ">
           <div className="border rounded-full shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
-            <div className=" relative w-50 h-50 sm:w-65 sm:h-65 bg-[#0db0eb]  rounded-full overflow-hidden">
+            <div className=" relative w-50 h-50 sm:w-65 sm:h-65 lg:h-75 lg:w-75 bg-[#0db0eb]  rounded-full overflow-hidden">
               <Image
                 src={img}
                 alt="Developer image"

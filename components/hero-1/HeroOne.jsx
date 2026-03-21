@@ -155,7 +155,7 @@ export default function HeroOne() {
           </div>
           <div className="absolute ">
             <Image
-              src={"/img/hero-img.png"}
+              src={"/img/hero-img.webp"}
               alt=""
               width={800}
               height={600}

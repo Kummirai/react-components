@@ -37,7 +37,7 @@ export default function HeroTwo() {
   ];
 
   return (
-    <section className="flex max-w-6xl flex-col mx-auto">
+    <section className="flex max-w-6xl flex-col mx-auto ">
       <div className="mb-10">
         <NavbarOne links={links} />
       </div>

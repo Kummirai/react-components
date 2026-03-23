@@ -68,8 +68,8 @@ export default function page() {
                   key={component.id}
                   className={
                     currentComponent === component.id
-                      ? "bg-[#0abcfa] text-white font-semibold py-2 text-left px-2 hover:cursor-pointer"
-                      : "text-[#0b344e] font-semibold py-2 text-left px-2 hover:bg-gray-100 hover:cursor-pointer"
+                      ? "bg-blue-500 text-white font-semibold py-2 text-left px-2 hover:cursor-pointer"
+                      : "bg-gray-50/50 font-semibold py-2 text-left px-2 hover:bg-gray-100 hover:cursor-pointer"
                   }
                   onClick={() => componentsToDisplay(component.id)}
                 >

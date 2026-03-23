@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
     },
     {
       id: 2,
-      link: "Services",
-      path: "/services",
+      link: "Projects",
+      path: "/projects",
     },
     {
       id: 3,
@@ -36,16 +36,11 @@ export default function RootLayout({ children }) {
     },
     {
       id: 4,
-      link: "Projects",
-      path: "/projects",
-    },
-    {
-      id: 5,
       link: "About",
       path: "/about",
     },
     {
-      id: 6,
+      id: 5,
       link: "Contact",
       path: "/contact",
     },
@@ -54,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <NavbarOne links={links} />
         {children}

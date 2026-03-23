@@ -10,7 +10,7 @@ export default function HeroTwoA({ img }) {
         {/* Developer image */}
         <div className="flex items-center justify-center order-2 sm:order-1">
           <div className="border rounded-full shadow-xl shadow-blue-500/30 p-1 border-blue-500/20">
-            <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden">
+            <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 bg-linear-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden">
               <Image
                 src={"/img/milton-2.webp"}
                 alt="Milton Kumirai - Web Developer"
@@ -113,7 +113,7 @@ export default function HeroTwoA({ img }) {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-8 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-center font-medium"
+              className="bg-linear-to-r from-blue-600 to-blue-700 text-white py-3 px-8 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-center font-medium"
             >
               Hire Me →
             </Link>

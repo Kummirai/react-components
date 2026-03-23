@@ -9,7 +9,7 @@ import StatsOne from "../stats/StatsOne";
 
 export default function HeroTwoA({ img }) {
   return (
-    <main className="lg:grow flex max-w-6xl mx-auto sm:max-lg:h-[50vh] ">
+    <main className="lg:grow flex max-w-6xl  mx-auto sm:max-lg:h-[50vh] ">
       <div className="grow grid gap-4 sm:gap-5 lg:gap-10 sm:grid-cols-2">
         {/* developer image */}
         <div className="flex items-center justify-center ">
@@ -41,7 +41,7 @@ export default function HeroTwoA({ img }) {
               </span>
             </h4>
           </div>
-          <p className=" text-lg text-gray-700 font-light max-w-2xl leading-7 text-start sm:text-start">
+          <p className="text-[16px] sm:text-lg text-gray-700 font-light max-w-2xl leading-7 text-center sm:text-start">
             I craft robust web solutions with React, Next.js, Tailwind CSS and
             Node.js. Building responsive, scalable applications that solve
             real-world problems for businesses and entrepreneurs.
@@ -54,15 +54,16 @@ export default function HeroTwoA({ img }) {
             <FaLinkedin />
           </div>
           {/* call to acction */}
-          <div className="flex gap-5">
+          <div className="flex flex-col w-3/4 sm:flex-row gap-5">
             <Link
               href={"#"}
-              className="bg-gray-900 text-white py-2 px-10 rounded-lg shadow-2xl shadow-gray-950/30 hover:bg-gray-900 hover:cursor-pointer"
+              className="bg-gray-900 text-white py-2 px-10 rounded-lg shadow-2xl shadow-gray-950/30 hover:bg-gray-900 hover:cursor-pointer text-center"
             >
-               Hire Me →
+              Hire Me →
             </Link>
+
             <Link
-              className="py-2 px-6 border border-gray-900 text-gray-700 rounded-lg shadow-2xl shadow-gray-950/30"
+              className="py-2 px-6 border border-gray-900 text-gray-700 rounded-lg shadow-2xl shadow-gray-950/30 text-center"
               href={"#"}
             >
               View My Work

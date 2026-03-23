@@ -252,7 +252,7 @@ function Pricing() {
           covered. Every plan includes custom design, mobile responsiveness, and
           ongoing support.
         </p>
-        <div className=" flex flex-col sm:flex-row w-3/4 gap-4">
+        <div className=" flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
           {tabs.map((tab) => {
             return (
               <button

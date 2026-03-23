@@ -2,6 +2,7 @@ import SelectView from "@/components/hero-2/ui/SelectView";
 import HeroOne from "@/components/hero-1/HeroOne";
 import HeroTwo from "@/components/hero-2/ui/HeroTwo";
 import ComponentsHeading from "./components-heading/ComponentsHeading";
+import HeroThree from "../components/hero-3/HeroThree";
 
 export default function HeroSections() {
   return (
@@ -20,6 +21,13 @@ export default function HeroSections() {
         <SelectView />
         <div className="min-h-screen shadow-xl flex px-10 py-5 rounded-md">
           <HeroTwo />
+        </div>
+      </div>
+      {/* Hero section three */}
+      <div className="flex flex-col gap-2 min-h-screen">
+        <SelectView />
+        <div className="min-h-screen shadow-xl flex px-10 py-5 rounded-md">
+          <HeroThree />
         </div>
       </div>
     </div>

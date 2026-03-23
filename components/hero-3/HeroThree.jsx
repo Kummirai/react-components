@@ -76,7 +76,7 @@ export default function HeroTwoA({ img }) {
           {/* Social links */}
           <div className="flex items-center gap-4 text-2xl text-gray-600">
             <Link
-              href="https://github.com/miltonkumirai"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
@@ -84,7 +84,7 @@ export default function HeroTwoA({ img }) {
               <FaGithub />
             </Link>
             <Link
-              href="https://linkedin.com/in/miltonkumirai"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
@@ -92,7 +92,7 @@ export default function HeroTwoA({ img }) {
               <FaLinkedin />
             </Link>
             <Link
-              href="https://twitter.com/miltonkumirai"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
@@ -100,7 +100,7 @@ export default function HeroTwoA({ img }) {
               <FaTwitter />
             </Link>
             <Link
-              href="https://facebook.com/miltonkumirai"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
@@ -112,13 +112,13 @@ export default function HeroTwoA({ img }) {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
             <Link
-              href="/contact"
+              href="#"
               className="bg-linear-to-r from-blue-600 to-blue-700 text-white py-3 px-8 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-center font-medium"
             >
               Hire Me →
             </Link>
             <Link
-              href="/projects"
+              href="#"
               className="border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 text-center font-medium"
             >
               View My Work

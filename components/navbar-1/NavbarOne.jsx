@@ -47,7 +47,7 @@ export default function NavbarOne({ links }) {
           </div>
           <div>
             <Link
-              className="bg-blue-500 shadow-lg shadow-blue-500/30 py-2 px-7 text-sm rounded-lg text-white font-semibold"
+              className="bg-blue-500 shadow-lg shadow-blue-500/30 py-2.5 px-7 text-[15px] rounded-lg text-white"
               href={"#"}
             >
               Contact Me

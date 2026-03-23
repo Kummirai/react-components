@@ -56,10 +56,10 @@ export default function HeroTwoA({ img }) {
           </p>
           {/* socials */}
           <div className="flex items-center my-3 gap-5 text-2xl text-gray-700">
-            <FaFacebook className="hover:text-blue-500 hover:cursor-pointer" />
-            <FaGithub className="hover:text-blue-500 hover:cursor-pointer" />
-            <FaSquareXTwitter className="hover:text-blue-500 hover:cursor-pointer" />
-            <FaLinkedin className="hover:text-blue-600 hover:cursor-pointer" />
+            <FaFacebook className="hover:text-blue-400 hover:cursor-pointer" />
+            <FaGithub className="hover:text-gray-950 hover:cursor-pointer" />
+            <FaSquareXTwitter className="hover:text-gray-950 hover:cursor-pointer" />
+            <FaLinkedin className="hover:text-[#0077B5] hover:cursor-pointer" />
           </div>
           {/* call to acction */}
           <div className="flex flex-col w-3/4 sm:flex-row gap-5">

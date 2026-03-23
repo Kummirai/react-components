@@ -271,13 +271,13 @@ function Pricing() {
         </div>
       </section>
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto min-h-screen p-10 sm:px-0 flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
+        <section className="max-w-6xl mx-auto min-h-screen  flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
           {websitePlans.map((plan) => {
             return <CardTwo key={plan.id} plan={plan} />;
           })}
         </section>
       ) : category === 2 ? (
-        <section className="max-w-6xl mx-auto min-h-screen p-10 sm:px-0 flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
+        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
           {webAppPlans.map((plan) => {
             return <CardTwo key={plan.id} plan={plan} />;
           })}

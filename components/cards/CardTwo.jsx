@@ -5,7 +5,7 @@ export default function CardTwo({ plan }) {
     <div
       className={
         plan.name === "Essential" || plan.name === "Business App"
-          ? "border-2 border-blue-500/80 bg-white flex flex-col justify-start gap-5 w-full sm:w-90 p-5 rounded-xl shadow-2xl shadow-blue-500/50 h-145"
+          ? "border-2 border-blue-500/80 bg-white flex flex-col justify-start gap-5 w-full  sm:w-90 p-5 rounded-xl shadow-2xl shadow-blue-500/50 h-145"
           : "flex flex-col justify-start gap-5 w-full sm:w-90 bg-white p-5 rounded-xl shadow-2xl h-145"
       }
     >

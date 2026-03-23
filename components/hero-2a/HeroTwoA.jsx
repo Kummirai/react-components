@@ -11,11 +11,11 @@ import { GoDotFill } from "react-icons/go";
 export default function HeroTwoA({ img }) {
   return (
     <main className="lg:grow flex items-center justify-center max-w-6xl   mx-auto sm:max-lg:h-[50vh] ">
-      <div className="grow grid gap-4 sm:gap-5 lg:gap-10 sm:grid-cols-2">
+      <div className="grow grid gap-4 sm:gap-5 lg:gap-10 sm:grid-cols-2 ">
         {/* developer image */}
         <div className="flex items-center justify-center ">
-          <div className="border rounded-full shadow-lg shadow-blue-500/50  p-1 border-[#0b344e0a]">
-            <div className=" relative w-50 h-50 sm:w-65 sm:h-65 lg:h-75 lg:w-75 bg-blue-500  rounded-full overflow-hidden">
+          <div className=" rounded-full shadow-2xl shadow-blue-500/80  p-1 ">
+            <div className=" relative w-50 h-50 sm:w-65 sm:h-65 lg:h-75 lg:w-75 border-0 bg-[#fefefe] to-70%  rounded-full overflow-hidden">
               <Image
                 src={img}
                 alt="Developer image"
@@ -56,10 +56,10 @@ export default function HeroTwoA({ img }) {
           </p>
           {/* socials */}
           <div className="flex items-center my-3 gap-5 text-2xl text-gray-700">
-            <FaFacebook className="hover:text-blue-400 hover:cursor-pointer" />
-            <FaGithub className="hover:text-gray-950 hover:cursor-pointer" />
-            <FaSquareXTwitter className="hover:text-gray-950 hover:cursor-pointer" />
-            <FaLinkedin className="hover:text-[#0077B5] hover:cursor-pointer" />
+            <FaFacebook className="hover:text-blue-400 hover:cursor-pointer duration-300" />
+            <FaGithub className="hover:text-gray-950 hover:cursor-pointer duration-300" />
+            <FaSquareXTwitter className="hover:text-gray-950 hover:cursor-pointer duration-300" />
+            <FaLinkedin className="hover:text-[#0077B5] hover:cursor-pointer duration-300" />
           </div>
           {/* call to acction */}
           <div className="flex flex-col w-3/4 sm:flex-row gap-5">

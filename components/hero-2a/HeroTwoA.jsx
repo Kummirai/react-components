@@ -14,7 +14,7 @@ export default function HeroTwoA({ img }) {
       <div className="grow grid gap-4 sm:gap-5 lg:gap-10 sm:grid-cols-2 ">
         {/* developer image */}
         <div className="flex items-center justify-center ">
-          <div className=" rounded-full shadow-2xl shadow-blue-500/80  p-1 ">
+          <div className=" rounded-full shadow-2xl shadow-blue-500/80  p-px ">
             <div className=" relative w-50 h-50 sm:w-65 sm:h-65 lg:h-75 lg:w-75 border-0 bg-[#fefefe] to-70%  rounded-full overflow-hidden">
               <Image
                 src={img}

@@ -79,7 +79,7 @@ export default function Features() {
             return (
               <div
                 key={feature.id}
-                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-light text-lg leading-6 shadow-2xl shadow-blue-500/20  rounded-xs "
+                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-light text-lg leading-6 shadow-2xl  rounded-xs "
               >
                 <p className="text-4xl text-blue-600">{feature.icon}</p>
                 <h2 className=" text-xl  text-gray-800 font-semibold">

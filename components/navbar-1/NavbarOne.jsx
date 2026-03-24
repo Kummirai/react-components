@@ -16,8 +16,8 @@ export default function NavbarOne({ links }) {
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <Link href={links[0].path}>
-              <span className="text-gray-700">Port</span>
-              <span className="text-blue-500">folio</span>
+              <span className="text-gray-700">mil</span>
+              <span className="text-blue-500">ton.</span>
             </Link>
           </h1>
         </div>

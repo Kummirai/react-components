@@ -65,7 +65,7 @@ export default function page() {
             {components.map((component) => {
               return (
                 <button
-                  key={component.id}
+                  key={component.title}
                   className={
                     currentComponent === component.id
                       ? "bg-blue-500 text-white font-semibold py-2 text-left px-2 hover:cursor-pointer"

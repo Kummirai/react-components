@@ -29,7 +29,7 @@ export default function HeroTwoA({ img }) {
         {/* Developer details */}
         <div className="flex flex-col items-center sm:items-start justify-center gap-3 my-5 sm:my-0 sm:px-5 lg:p-0">
           <div className="flex flex-col items-center sm:justify-start sm:items-start justify-center">
-            <div className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-0.5 rounded-full text-sm font-medium mb-2">
+            <div className="inline-flex items-center gap-1 bg-green-50 text-green-700 px-3 py-0.5 rounded-full text-sm font-medium mb-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>

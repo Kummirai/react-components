@@ -74,7 +74,7 @@ export default function Features() {
             value—every project is built to perform, scale, and succeed.
           </p>
         </div>
-        <div className="grid grow md:grid-cols-2 w-full lg:grid-cols-3 px-5 sm:px-0 gap-5 pb-20">
+        <div className="grid grow md:grid-cols-2 w-full lg:grid-cols-3 px-2 sm:px-0 gap-5 pb-20">
           {features.map((feature) => {
             return (
               <div

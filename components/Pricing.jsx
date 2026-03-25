@@ -238,7 +238,7 @@ function Pricing() {
 
   return (
     <section className=" w-full">
-      <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5 ">
+      <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5 smooth">
         <h2 className="text-2xl leading-6.5 sm:text-[32px] text-gray-700 font-semibold text-shadow-2xs text-center sm:leading-10 w-7/9">
           Choose a
           <span className="text-blue-500 mx-2">

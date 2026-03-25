@@ -64,7 +64,7 @@ const features = [
 export default function Features() {
   return (
     <section className="w-full grow flex items-center justify-center bg-[#fdfdfd] ">
-      <div className="max-w-6xl mx-auto flex flex-col gap-5 justify-around">
+      <div className="max-w-6xl mx-auto flex flex-col gap-5 justify-around smooth">
         <div className="mx-auto flex flex-col items-center max-w-2xl pt-20 pb-5 gap-3 sm:gap-5 ">
           <h2 className="text-2xl sm:text-[32px] text-gray-700 font-semibold text-shadow-2sm text-center leading-7.5 sm:leading-10 max-w-7/8 sm:w-full">
             Expert Development. Websites That Work as Hard as You Do.
@@ -79,7 +79,7 @@ export default function Features() {
             return (
               <div
                 key={feature.id}
-                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-light text-lg leading-6 shadow-2xl  rounded-xs smooth"
+                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-light text-lg leading-6 shadow-2xl  smooth rounded-sm"
               >
                 <p className="text-4xl text-blue-600">{feature.icon}</p>
                 <h2 className=" text-xl  text-gray-800 font-semibold">

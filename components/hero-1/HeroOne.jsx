@@ -90,13 +90,13 @@ export default function HeroOne() {
       <main className="max-w-5xl grow mx-auto grid grid-cols-2">
         {/* heading */}
         <div className="flex flex-col h-4/5 my-auto justify-around">
-          <h2 className="text-5xl font-semibold flex flex-col gap-1 text-gray-700 ">
+          <h2 className="text-5xl font-semibold flex flex-col gap-1 text-[var(--text-color)] ">
             <span>Let's Work</span>
             <span>Together To Create</span>
             <span>Wonders With Us</span>
           </h2>
           {/* tagline */}
-          <p className="text-gray-700">
+          <p className="text-[var(--text-color)]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
             soluta, molestiae numquam ad dignissimos suscipit delectus pariatur
             dolores autem tempora!
@@ -119,21 +119,27 @@ export default function HeroOne() {
           {/* Credibility stats */}
           <div className="grid grid-cols-3 max-w-100">
             <div>
-              <h2 className="text-2xl text-gray-700 font-bold">15+</h2>
+              <h2 className="text-2xl text-[var(--text-color)] font-bold">
+                15+
+              </h2>
               <p className="flex flex-col text-sm text-gray-500">
                 <span>Years</span>
                 <span>Experince</span>
               </p>
             </div>
             <div>
-              <h2 className="text-2xl text-gray-700 font-bold">26K</h2>
+              <h2 className="text-2xl text-[var(--text-color)] font-bold">
+                26K
+              </h2>
               <p className="flex flex-col text-sm text-gray-500">
                 <span>Projects</span>
                 <span>Success</span>
               </p>
             </div>
             <div>
-              <h2 className="text-2xl text-gray-700 font-bold">98%</h2>
+              <h2 className="text-2xl text-[var(--text-color)] font-bold">
+                98%
+              </h2>
               <p className="flex flex-col text-sm text-gray-500">
                 <span>Satisfied</span>
                 <span>Rate</span>

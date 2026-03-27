@@ -62,7 +62,7 @@ export default function CardOne({}) {
             </p>
           </div>
           <div>
-            <p className="text-[15px] mt-1 text-gray-700">
+            <p className="text-[15px] mt-1 text-[var(--text-color)]">
               {hotel[0]?.description}
             </p>
           </div>

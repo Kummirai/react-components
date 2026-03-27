@@ -9,7 +9,7 @@ export default function HeroTwoA({ img }) {
       <div className="grow grid gap-8 sm:gap-10 lg:gap-12 sm:grid-cols-2 items-center">
         {/* Developer image */}
         <div className="flex items-center justify-center order-2 sm:order-1">
-          <div className="border rounded-full shadow-xl shadow-blue-500/30 p-1 border-blue-500/20">
+          <div className="border rounded-full shadow-xl shadow-blue-[#443dff] p-1 border-[#443dff]">
             <div className="relative w-60 h-60 sm:w-72 sm:h-72 lg:w-80 lg:h-80 bg-linear-to-br from-blue-500 to-purple-600 rounded-full overflow-hidden">
               <Image
                 src={"/img/milton-2.webp"}
@@ -37,10 +37,10 @@ export default function HeroTwoA({ img }) {
 
           {/* Title */}
           <div className="text-center sm:text-left">
-            <h2 className="text-sm font-medium text-blue-600 uppercase tracking-wide">
+            <h2 className="text-sm font-medium text-[var(--primary-color)] uppercase tracking-wide">
               Hello, I'm
             </h2>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mt-2">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[var(--text-color)] mt-2">
               Milton Kumirai
             </h1>
             <div className="mt-3">
@@ -60,15 +60,19 @@ export default function HeroTwoA({ img }) {
           {/* Trust indicators */}
           <div className="flex gap-6 py-2">
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-gray-900">5+</p>
+              <p className="text-2xl font-bold text-[var(--text-color)]">5+</p>
               <p className="text-xs text-gray-500">Projects Delivered</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-gray-900">100%</p>
+              <p className="text-2xl font-bold text-[var(--text-color)]">
+                100%
+              </p>
               <p className="text-xs text-gray-500">Client Satisfaction</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-gray-900">2-wk</p>
+              <p className="text-2xl font-bold text-[var(--text-color)]">
+                2-wk
+              </p>
               <p className="text-xs text-gray-500">Avg. Turnaround</p>
             </div>
           </div>
@@ -79,7 +83,7 @@ export default function HeroTwoA({ img }) {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-[var(--primary-color)] transition-colors hover:scale-110 transform duration-200"
             >
               <FaGithub />
             </Link>
@@ -87,7 +91,7 @@ export default function HeroTwoA({ img }) {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-[var(--primary-color)] transition-colors hover:scale-110 transform duration-200"
             >
               <FaLinkedin />
             </Link>
@@ -95,7 +99,7 @@ export default function HeroTwoA({ img }) {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-[var(--primary-color)] transition-colors hover:scale-110 transform duration-200"
             >
               <FaTwitter />
             </Link>
@@ -103,7 +107,7 @@ export default function HeroTwoA({ img }) {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors hover:scale-110 transform duration-200"
+              className="hover:text-[var(--primary-color)] transition-colors hover:scale-110 transform duration-200"
             >
               <FaFacebook />
             </Link>
@@ -119,14 +123,14 @@ export default function HeroTwoA({ img }) {
             </Link>
             <Link
               href="#"
-              className="border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 text-center font-medium"
+              className="border-2 border-gray-300 text-[var(--text-color)] py-3 px-6 rounded-lg hover:border-blue-600 hover:text-[var(--primary-color)] transition-all duration-200 text-center font-medium"
             >
               View My Work
             </Link>
           </div>
 
           {/* Additional trust note */}
-          <p className="text-xs text-gray-400 mt-2">
+          <p className="text-xs text-[var(--text-color)] mt-2">
             ✨ Free consultation • No upfront payment • Fast turnaround
           </p>
         </div>

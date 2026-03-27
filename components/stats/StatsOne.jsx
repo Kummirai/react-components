@@ -40,7 +40,7 @@ export default function StatsOne() {
                 : "grow grid grid-cols-2 items-center justify-center gap-5"
             }
           >
-            <h2 className="text-4xl text-shadow-lg  text-gray-700 font-bold ">
+            <h2 className="text-4xl text-shadow-lg  text-[var(--text-color)] font-bold ">
               {stat.number}+
             </h2>
             <p className="text-xs text-gray-600 font-semibold flex flex-col">

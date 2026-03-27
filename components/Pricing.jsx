@@ -239,14 +239,14 @@ function Pricing() {
   return (
     <section className=" w-full">
       <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5 smooth">
-        <h2 className="text-2xl leading-6.5 sm:text-[32px] text-[var(--text-color)] font-semibold text-shadow-2xs text-center sm:leading-10 w-7/9">
+        <h2 className="text-2xl leading-6.5 sm:text-[32px] text-(--text-color) font-semibold text-shadow-2xs text-center sm:leading-10 w-7/9">
           Choose a
-          <span className="text-[var(--primary-color)] mx-2">
+          <span className="text-(--accent-color) mx-2">
             {myPackage.toLowerCase().slice(0, -1)}
           </span>
           that works for your business
         </h2>
-        <p className="text-center text-lg text-[var(--text-color)] font-light max-w-2xl leading-6">
+        <p className="text-center text-lg text-(--light-text-color) font-normal max-w-2xl leading-6">
           Choose a website package that works for your business Whether you need
           a simple online presence or a powerful web application, We've got you
           covered. Every plan includes custom design, mobile responsiveness, and
@@ -259,8 +259,8 @@ function Pricing() {
                 key={tab.id}
                 className={
                   tab.id === category
-                    ? "py-2 px-5 text-sm bg-[#2f27ce] text-white rounded-full border border-blue-500"
-                    : "text-[var(--primary-color)] py-2 px-5 text-sm border border-[#443dff] rounded-full hover:cursor-pointer hover:bg-blue-50/30 shadow-lg shadow-(--accent-color) hover:text-[var(--primary-color)]"
+                    ? "py-2 px-5 text-sm bg-(--accent-color) text-white rounded-full border-2 border-(--accent-color)"
+                    : "text-(--accent-color) py-2 px-5 text-sm border-2 border-(--accent-color) rounded-full hover:cursor-pointer hover:bg-blue-50/30 shadow-lg shadow-(--accent-color) hover:text-(--primary-color)"
                 }
                 onClick={() => selectCategory(tab.id)}
               >

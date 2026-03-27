@@ -36,26 +36,26 @@ export default function HeroTwoA({ img }) {
               </span>
               Available for freelance work
             </div>
-            <h2 className="text-md font-medium text-[var(--primary-color)] text-shadow-none ">
+            <h2 className="text-md font-medium text-(--accent-color) text-shadow-none ">
               Hello, I'm
             </h2>
-            <h3 className="text-4xl font-bold text-[var(--text-color)] text-shadow-lg leading-8">
+            <h3 className="text-4xl font-bold text-(--text-color) text-shadow-lg leading-8">
               Milton Kumirai
             </h3>
             <h4 className="text-2xl font-semibold flex gap-2">
               {/* <span>And I'm a</span> */}
-              <span className="text-[var(--primary-color)] font-semibold text-shadow-sm">
+              <span className="text-(--accent-color) font-semibold text-shadow-sm">
                 Web Developer
               </span>
             </h4>
           </div>
-          <p className="text-lg text-[var(--text-color)] font-light max-w-2xl leading-6 sm:leading-7 text-center sm:text-start">
+          <p className="text-lg text-(--light-text-color) font-normal max-w-2xl leading-6 sm:leading-7 text-center sm:text-start">
             I craft robust web solutions with React, Next.js, Tailwind CSS and
             Node.js. Building responsive, scalable applications that solve
             real-world problems for businesses and entrepreneurs.
           </p>
           {/* socials */}
-          <div className="flex items-center my-3 gap-5 text-2xl text-[var(--text-color)]">
+          <div className="flex items-center my-3 gap-5 text-2xl text-(--text-color)">
             <FaFacebook className="hover:text-blue-400 hover:cursor-pointer duration-300" />
             <FaGithub className="hover:text-gray-950 hover:cursor-pointer duration-300" />
             <FaSquareXTwitter className="hover:text-gray-950 hover:cursor-pointer duration-300" />
@@ -65,19 +65,19 @@ export default function HeroTwoA({ img }) {
           <div className="flex flex-col w-3/4 sm:flex-row gap-5">
             <Link
               href={"#"}
-              className="bg-[#131212] text-white py-2 px-10 rounded-lg shadow-2xl shadow-gray-950/30 hover:bg-[#131212] hover:cursor-pointer text-center"
+              className="bg-(--accent-color) text-white py-2 px-10 rounded-lg shadow-2xl shadow-gray-950/30 hover:bg-(--primary-color) hover:cursor-pointer text-center"
             >
               Hire Me →
             </Link>
 
             <Link
-              className="py-2 px-6 border border-gray-900 text-[var(--text-color)] rounded-lg shadow-2xl shadow-gray-950/30 text-center"
+              className="py-2 px-6 border-2 border-(--accent-color) text-(--accent-color) rounded-lg shadow-2xl shadow-gray-950/30 text-center hover:border-(--primary-color) hover:text-(--primary-color)"
               href={"#"}
             >
               View My Work
             </Link>
           </div>
-          <p className="text-xs text-[var(--text-color)] mt-2 flex gap-1 items-center">
+          <p className="text-xs text-(--light-text-color) mt-2 flex gap-1 items-center">
             <span>Free consultation</span>
             <span>
               <GoDotFill />

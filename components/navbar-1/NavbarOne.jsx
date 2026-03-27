@@ -16,13 +16,13 @@ export default function NavbarOne({ links }) {
         <div>
           <h1 className="text-2xl text-shadow-sm font-bold">
             <Link href={links[0].path}>
-              <span className="text-[var(--text-color)]">mil</span>
-              <span className="text-[var(--primary-color)]">ton.</span>
+              <span className="text-(--text-color)">mil</span>
+              <span className="text-(--accent-color)">ton.</span>
             </Link>
           </h1>
         </div>
         <button className=" lg:hidden hover:text-[#0abcfa] hover:cursor-pointer">
-          <IoMenu className="text-3xl text-[var(--text-color)] text-shadow-lg" />
+          <IoMenu className="text-3xl text-(--text-color) text-shadow-lg" />
         </button>
         <ul className="hidden lg:flex items-center  md:gap-2 xl:gap-8">
           {links.map((link) => {
@@ -31,8 +31,8 @@ export default function NavbarOne({ links }) {
                 key={link.id}
                 className={
                   pathname === link.path
-                    ? "text-[var(--primary-color)] text-sm font-bold text-shadow-xs"
-                    : "hover:text-[#4b6c81] text-[var(--text-color)] text-sm text-shadow-sm "
+                    ? "text-(--accent-color) text-sm font-bold text-shadow-xs"
+                    : "hover:text-[#4b6c81] text-(--text-color) text-sm text-shadow-sm "
                 }
               >
                 <Link href={link.path}>{link.link}</Link>
@@ -43,11 +43,11 @@ export default function NavbarOne({ links }) {
         <div className="hidden lg:flex items-center border-l-4 gap-8 pl-3 border-l-gray-400">
           <div className="flex gap-2 rounded-full p-1 px-2 border border-gray-200 text-white">
             <FaMoon className="bg-[#2f27ce] rounded-full text-xl p-1" />
-            <MdOutlineWbSunny className="text-[var(--text-color)] rounded-full text-xl" />
+            <MdOutlineWbSunny className="text-(--text-color) rounded-full text-xl" />
           </div>
           <div>
             <Link
-              className="bg-[#2f27ce] shadow-lg shadow-blue-[#443dff] py-2.5 px-7 text-[15px] rounded-lg text-white"
+              className="bg-(--accent-color) shadow-lg shadow-blue-[#443dff] py-2.5 px-7 text-[15px] rounded-lg text-white hover:cursor-pointer hover:bg-(--primary-color)"
               href={"#"}
             >
               Contact Me

@@ -63,13 +63,13 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="w-full grow flex items-center justify-center bg-[var(--background-color)] ">
+    <section className="w-full grow flex items-center justify-center bg-(--background-color) ">
       <div className="max-w-6xl mx-auto flex flex-col gap-5 justify-around smooth">
         <div className="mx-auto flex flex-col items-center max-w-2xl pt-20 pb-5 gap-3 sm:gap-5 ">
-          <h2 className="text-2xl sm:text-[32px] text-[var(--text-color)] font-semibold text-shadow-2sm text-center leading-7.5 sm:leading-10 max-w-7/8 sm:w-full">
+          <h2 className="text-2xl sm:text-[32px] text-(--text-color) font-semibold text-shadow-2sm text-center leading-7.5 sm:leading-10 max-w-7/8 sm:w-full">
             Expert Development. Websites That Work as Hard as You Do.
           </h2>
-          <p className="text-center text-lg text-[var(--text-color)] font-light max-w-2xl leading-6">
+          <p className="text-center text-lg text-(--light-text-color) font-normal max-w-2xl leading-6">
             Combining modern development practices with a focus on delivering
             value—every project is built to perform, scale, and succeed.
           </p>
@@ -79,15 +79,15 @@ export default function Features() {
             return (
               <div
                 key={feature.id}
-                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-light text-lg leading-6 shadow-2xl  smooth rounded-sm"
+                className="flex flex-col items-center justify-center gap-2 bg-white p-10 font-normal text-lg leading-6 shadow-2xl  smooth rounded-sm"
               >
-                <p className="text-4xl text-[var(--primary-color)]">
+                <p className="text-4xl text-(--accent-color)">
                   {feature.icon}
                 </p>
-                <h2 className=" text-xl  text-[var(--text-color)] font-semibold">
+                <h2 className=" text-xl  text-(--text-color) font-semibold">
                   {feature.title}
                 </h2>
-                <p className="text-center text-[16px] sm:text-md text-[var(--text-color)] line-clamp-4 h-24">
+                <p className="text-center text-[16px] sm:text-md text-(--light-text-color) line-clamp-4 h-24">
                   {feature.description}
                 </p>
               </div>

@@ -247,10 +247,10 @@ function Pricing() {
           that works for your business
         </h2>
         <p className="text-center text-lg text-(--light-text-color) font-normal max-w-2xl leading-6">
-          Choose a website package that works for your business Whether you need
-          a simple online presence or a powerful web application, We've got you
-          covered. Every plan includes custom design, mobile responsiveness, and
-          ongoing support.
+          Choose a {myPackage.toLowerCase().slice(0, -1)} that works for your
+          business Whether you need a simple online presence or a powerful web
+          application, We've got you covered. Every plan includes custom design,
+          mobile responsiveness, and ongoing support.
         </p>
         <div className=" flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
           {tabs.map((tab) => {

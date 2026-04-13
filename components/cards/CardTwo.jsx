@@ -13,8 +13,8 @@ export default function CardTwo({ plan }) {
         <h2
           className={
             plan.name === "Essential" || plan.name === "Business App"
-              ? "flex items-center justify-between text-xl font-semibold"
-              : "text-xl font-semibold"
+              ? "flex items-center justify-between text-gray-800 text-xl font-semibold"
+              : "text-xl font-semibold text-gray-800 "
           }
         >
           {plan.name}
@@ -26,15 +26,13 @@ export default function CardTwo({ plan }) {
             ""
           )}
         </h2>
-        <p className="text-(--light-text-color) text-sm line-clamp-1">
-          {plan.description}
-        </p>
+        <p className="text-gray-600 text-sm line-clamp-1">{plan.description}</p>
       </div>
       <h2 className="flex flex-col">
         <span className="text-[#131212ce] text-xs">
           {plan.price === "Custom" ? "price" : "from"}
         </span>
-        <span className="text-3xl text-(--text-color) font-semibold">
+        <span className="text-3xl text-gray-800  font-semibold">
           {plan.price}
         </span>
       </h2>
@@ -53,10 +51,10 @@ export default function CardTwo({ plan }) {
             return (
               <p
                 key={index}
-                className="flex items-center gap-2 text-sm text-(--text-color)"
+                className="flex items-center gap-2 text-sm text-gray-800 "
               >
                 <span className="text-lg">{features.icon}</span>
-                <span>{features.text}</span>
+                <span className="">{features.text}</span>
               </p>
             );
           })}
@@ -70,7 +68,7 @@ export default function CardTwo({ plan }) {
               return (
                 <li key={index} className="flex items-center gap-2">
                   <span>
-                    <IoCheckmarkDoneOutline className="text-xl text-(--accent-color)" />
+                    <IoCheckmarkDoneOutline className="text-xl text-gray-600" />
                   </span>
                   <span>{included}</span>
                 </li>

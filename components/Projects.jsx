@@ -111,7 +111,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-4 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl  font-semibold mb-4 text-gray-800">
             My Recent Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -127,7 +127,7 @@ export default function Projects() {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`
-                px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+                px-6 py-2 rounded-full text-sm  transition-all duration-300
                 ${
                   activeCategory === category
                     ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30 scale-105"
@@ -157,12 +157,12 @@ export default function Projects() {
               <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
               {/* Project Image Placeholder */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
+              <div className="relative h-48 bg-linear-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
                 <div className="text-6xl text-blue-500/50 group-hover:scale-110 transition-transform duration-500">
                   {project.icon}
                 </div>
                 {/* Overlay with blur effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
+                <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
                   <Link
                     href={project.github}
                     target="_blank"
@@ -188,7 +188,7 @@ export default function Projects() {
                 </span>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
                   {project.title}
                 </h3>
 

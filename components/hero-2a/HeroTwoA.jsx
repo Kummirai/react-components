@@ -12,7 +12,7 @@ import { GoDotFill } from "react-icons/go";
 
 export default function HeroTwoA({ img }) {
   return (
-    <main className="relative lg:grow flex items-center justify-center max-w-6xl mx-auto sm:max-lg:min-h-[50vh] overflow-hidden">
+    <main className="relative lg:grow flex items-center justify-center max-w-6xl mx-auto sm:max-lg:min-h-[50vh] overflow-hidden py-10">
       {/* Animated gradient background with blur effects - matching other sections */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
@@ -50,19 +50,19 @@ export default function HeroTwoA({ img }) {
               </span>
               Available for freelance work
             </div>
-            <h2 className="text-md font-medium bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-x text-shadow-none transition-all duration-300">
+            <h2 className="text-md font-medium text-gray-700 bg-clip-text animate-gradient-x text-shadow-none transition-all duration-300">
               Hello, I'm
             </h2>
-            <h3 className="text-4xl font-bold text-gray-800 dark:text-white text-shadow-lg leading-8 transition-all duration-300 hover:scale-105 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 hover:bg-clip-text">
+            <h3 className="text-4xl font-bold text-shadow-lg leading-8 transition-all duration-300 hover:scale-105 text-transparent bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text">
               Milton Kumirai
             </h3>
             <h4 className="text-2xl font-semibold flex gap-2">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent font-semibold text-shadow-sm animate-gradient-x transition-all duration-300">
+              <span className="text-gray-700 bg-clip-text  font-semibold text-shadow-sm animate-gradient-x transition-all duration-300">
                 Web Developer
               </span>
             </h4>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 font-normal max-w-2xl leading-6 sm:leading-7 text-center sm:text-start transition-all duration-300 hover:text-gray-800 dark:hover:text-gray-200 backdrop-blur-sm bg-white/5 p-3 rounded-lg">
+          <p className="text-lg text-gray-500 dark:text-gray-300 font-normal max-w-2xl leading-6 sm:leading-7 text-center sm:text-start transition-all duration-300 hover:text-gray-800 dark:hover:text-gray-200 backdrop-blur-sm bg-white/5 p-3 md:p-0 rounded-lg">
             I craft robust web solutions with React, Next.js, Tailwind CSS and
             Node.js. Building responsive, scalable applications that solve
             real-world problems for businesses and entrepreneurs.
@@ -86,7 +86,7 @@ export default function HeroTwoA({ img }) {
 
             <Link
               className="relative overflow-hidden py-2 px-6 border-2 border-blue-600 text-blue-600 rounded-lg shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl group/btn2 hover:border-transparent"
-              href={"#"}
+              href={"/project"}
             >
               <span className="relative z-10">View My Work</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn2:opacity-10 transition-opacity duration-500"></div>

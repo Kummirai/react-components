@@ -74,7 +74,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section with gradient colors */}
         <div className="mx-auto flex flex-col items-center max-w-2xl pt-10 pb-5 gap-3 sm:gap-5">
-          <h2 className="text-2xl sm:text-[32px] font-semibold text-center leading-7.5 sm:leading-10 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-[32px] font-semibold text-center leading-7.5 sm:leading-10 text-gray-800">
             Expert Development. Websites That Work as Hard as You Do.
           </h2>
           <p className="text-center text-lg text-gray-600 dark:text-gray-300 font-normal max-w-2xl leading-6 backdrop-blur-sm bg-white/5 p-3 rounded-lg">
@@ -89,21 +89,21 @@ export default function Features() {
             return (
               <div
                 key={feature.id}
-                className="group relative flex flex-col items-center justify-center gap-2 p-8 font-normal text-lg leading-6 rounded-2xl backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative flex flex-col items-center justify-center gap-3 p-8 font-normal text-lg leading-6 rounded-2xl backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 {/* Gradient background on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:opacity-10 transition-opacity duration-500"></div>
 
                 {/* Glow effect on hover */}
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+                <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
-                {/* Icon with gradient color */}
-                <p className="text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent transition-transform duration-300 group-hover:scale-110">
+                {/* Icon without gradient - just use a solid color */}
+                <p className="text-4xl text-blue-500 transition-transform duration-300 group-hover:scale-110">
                   {feature.icon}
                 </p>
 
                 {/* Title with hover gradient */}
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-white transition-all duration-300 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text">
+                <h2 className="text-xl font-semibold dark:text-white transition-all duration-300 text-transparent bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text">
                   {feature.title}
                 </h2>
 
@@ -113,7 +113,7 @@ export default function Features() {
                 </p>
 
                 {/* Decorative line at bottom */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
               </div>
             );
           })}

@@ -255,14 +255,14 @@ function Pricing() {
       </div>
 
       <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5">
-        <h2 className="text-2xl leading-6.5 sm:text-[32px] font-semibold text-center sm:leading-10 w-7/9">
+        <h2 className="text-2xl  sm:text-[32px] text-center sm:leading-10 w-7/9 text-gray-800  dark:text-gray-300 font-medium max-w-2xl leading-6 backdrop-blur-sm bg-white/5 p-3 rounded-lg">
           Choose a
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mx-2">
+          <span className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mx-2">
             {myPackage.toLowerCase().slice(0, -1)}
           </span>
           that works for your business
         </h2>
-        <p className="text-center text-lg text-(--light-text-color) font-normal max-w-2xl leading-6">
+        <p className="text-center text-lg text-gray-600 font-normal max-w-2xl leading-6">
           Choose a {myPackage.toLowerCase().slice(0, -1)} that works for your
           business Whether you need a simple online presence or a powerful web
           application, We've got you covered. Every plan includes custom design,
@@ -278,7 +278,7 @@ function Pricing() {
                 key={tab.id}
                 className={
                   isActive
-                    ? "py-2 px-5 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+                    ? "py-2 px-5 text-sm bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-105"
                     : "text-gray-600 py-2 px-5 text-sm border-2 border-gray-300 rounded-full hover:cursor-pointer hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover:scale-105"
                 }
                 onClick={() => selectCategory(tab.id)}

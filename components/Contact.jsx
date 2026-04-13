@@ -92,7 +92,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-semibold mb-4 text-gray-800">
             Let's Connect
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -111,11 +111,11 @@ export default function Contact() {
                 className="group relative rounded-2xl p-5 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 {/* Gradient background on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:opacity-10 transition-opacity duration-300"></div>
 
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="text-3xl bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                  <div className="text-3xl bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                     {info.icon}
                   </div>
 
@@ -145,7 +145,7 @@ export default function Contact() {
             ))}
 
             {/* Social Links Card */}
-            <div className="rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+            <div className="rounded-2xl p-6 backdrop-blur-sm bg-white/10 border border-white/20 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
               <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 text-center">
                 Connect With Me
               </h3>
@@ -160,7 +160,7 @@ export default function Contact() {
                   >
                     <span className="text-xl">{social.icon}</span>
                     {/* Glow effect */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
+                    <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
                   </Link>
                 ))}
               </div>
@@ -169,7 +169,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl">
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
+            <h3 className="text-xl font-semibold mb-6 text-gray-800 text-center">
               Send Me a Message
             </h3>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                     placeholder="hello@example.com"
                   />
                 </div>
@@ -223,7 +223,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -241,7 +241,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>

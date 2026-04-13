@@ -36,7 +36,7 @@ export default function StatsOne() {
             key={stat.id}
             className={`
               group relative flex items-center gap-4 md:gap-5 p-4 md:p-5 
-              rounded-2xl backdrop-blur-md bg-white/10 
+              rounded-2xl backdrop-blur-sm bg-white/10 
               border border-white/20 shadow-xl 
               transition-all duration-500 hover:scale-105 hover:bg-white/15 
               hover:shadow-2xl hover:shadow-blue-500/20
@@ -51,11 +51,9 @@ export default function StatsOne() {
 
             {/* Number with modern styling */}
             <div className="relative">
-              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x">
+              <h2 className="text-3xl  font-bold bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x">
                 {stat.number}+
               </h2>
-              {/* Decorative dot */}
-              {/* <div className="absolute -top-1 -right-2 w-2 h-2 bg-linear-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div> */}
             </div>
 
             {/* Text with modern typography */}

@@ -184,7 +184,7 @@ export default function ProjectsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-semibold mb-4 text-gray-800">
             My Projects
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -204,7 +204,7 @@ export default function ProjectsPage() {
             </div>
           </div>
           <div className="rounded-2xl p-4 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl text-center">
-            <div className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-semibold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {projectsData.filter((p) => p.category === "Web App").length}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
@@ -232,14 +232,14 @@ export default function ProjectsPage() {
         {/* Featured Projects Section */}
         {activeCategory === "All" && !searchQuery && (
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800">
               Featured Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredProjects.slice(0, 2).map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-2xl overflow-hidden backdrop-blur-md bg-gradient-to-br from-blue-50/90 to-purple-50/90 dark:from-blue-900/30 dark:to-purple-900/30 border border-white/20 shadow-2xl shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02]"
+                  className="group relative rounded-2xl overflow-hidden backdrop-blur-md bg-linear-to-br from-blue-50/90 to-purple-50/90 dark:from-blue-900/30 dark:to-purple-900/30 border border-white/20 shadow-2xl shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02]"
                 >
                   <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
 
@@ -252,7 +252,7 @@ export default function ProjectsPage() {
                         Featured
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -364,13 +364,13 @@ export default function ProjectsPage() {
                 <div className="absolute -inset-0.5 rounded-2xl bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
                 {/* Project Image Placeholder */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
+                <div className="relative h-48 bg-linear-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
                   <div className="text-5xl text-blue-500/70 group-hover:scale-110 transition-transform duration-500">
                     {project.icon}
                   </div>
 
                   {/* Overlay with blur effect on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
                     <Link
                       href={project.github}
                       target="_blank"
@@ -401,7 +401,7 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-md font-bold text-gray-800 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
                     {project.title}
                   </h3>
 

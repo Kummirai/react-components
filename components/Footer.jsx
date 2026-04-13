@@ -102,7 +102,7 @@ export default function Footer() {
             <Link href="/" className="group inline-block">
               <h2 className="text-2xl font-bold">
                 <span className="text-gray-800 dark:text-white">mil</span>
-                <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   ton.
                 </span>
               </h2>
@@ -137,7 +137,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
               Quick Links
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
@@ -158,7 +158,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
               Services
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
             </h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
@@ -179,7 +179,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
               Stay Updated
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
               Subscribe to get the latest updates on my work and tech insights.
@@ -193,7 +193,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white transition-all duration-300 hover:scale-105"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-linear-to-r from-blue-600 to-purple-600 text-white transition-all duration-300 hover:scale-105"
                 >
                   <FiSend className="text-sm" />
                 </button>
@@ -214,7 +214,7 @@ export default function Footer() {
                     aria-label={social.label}
                   >
                     <span className="text-lg">{social.icon}</span>
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
+                    <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
                   </Link>
                 ))}
               </div>
@@ -235,7 +235,7 @@ export default function Footer() {
             </div>
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-white/10 backdrop-blur-sm border border-white/30 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-white/10 backdrop-blur-sm border border-white/30 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:scale-105 hover:bg-linear-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white"
             >
               <FiArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" />
               Back to Top

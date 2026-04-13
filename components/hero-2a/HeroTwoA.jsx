@@ -12,7 +12,7 @@ import { GoDotFill } from "react-icons/go";
 
 export default function HeroTwoA({ img }) {
   return (
-    <main className="relative lg:grow flex items-center justify-center max-w-6xl mx-auto sm:max-lg:min-h-[50vh] overflow-hidden py-10">
+    <main className="relative lg:grow flex items-center justify-center max-w-6xl mx-auto sm:max-lg:min-h-[50vh] overflow-hidden mb-10">
       {/* Animated gradient background with blur effects - matching other sections */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
@@ -21,7 +21,7 @@ export default function HeroTwoA({ img }) {
       <div className="grow grid gap-4 sm:gap-5 lg:gap-10 sm:grid-cols-2">
         {/* developer image - enhanced with blur, animations, and modern styling */}
         <div className="flex items-center justify-center group">
-          <div className="relative rounded-full shadow-2xl shadow-blue-500/80 p-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-xy">
+          <div className="relative rounded-full shadow-2xl shadow-blue-500/80 p-0.5 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-xy">
             <div className="relative w-50 h-50 sm:w-65 sm:h-65 lg:h-75 lg:w-75 border-0 bg-[#fefefe] rounded-full overflow-hidden backdrop-blur-sm">
               <Image
                 src={img}
@@ -31,7 +31,7 @@ export default function HeroTwoA({ img }) {
                 className="object-center object-cover aspect-square transition-transform duration-700 group-hover:scale-105"
               />
               {/* Modern overlay with blur effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]"></div>
             </div>
             {/* Animated decorative rings */}
             <div className="absolute -inset-4 rounded-full border-2 border-blue-400/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-ping-slow"></div>
@@ -43,7 +43,7 @@ export default function HeroTwoA({ img }) {
         {/* Developer details - with glassmorphism matching other sections */}
         <div className="group/details flex flex-col items-center sm:items-start justify-center gap-3 my-5 sm:my-0 sm:px-5 lg:p-0 transition-all duration-500">
           <div className="flex flex-col items-center sm:justify-start sm:items-start justify-center">
-            <div className="inline-flex items-center gap-1 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 px-3 py-0.5 rounded-full text-xs font-medium mb-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm border border-green-200/50">
+            <div className="inline-flex items-center gap-1 bg-linear-to-r from-green-50 to-emerald-50 text-green-700 px-3 py-0.5 rounded-full text-xs font-medium mb-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm border border-green-200/50">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -62,7 +62,7 @@ export default function HeroTwoA({ img }) {
               </span>
             </h4>
           </div>
-          <p className="text-lg text-gray-500 dark:text-gray-300 font-normal max-w-2xl leading-6 sm:leading-7 text-center sm:text-start transition-all duration-300 hover:text-gray-800 dark:hover:text-gray-200 backdrop-blur-sm bg-white/5 p-3 md:p-0 rounded-lg">
+          <p className="text-md text-gray-500 dark:text-gray-300 font-normal max-w-2xl leading-6  text-center sm:text-start transition-all duration-300 hover:text-gray-800 dark:hover:text-gray-200 backdrop-blur-sm bg-white/5 p-3 md:p-0 rounded-lg">
             I craft robust web solutions with React, Next.js, Tailwind CSS and
             Node.js. Building responsive, scalable applications that solve
             real-world problems for businesses and entrepreneurs.
@@ -77,19 +77,19 @@ export default function HeroTwoA({ img }) {
           {/* call to action with enhanced hover effects */}
           <div className="flex flex-col w-3/4 sm:flex-row gap-5">
             <Link
-              href={"#"}
-              className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-10 rounded-lg shadow-lg shadow-blue-500/30 hover:cursor-pointer text-center transition-all duration-300 hover:scale-105 hover:shadow-xl group/btn"
+              href={"#contact"}
+              className="relative overflow-hidden bg-linear-to-r from-blue-600 to-purple-600 text-white py-2 px-10 rounded-lg shadow-lg shadow-blue-500/30 hover:cursor-pointer text-center transition-all duration-300 hover:scale-105 hover:shadow-xl group/btn"
             >
               <span className="relative z-10">Hire Me →</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></div>
             </Link>
 
             <Link
               className="relative overflow-hidden py-2 px-6 border-2 border-blue-600 text-blue-600 rounded-lg shadow-lg text-center transition-all duration-300 hover:scale-105 hover:shadow-xl group/btn2 hover:border-transparent"
-              href={"/project"}
+              href={"/projects"}
             >
               <span className="relative z-10">View My Work</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn2:opacity-10 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 opacity-0 group-hover/btn2:opacity-10 transition-opacity duration-500"></div>
             </Link>
           </div>
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 flex gap-1 items-center transition-all duration-300 hover:scale-105">

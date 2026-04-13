@@ -81,7 +81,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="relative w-full py-20 overflow-hidden">
+    <section className="relative w-full py-20 overflow-hidden" id="contact">
       {/* Animated gradient background with blur effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
@@ -140,7 +140,7 @@ export default function Contact() {
                 </div>
 
                 {/* Decorative line */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
               </div>
             ))}
 
@@ -257,7 +257,7 @@ export default function Contact() {
                   ${
                     isSubmitting
                       ? "bg-gray-500 cursor-not-allowed"
-                      : "bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg shadow-blue-500/30 hover:scale-105 hover:shadow-xl"
+                      : "bg-linear-to-r from-blue-600 to-purple-600 shadow-lg shadow-blue-500/30 hover:scale-105 hover:shadow-xl"
                   }
                 `}
               >

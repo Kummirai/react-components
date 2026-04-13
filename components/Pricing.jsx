@@ -42,6 +42,7 @@ function Pricing() {
       description:
         "Perfect for freelancers and small businesses starting online",
       price: "R2,500",
+      isPopular: false,
       features: [
         { icon: <FiLayout />, text: "1 Page Website" },
         { icon: <FiSmartphone />, text: "Full Mobile Optimization" },
@@ -59,6 +60,7 @@ function Pricing() {
       name: "Essential",
       description: "Professional online presence for growing businesses",
       price: "R4,500",
+      isPopular: false,
       features: [
         { icon: <FiFileText />, text: "3 Page Website" },
         { icon: <FiSmartphone />, text: "Full Mobile Optimization" },
@@ -77,6 +79,7 @@ function Pricing() {
       name: "Professional",
       description: "Multi-page presence for established businesses",
       price: "R6,500",
+      isPopular: true,
       features: [
         { icon: <FiFileText />, text: "4-5 Pages" },
         { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
@@ -96,6 +99,7 @@ function Pricing() {
       name: "Business",
       description: "Complete solution with advanced features",
       price: "R8,500",
+      isPopular: false,
       features: [
         { icon: <FiFileText />, text: "5-6 Pages + Blog" },
         { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
@@ -117,6 +121,7 @@ function Pricing() {
       name: "Premium",
       description: "Feature-rich website with e-commerce capabilities",
       price: "R12,000",
+      isPopular: false,
       features: [
         { icon: <FiFileText />, text: "10+ Pages" },
         { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
@@ -141,6 +146,7 @@ function Pricing() {
       name: "Booking App",
       description: "Simple appointment booking for single professionals",
       price: "R15,000",
+      isPopular: false,
       features: [
         { icon: <FiCalendar />, text: "Appointment Booking" },
         { icon: <FiSmartphone />, text: "Mobile Friendly" },
@@ -160,6 +166,7 @@ function Pricing() {
       name: "Business App",
       description: "Multi-user system for growing businesses",
       price: "R25,000",
+      isPopular: true,
       features: [
         { icon: <FiCalendar />, text: "Advanced Booking System" },
         { icon: <FiUsers />, text: "Multiple Staff/Doctors" },
@@ -180,6 +187,7 @@ function Pricing() {
       name: "Enterprise App",
       description: "Full-featured business management solution",
       price: "R40,000",
+      isPopular: false,
       features: [
         { icon: <FiCalendar />, text: "Smart Scheduling" },
         { icon: <FiUsers />, text: "Multiple Locations/Departments" },
@@ -201,6 +209,7 @@ function Pricing() {
       name: "Custom Web App",
       description: "Tailor-made solution for your specific needs",
       price: "Custom",
+      isPopular: false,
       features: [
         { icon: <FiTool />, text: "Custom Features" },
         { icon: <FiDatabase />, text: "Custom Database Design" },
@@ -237,11 +246,18 @@ function Pricing() {
   };
 
   return (
-    <section className=" w-full">
-      <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5 smooth">
-        <h2 className="text-2xl leading-6.5 sm:text-[32px] text-(--text-color) font-semibold text-shadow-2xs text-center sm:leading-10 w-7/9">
+    <section className="w-full relative overflow-hidden">
+      {/* Gradient background with blur effects */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5">
+        <h2 className="text-2xl leading-6.5 sm:text-[32px] font-semibold text-center sm:leading-10 w-7/9">
           Choose a
-          <span className="text-(--accent-color) mx-2">
+          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mx-2">
             {myPackage.toLowerCase().slice(0, -1)}
           </span>
           that works for your business
@@ -252,15 +268,18 @@ function Pricing() {
           application, We've got you covered. Every plan includes custom design,
           mobile responsiveness, and ongoing support.
         </p>
-        <div className=" flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
+
+        {/* Category Tabs with gradient theme */}
+        <div className="flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
           {tabs.map((tab) => {
+            const isActive = tab.id === category;
             return (
               <button
                 key={tab.id}
                 className={
-                  tab.id === category
-                    ? "py-2 px-5 text-sm bg-(--accent-color) text-white rounded-full border-2 border-(--accent-color)"
-                    : "text-(--accent-color) py-2 px-5 text-sm border-2 border-(--accent-color) rounded-full hover:cursor-pointer hover:bg-blue-50/30 shadow-lg shadow-(--accent-color) hover:text-(--primary-color)"
+                  isActive
+                    ? "py-2 px-5 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-105"
+                    : "text-gray-600 py-2 px-5 text-sm border-2 border-gray-300 rounded-full hover:cursor-pointer hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover:scale-105"
                 }
                 onClick={() => selectCategory(tab.id)}
               >
@@ -270,14 +289,16 @@ function Pricing() {
           })}
         </div>
       </section>
+
+      {/* Plans Grid */}
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto min-h-screen  flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
+        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 pb-20">
           {websitePlans.map((plan) => {
             return <CardTwo key={plan.name} plan={plan} />;
           })}
         </section>
       ) : category === 2 ? (
-        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 bg-radial from-blue-100 to-white to-0%">
+        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 pb-20">
           {webAppPlans.map((plan) => {
             return <CardTwo key={plan.name} plan={plan} />;
           })}

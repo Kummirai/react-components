@@ -6,7 +6,6 @@ import {
   FiMapPin,
   FiMail,
   FiPhone,
-  FiClock,
   FiSend,
   FiArrowUp,
   FiHeart,
@@ -26,18 +25,17 @@ export default function Footer() {
 
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
   ];
 
   const services = [
-    { name: "Website Development", href: "/services/websites" },
-    { name: "Web Applications", href: "/services/web-apps" },
-    { name: "E-commerce Solutions", href: "/services/ecommerce" },
-    { name: "UI/UX Design", href: "/services/design" },
-    { name: "SEO Optimization", href: "/services/seo" },
+    { name: "Website Development", href: "/services" },
+    { name: "Web Applications", href: "/services" },
+    { name: "E-commerce Solutions", href: "/services" },
+    { name: "UI/UX Design", href: "/services" },
+    { name: "Maintenance & Support", href: "/services" },
   ];
 
   const contactInfo = [
@@ -55,78 +53,71 @@ export default function Footer() {
       icon: <FaGithub />,
       href: "https://github.com/",
       label: "GitHub",
-      color: "hover:text-gray-900",
+      color: "hover:text-navy dark:hover:text-light",
     },
     {
       icon: <FaLinkedin />,
       href: "https://linkedin.com/",
       label: "LinkedIn",
-      color: "hover:text-[#0077B5]",
+      color: "hover:text-cyan",
     },
     {
       icon: <FaTwitter />,
       href: "https://twitter.com/",
       label: "Twitter",
-      color: "hover:text-[#1DA1F2]",
+      color: "hover:text-cyan",
     },
     {
       icon: <FaFacebook />,
       href: "https://facebook.com/",
       label: "Facebook",
-      color: "hover:text-[#1877F2]",
+      color: "hover:text-cyan",
     },
     {
       icon: <FaInstagram />,
       href: "https://instagram.com/",
       label: "Instagram",
-      color: "hover:text-[#E4405F]",
+      color: "hover:text-pink",
     },
   ];
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full overflow-hidden">
-      {/* Animated gradient background with blur effects */}
+    <footer className="relative w-full overflow-hidden bg-white dark:bg-navy/90">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div className="space-y-4">
             <Link href="/" className="group inline-block">
               <h2 className="text-2xl font-bold">
-                <span className="text-gray-800 dark:text-white">mil</span>
-                <span className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  ton.
-                </span>
+                <span className="text-navy dark:text-light">mil</span>
+                <span className="text-cyan">ton.</span>
               </h2>
             </Link>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              Crafting robust web solutions with modern technologies. Let's
-              build something amazing together.
+            <p className="text-sm text-navy/60 dark:text-light/60 leading-relaxed">
+              Freelance web developer building modern websites and applications.
+              Let&apos;s create something amazing together.
             </p>
-            {/* Contact Info */}
             <div className="space-y-2">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center gap-3 text-sm">
-                  <span className="text-blue-500">{info.icon}</span>
+                  <span className="text-cyan">{info.icon}</span>
                   {info.href ? (
                     <Link
                       href={info.href}
-                      className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors"
+                      className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors"
                     >
                       {info.text}
                     </Link>
                   ) : (
-                    <span className="text-gray-600 dark:text-gray-400">
-                      {info.text}
-                    </span>
+                    <span className="text-navy/60 dark:text-light/60">{info.text}</span>
                   )}
                 </div>
               ))}
@@ -135,18 +126,18 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
               Quick Links
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-cyan rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -156,18 +147,18 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
               Services
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-pink rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {service.name}
                   </Link>
                 </li>
@@ -177,11 +168,11 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
               Stay Updated
-              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            <p className="text-sm text-navy/60 dark:text-light/60 mb-4">
               Subscribe to get the latest updates on my work and tech insights.
             </p>
             <form className="space-y-3">
@@ -189,19 +180,18 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full px-4 py-2 pr-12 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm"
+                  className="w-full px-4 py-2 pr-12 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all text-sm"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-linear-to-r from-blue-600 to-purple-600 text-white transition-all duration-300 hover:scale-105"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-navy dark:bg-cyan text-white transition-all duration-300 hover:scale-105"
                 >
                   <FiSend className="text-sm" />
                 </button>
               </div>
             </form>
-            {/* Social Links */}
             <div className="mt-6">
-              <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+              <h4 className="text-sm font-medium text-navy/80 dark:text-light/80 mb-3">
                 Follow Me
               </h4>
               <div className="flex gap-3">
@@ -210,11 +200,11 @@ export default function Footer() {
                     key={index}
                     href={social.href}
                     target="_blank"
-                    className={`group relative p-2 rounded-full backdrop-blur-md bg-white/20 border border-white/30 text-gray-600 dark:text-gray-400 transition-all duration-300 hover:scale-110 ${social.color}`}
+                    className={`group relative p-2 rounded-full bg-navy/5 dark:bg-light/5 border border-navy/10 dark:border-light/10 text-navy/60 dark:text-light/60 transition-all duration-300 hover:scale-110 ${social.color}`}
                     aria-label={social.label}
                   >
                     <span className="text-lg">{social.icon}</span>
-                    <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
+                    <div className="absolute inset-0 rounded-full bg-cyan opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
                   </Link>
                 ))}
               </div>
@@ -222,20 +212,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 mt-8 border-t border-white/20">
+        <div className="pt-8 mt-8 border-t border-navy/10 dark:border-light/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center sm:text-left">
-              © {currentYear} Milton Kumirai. All rights reserved.
+            <p className="text-xs text-navy/50 dark:text-light/50 text-center sm:text-left">
+              &copy; {currentYear} Milton Kumirai. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+            <div className="flex items-center gap-2 text-xs text-navy/50 dark:text-light/50">
               <span>Made with</span>
-              <FiHeart className="text-red-500 animate-pulse text-sm" />
+              <FiHeart className="text-pink animate-pulse text-sm" />
               <span>in Zimbabwe</span>
             </div>
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-white/10 backdrop-blur-sm border border-white/30 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:scale-105 hover:bg-linear-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-navy/5 dark:bg-light/5 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 transition-all duration-300 hover:scale-105 hover:bg-navy hover:text-white dark:hover:bg-cyan"
             >
               <FiArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" />
               Back to Top

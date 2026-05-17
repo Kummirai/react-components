@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarOne from "@/components/navbar-1/NavbarOne";
 import Footer from "@/components/Footer";
+import DarkModeProvider from "@/components/DarkModeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Milton | Portfolio",
-  description: "Web developer",
+  title: "Milton | Freelance Web Developer",
+  description: "Freelance web developer building modern websites and web apps",
 };
 
 export default function RootLayout({ children }) {
@@ -32,16 +33,11 @@ export default function RootLayout({ children }) {
     },
     {
       id: 3,
-      link: "Components",
-      path: "/portfolio",
+      link: "Services",
+      path: "/services",
     },
     {
       id: 4,
-      link: "About",
-      path: "/about",
-    },
-    {
-      id: 5,
       link: "Contact",
       path: "/contact",
     },
@@ -50,11 +46,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-navy transition-colors duration-300`}
       >
-        <NavbarOne links={links} />
-        {children}
-        <Footer />
+        <DarkModeProvider>
+          <NavbarOne links={links} />
+          {children}
+          <Footer />
+        </DarkModeProvider>
       </body>
     </html>
   );

@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --primary-color: #2f27ce;
-  --secondary-color: #dddbff;
-  --text-color: #131212;
-  --accent-color: #443dff;
-  --background-color: #fbfbfe;
-  --light-text-color: #131212d8;
-  --text-hover-color: #131212f0;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy: #1d2a4d;
+  --color-light: #eff5f9;
+  --color-cyan: #13c5dd;
+  --color-pink: #f8c0de;
 }
+
+:root {
+  --primary-color: #1d2a4d;
+  --secondary-color: #eff5f9;
+  --text-color: #1d2a4d;
+  --accent-color: #13c5dd;
+  --background-color: #eff5f9;
+  --light-text-color: #1d2a4dd8;
+  --text-hover-color: #1d2a4df0;
+}
+
 .blob-1 {
   border-radius: 46% 54% 46% 54% / 57% 40% 60% 43%;
 }

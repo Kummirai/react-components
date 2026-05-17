@@ -26,10 +26,7 @@ export default function Contact() {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -37,7 +34,6 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus("success");
@@ -81,72 +77,52 @@ export default function Contact() {
   ];
 
   return (
-    <section className="relative w-full py-20 overflow-hidden" id="contact">
-      {/* Animated gradient background with blur effects */}
+    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-navy/90" id="contact">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-4 text-gray-800">
-            Let's Connect
+          <h2 className="text-3xl font-semibold mb-4 text-navy dark:text-light">
+            Let&apos;s Work Together
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Let's work
-            together to bring your ideas to life.
+          <p className="text-lg text-navy/60 dark:text-light/60 max-w-2xl mx-auto">
+            Have a project in mind? I&apos;d love to hear about it. Let&apos;s bring your
+            ideas to life.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Contact Information - Flex Column Layout */}
           <div className="flex flex-col gap-4">
-            {/* Contact Info Cards - Vertical Stack */}
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl p-5 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+                className="group relative rounded-2xl p-5 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
               >
-                {/* Gradient background on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-blue-500/0 via-purple-500/0 to-pink-500/0 group-hover:opacity-10 transition-opacity duration-300"></div>
-
                 <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="text-3xl bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                    {info.icon}
-                  </div>
-
+                  <div className="text-3xl text-cyan">{info.icon}</div>
                   <div className="flex-1">
-                    {/* Title */}
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                    <h3 className="text-lg font-semibold text-navy dark:text-light mb-2">
                       {info.title}
                     </h3>
-
-                    {/* Details */}
                     <div className="space-y-1">
                       {info.details.map((detail, idx) => (
-                        <p
-                          key={idx}
-                          className="text-sm text-gray-600 dark:text-gray-400"
-                        >
+                        <p key={idx} className="text-sm text-navy/60 dark:text-light/60">
                           {detail}
                         </p>
                       ))}
                     </div>
                   </div>
                 </div>
-
-                {/* Decorative line */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-cyan group-hover:w-3/4 transition-all duration-500 rounded-full"></div>
               </div>
             ))}
 
-            {/* Social Links Card */}
-            <div className="rounded-2xl p-6 backdrop-blur-sm bg-white/10 border border-white/20 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 text-center">
+            <div className="rounded-2xl p-6 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20">
+              <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 text-center">
                 Connect With Me
               </h3>
               <div className="flex justify-center gap-4">
@@ -155,66 +131,61 @@ export default function Contact() {
                     key={index}
                     href={social.href}
                     target="_blank"
-                    className="group relative p-3 rounded-full backdrop-blur-md bg-white/20 border border-white/30 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:scale-110 hover:text-blue-600 hover:border-blue-500"
+                    className="group relative p-3 rounded-full bg-navy/5 dark:bg-light/5 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 transition-all duration-300 hover:scale-110 hover:text-cyan hover:border-cyan"
                     aria-label={social.label}
                   >
                     <span className="text-xl">{social.icon}</span>
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
+                    <div className="absolute inset-0 rounded-full bg-cyan opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300 -z-10"></div>
                   </Link>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="rounded-2xl p-6 backdrop-blur-md bg-white/10 border border-white/20 shadow-xl">
-            <h3 className="text-xl font-semibold mb-6 text-gray-800 text-center">
-              Send Me a Message
+          <div className="rounded-2xl p-6 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl">
+            <h3 className="text-xl font-semibold mb-6 text-navy dark:text-light text-center">
+              Get a Quote
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Name Field */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-navy/70 dark:text-light/70 mb-2">
                   Your Name
                 </label>
                 <div className="relative">
-                  <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+                  <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-navy/40 dark:text-light/40 group-focus-within:text-cyan transition-colors" />
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                     placeholder="John Doe"
                   />
                 </div>
               </div>
 
-              {/* Email Field */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-navy/70 dark:text-light/70 mb-2">
                   Email Address
                 </label>
                 <div className="relative">
-                  <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+                  <FiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-navy/40 dark:text-light/40 group-focus-within:text-cyan transition-colors" />
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                     placeholder="hello@example.com"
                   />
                 </div>
               </div>
 
-              {/* Subject Field */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-navy/70 dark:text-light/70 mb-2">
                   Subject
                 </label>
                 <input
@@ -223,31 +194,29 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                   placeholder="Project Inquiry"
                 />
               </div>
 
-              {/* Message Field */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-navy/70 dark:text-light/70 mb-2">
                   Message
                 </label>
                 <div className="relative">
-                  <FiMessageSquare className="absolute left-3 top-4 text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+                  <FiMessageSquare className="absolute left-3 top-4 text-navy/40 dark:text-light/40 group-focus-within:text-cyan transition-colors" />
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-gray-200/60 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -256,8 +225,8 @@ export default function Contact() {
                   flex items-center justify-center gap-2
                   ${
                     isSubmitting
-                      ? "bg-gray-500 cursor-not-allowed"
-                      : "bg-linear-to-r from-blue-600 to-purple-600 shadow-lg shadow-blue-500/30 hover:scale-105 hover:shadow-xl"
+                      ? "bg-navy/50 dark:bg-cyan/50 cursor-not-allowed"
+                      : "bg-navy dark:bg-cyan shadow-lg shadow-navy/30 dark:shadow-cyan/30 hover:scale-105 hover:shadow-xl"
                   }
                 `}
               >
@@ -274,12 +243,11 @@ export default function Contact() {
                 )}
               </button>
 
-              {/* Success/Error Message */}
               {submitStatus === "success" && (
                 <div className="flex items-center gap-2 p-3 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700">
                   <FiCheckCircle className="text-lg" />
                   <span className="text-sm">
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </span>
                 </div>
               )}
@@ -296,10 +264,9 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Footer Note */}
         <div className="text-center mt-12">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            📍 Available for freelance work | 🚀 Quick response within 24 hours
+          <p className="text-sm text-navy/50 dark:text-light/50">
+            Available for freelance work | Quick response within 24 hours
           </p>
         </div>
       </div>

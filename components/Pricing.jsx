@@ -4,75 +4,46 @@ import CardTwo from "./cards/CardTwo";
 import {
   FiLayout,
   FiFileText,
-  FiGrid,
-  FiTool,
-  FiSettings,
   FiSmartphone,
   FiMail,
-  FiMessageCircle,
-  FiBell,
   FiSearch,
-  FiTrendingUp,
   FiBarChart2,
   FiMapPin,
   FiImage,
-  FiStar,
   FiClock,
   FiCalendar,
   FiUsers,
-  FiLock,
-  FiShield,
   FiCreditCard,
   FiDatabase,
-  FiGlobe,
-  FiEdit,
+  FiTool,
 } from "react-icons/fi";
-
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineRateReview } from "react-icons/md";
 import { useState } from "react";
+import Link from "next/link";
 
 function Pricing() {
   const [category, setCategory] = useState(1);
-  const [myPackage, setMyPackage] = useState("Website Packages");
+  const [myPackageLabel, setMyPackageLabel] = useState("Website");
 
   const websitePlans = [
     {
-      name: "Express",
-      description:
-        "Perfect for freelancers and small businesses starting online",
+      name: "Essential",
+      description: "Perfect for freelancers and startups needing a simple online presence",
       price: "R2,500",
       isPopular: false,
+      timeline: "3-5 days",
       features: [
         { icon: <FiLayout />, text: "1 Page Website" },
         { icon: <FiSmartphone />, text: "Full Mobile Optimization" },
         { icon: <FiMail />, text: "Contact Form" },
-        { icon: <FiSearch />, text: "SEO Optimization" },
+        { icon: <FiSearch />, text: "Basic SEO" },
       ],
       includedFeatures: [
         "5-8 Custom Sections",
         "Social Media Links",
         "Hosting Setup Assistance",
-        "5 Rounds of Revisions",
-      ],
-    },
-    {
-      name: "Essential",
-      description: "Professional online presence for growing businesses",
-      price: "R4,500",
-      isPopular: false,
-      features: [
-        { icon: <FiFileText />, text: "3 Page Website" },
-        { icon: <FiSmartphone />, text: "Full Mobile Optimization" },
-        { icon: <FiMail />, text: "Contact Forms" },
-        { icon: <FaWhatsapp />, text: "WhatsApp Integration" },
-        { icon: <FiSearch />, text: "SEO Optimization" },
-      ],
-      includedFeatures: [
-        "8-10 Custom Sections",
-        "Google Maps Integration",
         "2 Rounds of Revisions",
-        "Email Setup Guidance",
       ],
     },
     {
@@ -80,6 +51,7 @@ function Pricing() {
       description: "Multi-page presence for established businesses",
       price: "R6,500",
       isPopular: true,
+      timeline: "5-7 days",
       features: [
         { icon: <FiFileText />, text: "4-5 Pages" },
         { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
@@ -90,76 +62,55 @@ function Pricing() {
       ],
       includedFeatures: [
         "12-15 Custom Sections",
-        "2 Rounds of Revisions",
         "1 Month Free Maintenance",
+        "3 Rounds of Revisions",
         "Priority Email Support",
       ],
     },
     {
       name: "Business",
-      description: "Complete solution with advanced features",
+      description: "Complete solution with blog and advanced features",
       price: "R8,500",
       isPopular: false,
+      timeline: "7-10 days",
       features: [
         { icon: <FiFileText />, text: "5-6 Pages + Blog" },
         { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
         { icon: <MdOutlineRateReview />, text: "Testimonials Slider" },
         { icon: <FiMail />, text: "Newsletter Signup" },
         { icon: <FiImage />, text: "Image Gallery" },
-        { icon: <FiTrendingUp />, text: "Advanced SEO + Analytics" },
+        { icon: <FiBarChart2 />, text: "Advanced SEO + Analytics" },
       ],
       includedFeatures: [
         "18+ Custom Sections",
-        "3 Rounds of Revisions",
         "3 Months Maintenance",
-        "Priority Support",
         "Free .co.za Domain Setup",
         "Content Upload Assistance",
-      ],
-    },
-    {
-      name: "Premium",
-      description: "Feature-rich website with e-commerce capabilities",
-      price: "R12,000",
-      isPopular: false,
-      features: [
-        { icon: <FiFileText />, text: "10+ Pages" },
-        { icon: <FiSmartphone />, text: "Premium Mobile Experience" },
-        { icon: <FiCreditCard />, text: "E-commerce Integration" },
-        { icon: <FiMail />, text: "Newsletter System" },
-        { icon: <FiImage />, text: "Advanced Gallery" },
-        { icon: <FiUsers />, text: "User Accounts" },
-      ],
-      includedFeatures: [
-        "25+ Custom Sections",
-        "Product Management",
-        "Payment Gateway Setup",
-        "6 Months Maintenance",
         "Priority Support",
-        "SEO & Analytics Package",
       ],
     },
   ];
 
   const webAppPlans = [
     {
-      name: "Booking App",
-      description: "Simple appointment booking for single professionals",
+      name: "Starter App",
+      description: "Simple booking system for single professionals",
       price: "R15,000",
       isPopular: false,
+      timeline: "2-3 weeks",
       features: [
         { icon: <FiCalendar />, text: "Appointment Booking" },
         { icon: <FiSmartphone />, text: "Mobile Friendly" },
         { icon: <FiMail />, text: "Email Confirmations" },
-        { icon: <FiUsers />, text: "Patient/Client Portal" },
+        { icon: <FiUsers />, text: "Client Portal" },
         { icon: <FiClock />, text: "Availability Management" },
       ],
       includedFeatures: [
-        "Single Professional/Doctor",
-        "Cancel/Reschedule Functionality",
+        "Single Professional",
+        "Cancel/Reschedule",
         "Email Reminders",
-        "1 Month Maintenance",
         "Basic Dashboard",
+        "1 Month Maintenance",
       ],
     },
     {
@@ -167,13 +118,14 @@ function Pricing() {
       description: "Multi-user system for growing businesses",
       price: "R25,000",
       isPopular: true,
+      timeline: "4-6 weeks",
       features: [
         { icon: <FiCalendar />, text: "Advanced Booking System" },
         { icon: <FiUsers />, text: "Multiple Staff/Doctors" },
         { icon: <FiMail />, text: "Email & SMS Notifications" },
         { icon: <FiBarChart2 />, text: "Reporting Dashboard" },
         { icon: <FiDatabase />, text: "Client Database" },
-        { icon: <FiSettings />, text: "Staff Management" },
+        { icon: <FiTool />, text: "Staff Management" },
       ],
       includedFeatures: [
         "Unlimited Appointments",
@@ -188,13 +140,14 @@ function Pricing() {
       description: "Full-featured business management solution",
       price: "R40,000",
       isPopular: false,
+      timeline: "6-8 weeks",
       features: [
         { icon: <FiCalendar />, text: "Smart Scheduling" },
         { icon: <FiUsers />, text: "Multiple Locations/Departments" },
         { icon: <FiCreditCard />, text: "Payment Processing" },
-        { icon: <FiBell />, text: "Real-time Notifications" },
         { icon: <FiDatabase />, text: "Advanced Analytics" },
-        { icon: <FiLock />, text: "Role-Based Access" },
+        { icon: <FiTool />, text: "API Integrations" },
+        { icon: <FiUsers />, text: "Role-Based Access" },
       ],
       includedFeatures: [
         "API Integrations",
@@ -205,71 +158,48 @@ function Pricing() {
         "Data Migration Assistance",
       ],
     },
-    {
-      name: "Custom Web App",
-      description: "Tailor-made solution for your specific needs",
-      price: "Custom",
-      isPopular: false,
-      features: [
-        { icon: <FiTool />, text: "Custom Features" },
-        { icon: <FiDatabase />, text: "Custom Database Design" },
-        { icon: <FiUsers />, text: "User Authentication" },
-        { icon: <FiShield />, text: "Security First Approach" },
-        { icon: <FiSettings />, text: "Scalable Architecture" },
-        { icon: <FiGlobe />, text: "API Integrations" },
-      ],
-      includedFeatures: [
-        "Tailored to Your Requirements",
-        "Full Source Code Ownership",
-        "3 Months Maintenance",
-        "Priority Support",
-        "Comprehensive Documentation",
-        "Training Included",
-      ],
-    },
   ];
 
   const tabs = [
-    {
-      id: 1,
-      title: "Website Packages",
-    },
-    {
-      id: 2,
-      title: "Web App Packages",
-    },
+    { id: 1, title: "Website Packages", label: "Website" },
+    { id: 2, title: "Web App Packages", label: "Web App" },
   ];
 
   const selectCategory = (id) => {
     setCategory(id);
-    setMyPackage(tabs[id - 1].title);
+    const tab = tabs.find((t) => t.id === id);
+    if (tab) setMyPackageLabel(tab.label);
+  };
+
+  const handleGetStarted = (plan) => {
+    const subject = encodeURIComponent(`Interested in the ${plan.name} plan`);
+    const body = encodeURIComponent(
+      `Hi Milton,\n\nI'm interested in the ${plan.name} plan (${plan.price}).\n\nCould we discuss this further?\n\nThanks!`,
+    );
+    window.open(`mailto:hello@milton.dev?subject=${subject}&body=${body}`);
   };
 
   return (
-    <section className="w-full relative overflow-hidden">
-      {/* Gradient background with blur effects */}
+    <section className="w-full relative overflow-hidden bg-white dark:bg-navy/90" id="pricing">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
       </div>
 
       <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5">
-        <h2 className="text-2xl  sm:text-[32px] text-center sm:leading-10 w-7/9 text-gray-800  dark:text-gray-300 font-medium max-w-2xl leading-6 backdrop-blur-sm bg-white/5 p-3 rounded-lg">
+        <h2 className="text-3xl sm:text-[32px] text-center sm:leading-10 text-navy dark:text-light font-semibold max-w-2xl leading-6 p-3 rounded-lg">
           Choose a
-          <span className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mx-2">
-            {myPackage.toLowerCase().slice(0, -1)}
-          </span>
-          that works for your business
+          <span className="text-cyan mx-2">{myPackageLabel}</span>
+          plan that works for your business
         </h2>
-        <p className="text-center text-lg text-gray-600 font-normal max-w-2xl leading-6">
-          Choose a {myPackage.toLowerCase().slice(0, -1)} that works for your
-          business Whether you need a simple online presence or a powerful web
-          application, We've got you covered. Every plan includes custom design,
-          mobile responsiveness, and ongoing support.
+        <p className="text-center text-lg text-navy/60 dark:text-light/60 font-normal max-w-2xl leading-6">
+          Whether you need a simple online presence or a powerful web
+          application, I&apos;ve got you covered. Every plan includes custom
+          design, mobile responsiveness, and ongoing support. Hosting and domain
+          are quoted separately based on your needs.
         </p>
 
-        {/* Category Tabs with gradient theme */}
         <div className="flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
           {tabs.map((tab) => {
             const isActive = tab.id === category;
@@ -278,8 +208,8 @@ function Pricing() {
                 key={tab.id}
                 className={
                   isActive
-                    ? "py-2 px-5 text-sm bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-105"
-                    : "text-gray-600 py-2 px-5 text-sm border-2 border-gray-300 rounded-full hover:cursor-pointer hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover:scale-105"
+                    ? "py-2 px-5 text-sm bg-navy dark:bg-cyan text-white rounded-full shadow-lg shadow-navy/30 transition-all duration-300 hover:scale-105"
+                    : "text-navy/70 dark:text-light/70 py-2 px-5 text-sm border-2 border-navy/20 dark:border-light/20 rounded-full hover:cursor-pointer hover:border-cyan hover:text-cyan transition-all duration-300 hover:scale-105"
                 }
                 onClick={() => selectCategory(tab.id)}
               >
@@ -290,22 +220,39 @@ function Pricing() {
         </div>
       </section>
 
-      {/* Plans Grid */}
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 pb-20">
-          {websitePlans.map((plan) => {
-            return <CardTwo key={plan.name} plan={plan} />;
-          })}
-        </section>
-      ) : category === 2 ? (
-        <section className="max-w-6xl mx-auto min-h-screen flex items-center justify-center flex-wrap gap-5 pb-20">
-          {webAppPlans.map((plan) => {
-            return <CardTwo key={plan.name} plan={plan} />;
-          })}
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5 pb-20">
+          {websitePlans.map((plan) => (
+            <CardTwo
+              key={plan.name}
+              plan={plan}
+              onGetStarted={() => handleGetStarted(plan)}
+            />
+          ))}
         </section>
       ) : (
-        " "
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5 pb-20">
+          {webAppPlans.map((plan) => (
+            <CardTwo
+              key={plan.name}
+              plan={plan}
+              onGetStarted={() => handleGetStarted(plan)}
+            />
+          ))}
+        </section>
       )}
+
+      <div className="text-center pb-20">
+        <p className="text-navy/60 dark:text-light/60 mb-4">
+          Don&apos;t see exactly what you need?
+        </p>
+        <Link
+          href="#contact"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold border-2 border-cyan text-cyan transition-all duration-300 hover:scale-105 hover:bg-cyan hover:text-white"
+        >
+          Request a Custom Quote
+        </Link>
+      </div>
     </section>
   );
 }

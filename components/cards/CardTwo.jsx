@@ -1,79 +1,83 @@
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
-export default function CardTwo({ plan }) {
+export default function CardTwo({ plan, onGetStarted }) {
+  const isPopular = plan.isPopular;
   return (
     <div
       className={
-        plan.name === "Essential" || plan.name === "Business App"
-          ? "border-2 border-(--primary-color) bg-white flex flex-col justify-start gap-5 w-full  sm:w-90 p-5 rounded-xl shadow-2xl shadow-blue-500/50 h-145 smooth"
-          : "flex flex-col justify-start gap-5 w-full sm:w-90 bg-white p-5 rounded-xl shadow-2xl h-145 smooth"
+        isPopular
+          ? "border-2 border-cyan bg-white/80 dark:bg-navy/90 flex flex-col justify-start gap-5 w-full sm:w-90 p-5 rounded-xl shadow-2xl shadow-cyan/30"
+          : "flex flex-col justify-start gap-5 w-full sm:w-90 bg-white/60 dark:bg-navy/80 p-5 rounded-xl shadow-2xl"
       }
     >
-      <div className="">
+      <div>
         <h2
           className={
-            plan.name === "Essential" || plan.name === "Business App"
-              ? "flex items-center justify-between text-gray-800 text-xl font-semibold"
-              : "text-xl font-semibold text-gray-800 "
+            isPopular
+              ? "flex items-center justify-between text-navy dark:text-light text-xl font-semibold"
+              : "text-xl font-semibold text-navy dark:text-light"
           }
         >
           {plan.name}
-          {plan.name === "Essential" || plan.name === "Business App" ? (
-            <span className="bg-[#2f27ce] text-white font-semibold text-xs py-1 px-3 rounded-full">
+          {isPopular ? (
+            <span className="bg-cyan text-white font-semibold text-xs py-1 px-3 rounded-full">
               Most Popular
             </span>
-          ) : (
-            ""
-          )}
+          ) : null}
         </h2>
-        <p className="text-gray-600 text-sm line-clamp-1">{plan.description}</p>
+        <p className="text-navy/60 dark:text-light/60 text-sm line-clamp-1">{plan.description}</p>
       </div>
-      <h2 className="flex flex-col">
-        <span className="text-[#131212ce] text-xs">
-          {plan.price === "Custom" ? "price" : "from"}
-        </span>
-        <span className="text-3xl text-gray-800  font-semibold">
-          {plan.price}
-        </span>
-      </h2>
+
+      <div className="flex items-end gap-3">
+        <h2 className="flex flex-col">
+          <span className="text-navy/50 dark:text-light/50 text-xs">
+            {plan.price === "Custom" ? "price" : "from"}
+          </span>
+          <span className="text-3xl text-navy dark:text-light font-semibold">
+            {plan.price}
+          </span>
+        </h2>
+        {plan.timeline && (
+          <span className="text-navy/40 dark:text-light/40 text-xs mb-1">
+            ~{plan.timeline}
+          </span>
+        )}
+      </div>
+
       <button
+        onClick={onGetStarted}
         className={
-          plan.name === "Essential" || plan.name === "Business App"
-            ? "bg-[#2f27ce] text-white py-2 rounded-lg shadow-lg shadow-blue-[#443dff] hover:bg-[#2f27ce]/90 hover:cursor-pointer"
-            : "bg-(--text-color) text-white py-2 rounded-lg shadow-2xl shadow-gray-950/30 hover:bg-(--text-hover-color) hover:cursor-pointer"
+          isPopular
+            ? "bg-cyan text-white py-2 rounded-lg shadow-lg shadow-cyan/40 hover:bg-cyan/90 hover:cursor-pointer transition-all duration-300"
+            : "bg-navy dark:bg-cyan text-white py-2 rounded-lg shadow-2xl shadow-navy/30 dark:shadow-cyan/30 hover:bg-navy/90 dark:hover:bg-cyan/90 hover:cursor-pointer transition-all duration-300"
         }
       >
         Get Started
       </button>
+
       <div className="grid gap-5">
-        <div className="flex  flex-col gap-1 text-sm">
-          {plan.features.map((features, index) => {
-            return (
-              <p
-                key={index}
-                className="flex items-center gap-2 text-sm text-gray-800 "
-              >
-                <span className="text-lg">{features.icon}</span>
-                <span className="">{features.text}</span>
-              </p>
-            );
-          })}
+        <div className="flex flex-col gap-1 text-sm">
+          {plan.features.map((feature, index) => (
+            <p
+              key={index}
+              className="flex items-center gap-2 text-sm text-navy dark:text-light"
+            >
+              <span className="text-lg text-cyan shrink-0">{feature.icon}</span>
+              <span>{feature.text}</span>
+            </p>
+          ))}
         </div>
         <div>
-          <h2 className="font-semibold text-(--text-color)">
-            Package Includes
-          </h2>
-          <ul className="text-(--light-text-color) ml-2 mt-1 text-sm">
-            {plan.includedFeatures.map((included, index) => {
-              return (
-                <li key={index} className="flex items-center gap-2">
-                  <span>
-                    <IoCheckmarkDoneOutline className="text-xl text-gray-600" />
-                  </span>
-                  <span>{included}</span>
-                </li>
-              );
-            })}
+          <h2 className="font-semibold text-navy dark:text-light">Package Includes</h2>
+          <ul className="text-navy/60 dark:text-light/60 ml-2 mt-1 text-sm">
+            {plan.includedFeatures.map((included, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <span className="shrink-0">
+                  <IoCheckmarkDoneOutline className="text-xl text-cyan" />
+                </span>
+                <span>{included}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -84,22 +84,28 @@ export default function HeroTwoA({ img }) {
             top: "clamp(300px, 55%, 415px)",
             fontFamily: "'Great Vibes', cursive",
             fontSize: "clamp(36px, 6vw, 76px)",
-            color: "#13c5dd",
+            background: "linear-gradient(135deg, #13c5dd 0%, #f8c0de 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
           }}
         >
           Web Developer
         </div>
 
-        {/* Availability badge */}
+        {/* Availability badge - same line as stats, above testimonial */}
         <div
-          className="absolute flex items-center gap-2"
+          className="absolute flex items-center gap-1.5 px-3 py-1 rounded-full"
           style={{
-            top: "clamp(25px, 4vh, 50px)",
+            top: "clamp(80px, 12%, 130px)",
             right: 0,
+            background: "rgba(34,197,94,0.12)",
+            border: "1px solid rgba(34,197,94,0.25)",
+            animation: "fadeSlideUp 0.6s ease-out 0.3s both",
           }}
         >
           <span
-            className="inline-block w-2 h-2 rounded-full"
+            className="inline-block w-1.5 h-1.5 rounded-full"
             style={{
               backgroundColor: "#22c55e",
               animation: "pulseDot 2s ease-in-out infinite",
@@ -108,10 +114,10 @@ export default function HeroTwoA({ img }) {
           />
           <span
             style={{
-              fontSize: "clamp(11px, 0.9vw, 13px)",
+              fontSize: "clamp(9px, 0.7vw, 11px)",
               fontFamily: "'Poppins', sans-serif",
-              fontWeight: 300,
-              color: "rgba(255,255,255,0.8)",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.85)",
               letterSpacing: "0.05em",
             }}
           >
@@ -119,7 +125,27 @@ export default function HeroTwoA({ img }) {
           </span>
         </div>
 
-        {/* Animated stats - top-left corner */}
+        {/* Bottom-right: CTA button */}
+        <div
+          className="absolute"
+          style={{
+            bottom: "clamp(30px, 8vh, 70px)",
+            right: 0,
+          }}
+        >
+          <Link
+            href="#contact"
+            className="group inline-flex items-center gap-3 px-8 py-3 bg-cyan text-navy text-sm font-semibold tracking-[0.15em] uppercase transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(19,197,221,0.4)]"
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              boxShadow: "0 0 20px rgba(19,197,221,0.3)",
+              animation: "pulseCta 2.5s ease-in-out infinite",
+            }}
+          >
+            Start a Project
+            <span className="inline-block text-lg transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+          </Link>
+        </div>
         <div
           className="absolute flex gap-8"
           style={{
@@ -269,6 +295,8 @@ export default function HeroTwoA({ img }) {
             className="group inline-flex items-center gap-3 px-8 py-3 bg-cyan text-navy text-sm font-semibold tracking-[0.15em] uppercase transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(19,197,221,0.4)]"
             style={{
               fontFamily: "'Poppins', sans-serif",
+              boxShadow: "0 0 20px rgba(19,197,221,0.3)",
+              animation: "pulseCta 2.5s ease-in-out infinite",
             }}
           >
             Start a Project
@@ -336,6 +364,10 @@ export default function HeroTwoA({ img }) {
         @keyframes bounceScroll {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(6px); }
+        }
+        @keyframes pulseCta {
+          0%, 100% { box-shadow: 0 0 20px rgba(19,197,221,0.3); }
+          50% { box-shadow: 0 0 50px rgba(19,197,221,0.6); }
         }
       `}</style>
     </main>

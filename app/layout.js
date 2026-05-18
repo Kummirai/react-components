@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-navy transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-[#070b15] transition-colors duration-300`}
       >
         <DarkModeProvider>
           <NavbarOne links={links} />

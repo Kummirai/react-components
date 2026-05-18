@@ -98,11 +98,14 @@ export default function Projects() {
   );
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-navy/90" id="projects">
+    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-[#070b15]" id="projects">
+      {/* Top fade gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,7 +129,7 @@ export default function Projects() {
                 ${
                   activeCategory === category
                     ? "bg-navy dark:bg-cyan text-white shadow-lg shadow-navy/30 scale-105"
-                    : "bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan hover:text-cyan hover:scale-105"
+                    : "bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan hover:text-cyan hover:scale-105"
                 }
               `}
             >
@@ -139,7 +142,7 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+              className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
             >
               <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
@@ -151,14 +154,14 @@ export default function Projects() {
                   <Link
                     href={project.github}
                     target="_blank"
-                    className="bg-white/90 dark:bg-navy p-2 rounded-full transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
+                    className="bg-white/90 dark:bg-[#070b15] p-2 rounded-full transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
                   >
                     <FiGithub className="text-navy dark:text-light text-xl" />
                   </Link>
                   <Link
                     href={project.liveDemo}
                     target="_blank"
-                    className="bg-white/90 dark:bg-navy p-2 rounded-full transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
+                    className="bg-white/90 dark:bg-[#070b15] p-2 rounded-full transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
                   >
                     <FiExternalLink className="text-navy dark:text-light text-xl" />
                   </Link>

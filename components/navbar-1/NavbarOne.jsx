@@ -15,8 +15,11 @@ export default function NavbarOne({ links }) {
 
   return (
     <header className="relative p-6 sm:max-lg:p-10">
-      <div className="absolute inset-0 -z-10 backdrop-blur-md bg-white dark:bg-navy/80">
+      <div className="absolute inset-0 -z-10 backdrop-blur-md bg-white dark:bg-[#070b15]/80">
       </div>
+      {/* Bottom fade gradient for continuity */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-transparent to-white/0 dark:to-[#070b15]/0 z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/20 dark:via-cyan/10 to-transparent" />
 
       <nav className="sm:max-w-3xl lg:max-w-6xl mx-auto flex items-center justify-between relative z-10">
         {/* Logo */}
@@ -78,7 +81,7 @@ export default function NavbarOne({ links }) {
         {/* Desktop Right Section */}
         <div className="hidden lg:flex items-center border-l-4 gap-8 pl-3 border-l-navy/20 dark:border-l-light/20">
           {/* Theme Toggle */}
-          <div className="flex gap-2 rounded-full p-1 px-2 border border-navy/20 dark:border-light/20 bg-light/50 dark:bg-navy/50 backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-105 hover:bg-light/80 dark:hover:bg-navy/80">
+          <div className="flex gap-2 rounded-full p-1 px-2 border border-navy/20 dark:border-light/20 bg-light/50 dark:bg-[#070b15]/50 backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-105 hover:bg-light/80 dark:hover:bg-[#070b15]/80">
             <button
               onClick={toggle}
               className="group relative transition-all duration-300 hover:scale-110"
@@ -107,7 +110,7 @@ export default function NavbarOne({ links }) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 mx-4 p-4 rounded-2xl backdrop-blur-md bg-light/90 dark:bg-navy/90 border border-navy/10 dark:border-light/10 shadow-2xl animate-slide-down z-20">
+        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 mx-4 p-4 rounded-2xl backdrop-blur-md bg-light/90 dark:bg-[#070b15]/90 border border-navy/10 dark:border-light/10 shadow-2xl animate-slide-down z-20">
           <ul className="flex flex-col items-center gap-3">
             {links.map((link) => {
               const isActive = pathname === link.path;
@@ -133,7 +136,7 @@ export default function NavbarOne({ links }) {
             })}
             {/* Mobile theme toggle and contact */}
             <li className="w-full flex items-center justify-center gap-4 mt-2 pt-2 border-t border-navy/10 dark:border-light/10">
-              <div className="flex gap-2 rounded-full p-1 px-3 border border-navy/20 dark:border-light/20 bg-light/50 dark:bg-navy/50">
+              <div className="flex gap-2 rounded-full p-1 px-3 border border-navy/20 dark:border-light/20 bg-light/50 dark:bg-[#070b15]/50">
                 <button
                   onClick={toggle}
                   className="transition-all duration-300 hover:scale-110"

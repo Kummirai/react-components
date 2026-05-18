@@ -2,30 +2,50 @@
 
 import React from "react";
 import Link from "next/link";
+import { useDarkMode } from "@/components/DarkModeProvider";
 
 export default function HeroTwoA({ img }) {
+  const { dark } = useDarkMode();
+
+  const c = {
+    bg: dark ? "#070b15" : "#f0f4f8",
+    radialStart: dark ? "rgba(19,197,221,0.45)" : "rgba(19,197,221,0.08)",
+    radialMid: dark ? "rgba(19,197,221,0.15)" : "rgba(19,197,221,0.02)",
+    radialEnd: dark ? "#070b15" : "#f0f4f8",
+    orbStart: dark ? "rgba(19,197,221,0.9)" : "rgba(19,197,221,0.12)",
+    orbMid: dark ? "rgba(19,197,221,0.2)" : "rgba(19,197,221,0.04)",
+    watermark: dark ? "rgba(243,237,237,0.1)" : "rgba(29,42,77,0.12)",
+    statNumber: dark ? "#f3eded" : "#1d2a4d",
+    statLabel: dark ? "rgba(255,255,255,0.3)" : "rgba(29,42,77,0.55)",
+    name: dark ? "rgba(255,255,255,0.9)" : "#1d2a4d",
+    tagline: dark ? "rgba(255,255,255,0.45)" : "rgba(29,42,77,0.6)",
+    testiText: dark ? "rgba(255,255,255,0.5)" : "rgba(29,42,77,0.7)",
+    testiAttr: dark ? "rgba(255,255,255,0.25)" : "rgba(29,42,77,0.5)",
+    availText: dark ? "rgba(255,255,255,0.85)" : "rgba(29,42,77,0.8)",
+    scrollText: dark ? "rgba(255,255,255,0.2)" : "rgba(29,42,77,0.45)",
+    scrollArrow: dark ? "rgba(19,197,221,0.3)" : "rgba(19,197,221,0.5)",
+  };
+
   return (
     <main
       className="relative w-full h-screen overflow-hidden"
-      style={{ backgroundColor: "#070b15" }}
+      style={{ backgroundColor: c.bg }}
     >
-      {/* Radial background gradient - cyan glow */}
+      {/* Radial background gradient */}
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "radial-gradient(circle at center, rgba(19,197,221,0.45) 0%, rgba(19,197,221,0.15) 25%, #070b15 70%)",
+          background: `radial-gradient(circle at center, ${c.radialStart} 0%, ${c.radialMid} 25%, ${c.radialEnd} 70%)`,
         }}
       />
 
-      {/* Cyan glow orb */}
+      {/* Glow orb */}
       <div
         className="absolute"
         style={{
           width: "min(650px, 50vw)",
           height: "min(650px, 50vw)",
-          background:
-            "radial-gradient(circle, rgba(19,197,221,0.9) 0%, rgba(19,197,221,0.2) 40%, transparent 70%)",
+          background: `radial-gradient(circle, ${c.orbStart} 0%, ${c.orbMid} 40%, transparent 70%)`,
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -43,7 +63,7 @@ export default function HeroTwoA({ img }) {
           fontSize: "clamp(60px, 20vw, 300px)",
           fontWeight: 800,
           letterSpacing: "clamp(-4px, -0.8vw, -12px)",
-          color: "rgba(243,237,237,0.1)",
+          color: c.watermark,
           zIndex: 1,
           fontFamily: "'Poppins', sans-serif",
           whiteSpace: "nowrap",
@@ -54,7 +74,7 @@ export default function HeroTwoA({ img }) {
         KUMIRAI
       </h1>
 
-      {/* Model image - spans full width at bottom */}
+      {/* Model image */}
       <div
         className="absolute bottom-0 inset-x-0 flex justify-center"
         style={{ height: "92%", zIndex: 3 }}
@@ -65,8 +85,7 @@ export default function HeroTwoA({ img }) {
           loading="eager"
           className="h-full w-auto object-contain object-bottom"
           style={{
-            filter:
-              "contrast(1.05) saturate(1.1) drop-shadow(0 25px 40px rgba(0,0,0,0.7))",
+            filter: `contrast(1.05) saturate(1.1) drop-shadow(0 25px 40px rgba(0,0,0,${dark ? "0.7" : "0.15"}))`,
             maxWidth: "none",
           }}
         />
@@ -84,23 +103,24 @@ export default function HeroTwoA({ img }) {
             top: "clamp(300px, 55%, 415px)",
             fontFamily: "'Great Vibes', cursive",
             fontSize: "clamp(36px, 6vw, 76px)",
-            background: "linear-gradient(135deg, #13c5dd 0%, #f8c0de 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
+            color: dark ? undefined : "#1d2a4d",
+            background: dark ? "linear-gradient(135deg, #13c5dd 0%, #f8c0de 100%)" : undefined,
+            WebkitBackgroundClip: dark ? "text" : undefined,
+            WebkitTextFillColor: dark ? "transparent" : undefined,
+            backgroundClip: dark ? "text" : undefined,
           }}
         >
           Web Developer
         </div>
 
-        {/* Availability badge - same line as stats, above testimonial */}
+        {/* Availability badge */}
         <div
           className="absolute flex items-center gap-1.5 px-3 py-1 rounded-full"
           style={{
             top: "clamp(80px, 12%, 130px)",
             right: 0,
-            background: "rgba(34,197,94,0.12)",
-            border: "1px solid rgba(34,197,94,0.25)",
+            background: dark ? "rgba(34,197,94,0.12)" : "rgba(34,197,94,0.1)",
+            border: dark ? "1px solid rgba(34,197,94,0.25)" : "1px solid rgba(34,197,94,0.3)",
             animation: "fadeSlideUp 0.6s ease-out 0.3s both",
           }}
         >
@@ -117,7 +137,7 @@ export default function HeroTwoA({ img }) {
               fontSize: "clamp(9px, 0.7vw, 11px)",
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 400,
-              color: "rgba(255,255,255,0.85)",
+              color: c.availText,
               letterSpacing: "0.05em",
             }}
           >
@@ -125,27 +145,7 @@ export default function HeroTwoA({ img }) {
           </span>
         </div>
 
-        {/* Bottom-right: CTA button */}
-        <div
-          className="absolute"
-          style={{
-            bottom: "clamp(30px, 8vh, 70px)",
-            right: 0,
-          }}
-        >
-          <Link
-            href="#contact"
-            className="group inline-flex items-center gap-3 px-8 py-3 bg-cyan text-navy text-sm font-semibold tracking-[0.15em] uppercase transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(19,197,221,0.4)]"
-            style={{
-              fontFamily: "'Poppins', sans-serif",
-              boxShadow: "0 0 20px rgba(19,197,221,0.3)",
-              animation: "pulseCta 2.5s ease-in-out infinite",
-            }}
-          >
-            Start a Project
-            <span className="inline-block text-lg transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
-          </Link>
-        </div>
+        {/* Animated stats */}
         <div
           className="absolute flex gap-8"
           style={{
@@ -170,7 +170,7 @@ export default function HeroTwoA({ img }) {
                   fontSize: "clamp(28px, 3vw, 42px)",
                   fontWeight: 200,
                   fontFamily: "'Poppins', sans-serif",
-                  color: "#f3eded",
+                  color: c.statNumber,
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
                 }}
@@ -182,7 +182,7 @@ export default function HeroTwoA({ img }) {
                   fontSize: "clamp(10px, 0.75vw, 12px)",
                   fontFamily: "'Poppins', sans-serif",
                   fontWeight: 300,
-                  color: "rgba(255,255,255,0.3)",
+                  color: c.statLabel,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
                   marginTop: "4px",
@@ -194,7 +194,7 @@ export default function HeroTwoA({ img }) {
           ))}
         </div>
 
-        {/* Testimonial snippet */}
+        {/* Testimonial */}
         <div
           className="absolute"
           style={{
@@ -211,7 +211,7 @@ export default function HeroTwoA({ img }) {
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 300,
               fontStyle: "italic",
-              color: "rgba(255,255,255,0.5)",
+              color: c.testiText,
               lineHeight: 1.5,
             }}
           >
@@ -222,7 +222,7 @@ export default function HeroTwoA({ img }) {
               fontSize: "clamp(9px, 0.7vw, 11px)",
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 300,
-              color: "rgba(255,255,255,0.25)",
+              color: c.testiAttr,
               marginTop: "6px",
             }}
           >
@@ -243,7 +243,7 @@ export default function HeroTwoA({ img }) {
               fontSize: "clamp(13px, 1.1vw, 16px)",
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 300,
-              color: "rgba(255,255,255,0.9)",
+              color: c.name,
             }}
           >
             Milton Kumirai
@@ -253,7 +253,7 @@ export default function HeroTwoA({ img }) {
               fontSize: "clamp(11px, 0.9vw, 13px)",
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 300,
-              color: "rgba(255,255,255,0.45)",
+              color: c.tagline,
               marginTop: "4px",
             }}
           >
@@ -271,7 +271,7 @@ export default function HeroTwoA({ img }) {
                   color: "#13c5dd",
                   border: "1px solid rgba(19,197,221,0.4)",
                   borderRadius: "10px",
-                  background: "rgba(19,197,221,0.1)",
+                  background: dark ? "rgba(19,197,221,0.1)" : "rgba(19,197,221,0.06)",
                   letterSpacing: "0.03em",
                   animation: `fadeSlideUp 0.5s ease-out ${0.3 + i * 0.1}s both`,
                 }}
@@ -282,7 +282,7 @@ export default function HeroTwoA({ img }) {
           </div>
         </div>
 
-        {/* Bottom-right: CTA button */}
+        {/* Bottom-right: CTA */}
         <div
           className="absolute"
           style={{
@@ -295,7 +295,9 @@ export default function HeroTwoA({ img }) {
             className="group inline-flex items-center gap-3 px-8 py-3 bg-cyan text-navy text-sm font-semibold tracking-[0.15em] uppercase transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(19,197,221,0.4)]"
             style={{
               fontFamily: "'Poppins', sans-serif",
-              boxShadow: "0 0 20px rgba(19,197,221,0.3)",
+              boxShadow: dark
+                ? "0 0 20px rgba(19,197,221,0.3)"
+                : "0 0 20px rgba(19,197,221,0.15)",
               animation: "pulseCta 2.5s ease-in-out infinite",
             }}
           >
@@ -325,7 +327,7 @@ export default function HeroTwoA({ img }) {
                 fontSize: "clamp(8px, 0.6vw, 10px)",
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 300,
-                color: "rgba(255,255,255,0.2)",
+                color: c.scrollText,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
               }}
@@ -334,7 +336,7 @@ export default function HeroTwoA({ img }) {
             </span>
             <span
               style={{
-                color: "rgba(19,197,221,0.3)",
+                color: c.scrollArrow,
                 fontSize: "14px",
                 lineHeight: 1,
               }}

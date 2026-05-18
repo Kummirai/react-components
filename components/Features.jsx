@@ -53,11 +53,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-navy/90" id="services">
+    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-[#070b15]" id="services">
+      {/* Top fade gradient for smooth hero transition */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +78,7 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative flex flex-col items-center justify-center gap-3 p-8 font-normal text-lg leading-6 rounded-2xl bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+              className="group relative flex flex-col items-center justify-center gap-3 p-8 font-normal text-lg leading-6 rounded-2xl bg-white/60 dark:bg-[#070b15] border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
             >
               <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
@@ -87,7 +90,7 @@ export default function Services() {
                 {service.title}
               </h2>
 
-              <p className="text-center text-[16px] sm:text-md text-navy/60 dark:text-light/60 line-clamp-4 h-24 transition-all duration-300 group-hover:text-navy/80 dark:group-hover:text-light/80">
+              <p className="text-center text-[16px] sm:text-md text-navy/70 dark:text-light/60 line-clamp-4 h-24 transition-all duration-300 group-hover:text-navy/90 dark:group-hover:text-light/80">
                 {service.description}
               </p>
 

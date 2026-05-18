@@ -15,9 +15,9 @@ export default function StatsOne() {
           key={stat.id}
           className={`
             group relative flex items-center gap-4 md:gap-5 p-4 md:p-5 
-            rounded-2xl bg-white/60 dark:bg-navy/80
+            rounded-2xl bg-white/60 dark:bg-[#070b15]/80
             border border-navy/10 dark:border-light/10 shadow-xl 
-            transition-all duration-500 hover:scale-105 hover:bg-white/80 dark:hover:bg-navy/90
+            transition-all duration-500 hover:scale-105 hover:bg-white/80 dark:hover:bg-[#070b15]
             hover:shadow-2xl hover:shadow-cyan/20
             ${index > 0 ? "md:border-l md:border-l-navy/10 dark:md:border-l-light/10 md:rounded-l-none" : ""}
           `}

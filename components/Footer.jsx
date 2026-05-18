@@ -84,11 +84,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full overflow-hidden bg-white dark:bg-navy/90">
+    <footer className="relative w-full overflow-hidden bg-white dark:bg-[#070b15]">
+      {/* Top fade gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -180,7 +183,7 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full px-4 py-2 pr-12 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all text-sm"
+                  className="w-full px-4 py-2 pr-12 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all text-sm"
                 />
                 <button
                   type="submit"

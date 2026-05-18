@@ -172,7 +172,7 @@ export default function ProjectsPage() {
   const projectCount = filteredProjects.length;
 
   return (
-    <main className="relative w-full min-h-screen py-20 overflow-hidden bg-white dark:bg-navy/90">
+    <main className="relative w-full min-h-screen py-20 overflow-hidden bg-white dark:bg-[#070b15]">
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
@@ -191,23 +191,23 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">{projectsData.length}</div>
             <div className="text-sm text-navy/60 dark:text-light/60">Total Projects</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-semibold text-cyan">
               {projectsData.filter((p) => p.category === "Web App").length}
             </div>
             <div className="text-sm text-navy/60 dark:text-light/60">Web Apps</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">
               {projectsData.filter((p) => p.category === "Website").length}
             </div>
             <div className="text-sm text-navy/60 dark:text-light/60">Websites</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">
               {projectsData.filter((p) => p.featured).length}
             </div>
@@ -224,7 +224,7 @@ export default function ProjectsPage() {
               {featuredProjects.slice(0, 2).map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
+                  className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
                 >
                   <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
 
@@ -283,7 +283,7 @@ export default function ProjectsPage() {
                   ${
                     activeCategory === category
                       ? "bg-navy dark:bg-cyan text-white shadow-lg shadow-navy/30 scale-105"
-                      : "bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan hover:text-cyan hover:scale-105"
+                      : "bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan hover:text-cyan hover:scale-105"
                   }
                 `}
               >
@@ -299,7 +299,7 @@ export default function ProjectsPage() {
                 placeholder="Search projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 rounded-full bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan transition-all text-sm"
+                className="w-full px-4 py-2 pl-10 rounded-full bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan transition-all text-sm"
               />
               <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-navy/40 dark:text-light/40 text-sm" />
               {searchQuery && (
@@ -316,7 +316,7 @@ export default function ProjectsPage() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                 showFeaturedOnly
                   ? "bg-navy dark:bg-cyan text-white shadow-lg shadow-navy/30"
-                  : "bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan"
+                  : "bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 hover:border-cyan"
               }`}
             >
               <FiFilter className="text-sm" />
@@ -334,7 +334,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+                className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
               >
                 <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
@@ -347,14 +347,14 @@ export default function ProjectsPage() {
                     <Link
                       href={project.github}
                       target="_blank"
-                      className="bg-white/90 dark:bg-navy p-2.5 rounded-full transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
+                      className="bg-white/90 dark:bg-[#070b15] p-2.5 rounded-full transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
                     >
                       <FiGithub className="text-navy dark:text-light text-xl" />
                     </Link>
                     <Link
                       href={project.liveDemo}
                       target="_blank"
-                      className="bg-white/90 dark:bg-navy p-2.5 rounded-full transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
+                      className="bg-white/90 dark:bg-[#070b15] p-2.5 rounded-full transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 hover:scale-110"
                     >
                       <FiExternalLink className="text-navy dark:text-light text-xl" />
                     </Link>

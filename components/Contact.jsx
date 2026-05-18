@@ -77,11 +77,14 @@ export default function Contact() {
   ];
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-navy/90" id="contact">
+    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-[#070b15]" id="contact">
+      {/* Top fade gradient */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan/20 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,7 +103,7 @@ export default function Contact() {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl p-5 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+                className="group relative rounded-2xl p-5 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
               >
                 <div className="flex items-start gap-4">
                   <div className="text-3xl text-cyan">{info.icon}</div>
@@ -121,7 +124,7 @@ export default function Contact() {
               </div>
             ))}
 
-            <div className="rounded-2xl p-6 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20">
+            <div className="rounded-2xl p-6 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20">
               <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 text-center">
                 Connect With Me
               </h3>
@@ -142,7 +145,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-6 bg-white/60 dark:bg-navy/80 border border-navy/10 dark:border-light/10 shadow-xl">
+          <div className="rounded-2xl p-6 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl">
             <h3 className="text-xl font-semibold mb-6 text-navy dark:text-light text-center">
               Get a Quote
             </h3>
@@ -160,7 +163,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -178,7 +181,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                     placeholder="hello@example.com"
                   />
                 </div>
@@ -194,7 +197,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -211,7 +214,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-navy/90 border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all resize-none"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all resize-none"
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>

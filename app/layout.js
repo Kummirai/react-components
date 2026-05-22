@@ -34,12 +34,12 @@ export default function RootLayout({ children }) {
     {
       id: 3,
       link: "Services",
-      path: "/services",
+      path: "/#services",
     },
     {
       id: 4,
       link: "Contact",
-      path: "/contact",
+      path: "/#contact",
     },
   ];
 

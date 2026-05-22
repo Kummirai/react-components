@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback } from "react";
+import { createContext, useContext, useState, useCallback, useEffect } from "react";
 
 const DarkModeContext = createContext();
 
@@ -9,20 +9,21 @@ export function useDarkMode() {
 }
 
 export default function DarkModeProvider({ children }) {
-  const [dark, setDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("darkMode");
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      const isDark = stored !== null ? stored === "true" : prefersDark;
-      if (isDark) {
-        document.documentElement.classList.add("dark");
-      }
-      return isDark;
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("darkMode");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const isDark = stored !== null ? stored === "true" : prefersDark;
+    setDark(isDark);
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-    return false;
-  });
+  }, []);
 
   const toggle = useCallback(() => {
     setDark((prev) => {

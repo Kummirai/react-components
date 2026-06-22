@@ -192,7 +192,7 @@ function Pricing() {
       </section>
 
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8 px-4">
           {websitePlans.map((plan) => (
             <CardTwo
               key={plan.name}
@@ -202,7 +202,7 @@ function Pricing() {
           ))}
         </section>
       ) : (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8 px-4">
           {webAppPlans.map((plan) => (
             <CardTwo
               key={plan.name}

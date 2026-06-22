@@ -11,42 +11,42 @@ const services = [
     id: 1,
     title: "Web Development",
     description:
-      "Custom websites and web apps built with React, Next.js, and Node.js. Responsive, fast, and tailored to your needs.",
+      "A website that works for you. Built with modern tech so your business gets a fast, reliable online presence — no templates, no limitations.",
     icon: <SiReact />,
   },
   {
     id: 2,
     title: "UI/UX Design",
     description:
-      "Beautiful, user-centered designs that engage your audience and drive results. From wireframes to polished mockups.",
+      "Design that converts. Interfaces your customers will love using, guiding them naturally from curious to converted.",
     icon: <SiFigma />,
   },
   {
     id: 3,
     title: "E-Commerce Solutions",
     description:
-      "Full-featured online stores with cart, payments, and inventory management. Integrations with Stripe, Shopify, and more.",
+      "Sell online without the headache. A full online store handling carts, payments, and inventory — you focus on products, I handle the tech.",
     icon: <SiStripe />,
   },
   {
     id: 4,
     title: "Performance Optimization",
     description:
-      "Speed up your existing site with lazy loading, code splitting, image optimization, and caching strategies.",
+      "Speed your customers will notice. Faster pages mean better search rankings and happier visitors who actually stick around.",
     icon: <MdSpeed />,
   },
   {
     id: 5,
     title: "Responsive Development",
     description:
-      "Websites that look and work beautifully on every device — from mobile phones to large desktop screens.",
+      "Perfect on every screen. Your site looks and works great on phones, tablets, and desktops — no visitor left behind.",
     icon: <MdDevices />,
   },
   {
     id: 6,
     title: "Maintenance & Support",
     description:
-      "Ongoing updates, security patches, bug fixes, and feature additions to keep your site running smoothly.",
+      "Set it and forget it. I handle updates, security, and fixes so your site stays running smoothly without you lifting a finger.",
     icon: <MdSupportAgent />,
   },
 ];
@@ -64,7 +64,7 @@ export default function Services() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex flex-col items-center max-w-2xl pt-10 pb-5 gap-3 sm:gap-5">
+        <div className="mx-auto flex flex-col items-center max-w-2xl pt-24 pb-5 gap-3 sm:gap-5">
           <h2 className="text-2xl sm:text-[32px] font-semibold text-center leading-7.5 sm:leading-10 text-navy dark:text-light">
             What I Can Do For You
           </h2>

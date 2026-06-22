@@ -190,7 +190,7 @@ function Pricing() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
-      <section className="mx-auto flex flex-col items-center max-w-3xl py-10 gap-5">
+      <section className="mx-auto flex flex-col items-center max-w-3xl pt-24 pb-5 gap-5">
         <h2 className="text-3xl sm:text-[32px] text-center sm:leading-10 text-navy dark:text-light font-semibold max-w-2xl leading-6 p-3 rounded-lg">
           Choose a
           <span className="text-cyan mx-2">{myPackageLabel}</span>

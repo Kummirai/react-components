@@ -20,7 +20,7 @@ export default function HeroTwoA() {
   }, [next]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-light p-6">
+    <section className="relative min-h-screen w-full bg-light px-6 py-12 lg:h-screen lg:py-6">
       {/* Background image */}
       <img
         src="/web%20developer/pakata-goh-EJMTKCZ00I0-unsplash.jpg"
@@ -29,25 +29,26 @@ export default function HeroTwoA() {
       />
       {/* Overlay focused behind text area */}
       <div
-        className="absolute inset-y-0 left-0 w-1/2"
+        className="absolute inset-0 lg:inset-y-0 lg:left-0 lg:w-1/2"
         style={{
           background:
             "linear-gradient(to right, #0f1a33 0%, #0f1a33 30%, rgba(15,26,51,0.6) 60%, rgba(15,26,51,0) 100%)",
         }}
       />
-      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center">
-        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl items-start pt-12 lg:h-full lg:items-center lg:pt-0">
+        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-12">
           {/* Left: Text */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h1
               className="leading-[1.1] tracking-[-0.02em] text-white"
               style={{
-                fontSize: "clamp(2.2rem, 4.5vw, 3.125rem)",
+                fontSize: "clamp(2.8rem, 6vw, 4rem)",
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 300,
               }}
             >
-              Websites that
+              <span className="sm:hidden">Websites</span>
+              <span className="hidden sm:inline">Websites that</span>
               <br />
               bring in
               <br />
@@ -55,7 +56,7 @@ export default function HeroTwoA() {
             </h1>
 
             <p
-              className="mt-5 max-w-xs text-sm leading-relaxed sm:text-base"
+              className="mt-6 max-w-xs text-sm leading-relaxed sm:text-base"
               style={{
                 color: "rgba(255,255,255,0.6)",
                 fontFamily: "'Poppins', sans-serif",
@@ -98,7 +99,7 @@ export default function HeroTwoA() {
           {/* Right: Design carousel */}
           <div className="flex flex-col items-center lg:items-start">
             <div
-              className="relative w-full overflow-hidden rounded-lg shadow-2xl"
+              className="relative w-full max-w-xs overflow-hidden rounded-lg shadow-2xl lg:max-w-none"
               style={{ aspectRatio: "16/10" }}
             >
               {designShots.map((src, i) => {
@@ -123,7 +124,7 @@ export default function HeroTwoA() {
             </div>
 
             {/* Dots */}
-            <div className="mt-6 flex items-center gap-2">
+            <div className="mt-6 flex items-center gap-2 lg:mt-6">
               {designShots.map((_, i) => (
                 <button
                   key={i}

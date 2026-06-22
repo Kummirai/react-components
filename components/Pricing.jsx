@@ -155,7 +155,7 @@ function Pricing() {
   return (
     <section className="w-full relative overflow-hidden bg-white dark:bg-[#070b15] py-16" id="services">
       {/* Top fade gradient */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
 
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>

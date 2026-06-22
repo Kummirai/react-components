@@ -22,7 +22,7 @@ const projects = [
     image: "/projects/highveld.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://highveldmilton.netlify.app",
     icon: <FiBookOpen />,
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     image: "/projects/learnmore.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://learnmoremilton.netlify.app",
     icon: <FiBookOpen />,
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     image: "/projects/kapuka.svg",
     techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Vercel"],
     github: "#",
-    liveDemo: "https://kapuka.vercel.app",
+    liveDemo: "https://kapukandroird.netlify.app",
     icon: <FiSmartphone />,
   },
 ];

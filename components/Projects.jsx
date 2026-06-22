@@ -19,7 +19,7 @@ const projects = [
     category: "Website",
     description:
       "School website with hero section, events calendar, extracurricular activities, gallery, and contact/apply forms.",
-    image: "/projects/highveld.jpg",
+    image: "/projects/highveld.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -31,7 +31,7 @@ const projects = [
     category: "Website",
     description:
       "Primary school website with enrollment, subjects, teachers, events, fees, timetable, news, and FAQ.",
-    image: "/projects/learnmore.jpg",
+    image: "/projects/learnmore.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -43,7 +43,7 @@ const projects = [
     category: "Website",
     description:
       "Electrical contracting company website with residential, commercial, and solar energy services and quote requests.",
-    image: "/projects/brilliant.jpg",
+    image: "/projects/brilliant.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -55,10 +55,10 @@ const projects = [
     category: "Website",
     description:
       "Construction company website showcasing projects, services, gallery, and WhatsApp contact.",
-    image: "/projects/carrington.jpg",
+    image: "/projects/carrington.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://carringtonsconstruction.netlify.app",
     icon: <FiTool />,
   },
   {
@@ -67,7 +67,7 @@ const projects = [
     category: "Website",
     description:
       "Medical practice website for Dr. Wilna Lombaard with online appointment booking, services, and admin authentication.",
-    image: "/projects/doctor.jpg",
+    image: "/projects/doctor.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
     github: "#",
     liveDemo: "#",
@@ -79,7 +79,7 @@ const projects = [
     category: "Mobile App",
     description:
       "CAPS-aligned maths practice for Grade 7–12 with AI tutoring, timed past papers, and progress tracking.",
-    image: "/projects/xamace.jpg",
+    image: "/projects/xamace.svg",
     techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Ably"],
     github: "#",
     liveDemo: "https://xamace.netlify.app",
@@ -91,7 +91,7 @@ const projects = [
     category: "Mobile App",
     description:
       "Driver services platform for fuel delivery, car wash, and cash loans with role-based access and real-time tracking.",
-    image: "/projects/kapuka.jpg",
+    image: "/projects/kapuka.svg",
     techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Vercel"],
     github: "#",
     liveDemo: "https://kapuka.vercel.app",
@@ -158,11 +158,13 @@ export default function Projects() {
             >
               <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
-              <div className="relative h-48 bg-navy/5 dark:bg-light/5 flex items-center justify-center">
-                <div className="text-6xl text-cyan/50 group-hover:scale-110 transition-transform duration-500">
-                  {project.icon}
-                </div>
-                <div className="absolute inset-0 bg-linear-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4">
                   <Link
                     href={project.github}
                     target="_blank"

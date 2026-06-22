@@ -22,7 +22,7 @@ const projectsData = [
     category: "Website",
     description:
       "School website with hero section, events calendar, extracurricular activities, gallery, and contact/apply forms.",
-    image: "/projects/highveld.jpg",
+    image: "/projects/highveld.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -36,7 +36,7 @@ const projectsData = [
     category: "Website",
     description:
       "Primary school website with enrollment, subjects, teachers, events, fees, timetable, news, and FAQ.",
-    image: "/projects/learnmore.jpg",
+    image: "/projects/learnmore.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -50,7 +50,7 @@ const projectsData = [
     category: "Website",
     description:
       "Electrical contracting company website with residential, commercial, and solar energy services and quote requests.",
-    image: "/projects/brilliant.jpg",
+    image: "/projects/brilliant.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "#",
@@ -64,10 +64,10 @@ const projectsData = [
     category: "Website",
     description:
       "Construction company website showcasing projects, services, gallery, and WhatsApp contact.",
-    image: "/projects/carrington.jpg",
+    image: "/projects/carrington.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://carringtonsconstruction.netlify.app",
     featured: false,
     year: "2025",
     icon: <FiTool />,
@@ -78,7 +78,7 @@ const projectsData = [
     category: "Website",
     description:
       "Medical practice website for Dr. Wilna Lombaard with online appointment booking, services, and admin authentication.",
-    image: "/projects/doctor.jpg",
+    image: "/projects/doctor.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
     github: "#",
     liveDemo: "#",
@@ -92,7 +92,7 @@ const projectsData = [
     category: "Mobile App",
     description:
       "CAPS-aligned maths practice for Grade 7–12 with AI tutoring, timed past papers, and progress tracking.",
-    image: "/projects/xamace.jpg",
+    image: "/projects/xamace.svg",
     techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Ably"],
     github: "#",
     liveDemo: "https://xamace.netlify.app",
@@ -106,7 +106,7 @@ const projectsData = [
     category: "Mobile App",
     description:
       "Driver services platform for fuel delivery, car wash, and cash loans with role-based access and real-time tracking.",
-    image: "/projects/kapuka.jpg",
+    image: "/projects/kapuka.svg",
     techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Vercel"],
     github: "#",
     liveDemo: "https://kapuka.vercel.app",
@@ -195,43 +195,51 @@ export default function ProjectsPage() {
                   className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
                 >
                   <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
-
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl text-cyan">{project.icon}</div>
-                      <span className="px-3 py-1 text-xs font-semibold rounded-full bg-cyan text-white">
-                        Featured
-                      </span>
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     </div>
-                    <h3 className="text-2xl font-semibold text-navy dark:text-light mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-navy/60 dark:text-light/60 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.techStack.slice(0, 3).map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="text-xs px-2 py-1 rounded-full bg-navy/5 dark:bg-light/5 text-navy/60 dark:text-light/60"
-                        >
-                          {tech}
+                    <div className="flex-1 p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-4xl text-cyan">{project.icon}</div>
+                        <span className="px-3 py-1 text-xs font-semibold rounded-full bg-cyan text-white">
+                          Featured
                         </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-3">
-                      <Link
-                        href={project.github}
-                        target="_blank"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-navy dark:bg-cyan text-white hover:bg-navy/90 dark:hover:bg-cyan/90 transition-all duration-300 hover:scale-105"
-                      >
-                        <FiGithub /> Code
-                      </Link>
-                      <Link
-                        href={project.liveDemo}
-                        target="_blank"
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan text-white hover:scale-105 transition-all duration-300"
-                      >
-                        <FiExternalLink /> Demo
-                      </Link>
+                      </div>
+                      <h3 className="text-2xl font-semibold text-navy dark:text-light mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-navy/60 dark:text-light/60 mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.techStack.slice(0, 3).map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="text-xs px-2 py-1 rounded-full bg-navy/5 dark:bg-light/5 text-navy/60 dark:text-light/60"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-3">
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-navy dark:bg-cyan text-white hover:bg-navy/90 dark:hover:bg-cyan/90 transition-all duration-300 hover:scale-105"
+                        >
+                          <FiGithub /> Code
+                        </Link>
+                        <Link
+                          href={project.liveDemo}
+                          target="_blank"
+                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan text-white hover:scale-105 transition-all duration-300"
+                        >
+                          <FiExternalLink /> Demo
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -306,12 +314,13 @@ export default function ProjectsPage() {
               >
                 <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
-                <div className="relative h-48 bg-navy/5 dark:bg-light/5 flex items-center justify-center">
-                  <div className="text-5xl text-cyan/70 group-hover:scale-110 transition-transform duration-500">
-                    {project.icon}
-                  </div>
-
-                  <div className="absolute inset-0 bg-linear-to-t from-navy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center gap-4">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-4">
                     <Link
                       href={project.github}
                       target="_blank"

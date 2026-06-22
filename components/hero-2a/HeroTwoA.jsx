@@ -24,15 +24,15 @@ export default function HeroTwoA() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-light p-6">
-      {/* Background image */}
+      {/* Background image — fixed to cover full viewport behind navbar too */}
       <img
         src="/web%20developer/campaign-creators-iEiUITs149M-unsplash.jpg"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover"
+        className="fixed inset-0 h-full w-full object-cover"
       />
-      {/* Gradient overlay: more opaque on left, transparent on right */}
+      {/* Gradient overlay — fixed to cover full viewport including navbar area */}
       <div
-        className="absolute inset-0"
+        className="fixed inset-0"
         style={{
           background: "linear-gradient(to right, #1d2a4d 0%, #1d2a4d 25%, rgba(29,42,77,0.6) 50%, rgba(29,42,77,0) 100%)",
         }}

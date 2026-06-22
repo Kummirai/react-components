@@ -5,89 +5,101 @@ import Link from "next/link";
 import {
   FiGithub,
   FiExternalLink,
-  FiCode,
-  FiGrid,
-  FiLayout,
-  FiShoppingCart,
-  FiMessageCircle,
+  FiBookOpen,
+  FiZap,
+  FiTool,
+  FiHeart,
+  FiSmartphone,
 } from "react-icons/fi";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web App",
+    title: "Highveld Primary",
+    category: "Website",
     description:
-      "Full-featured online store with cart, payments, and admin dashboard. Built with Next.js, Stripe, and MongoDB.",
-    image: "/projects/ecommerce.jpg",
-    techStack: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiShoppingCart />,
+      "School website with hero section, events calendar, extracurricular activities, gallery, and contact/apply forms.",
+    image: "/projects/highveld.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
+    icon: <FiBookOpen />,
   },
   {
     id: 2,
-    title: "Portfolio Website",
+    title: "Learnmore Primary",
     category: "Website",
     description:
-      "Modern portfolio for a creative agency with smooth animations and responsive design.",
-    image: "/projects/portfolio.jpg",
-    techStack: ["React", "Framer Motion", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiLayout />,
+      "Primary school website with enrollment, subjects, teachers, events, fees, timetable, news, and FAQ.",
+    image: "/projects/learnmore.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
+    icon: <FiBookOpen />,
   },
   {
     id: 3,
-    title: "Task Management App",
-    category: "Web App",
+    title: "BNT Electrical Solutions",
+    category: "Website",
     description:
-      "Collaborative task management tool with real-time updates, team workspaces, and file attachments.",
-    image: "/projects/taskapp.jpg",
-    techStack: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiGrid />,
+      "Electrical contracting company website with residential, commercial, and solar energy services and quote requests.",
+    image: "/projects/brilliant.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
+    icon: <FiZap />,
   },
   {
     id: 4,
-    title: "Restaurant Website",
+    title: "Carrington Construction",
     category: "Website",
     description:
-      "Elegant restaurant website with online ordering, reservation system, and menu management.",
-    image: "/projects/restaurant.jpg",
-    techStack: ["Next.js", "Tailwind CSS", "MongoDB"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiMessageCircle />,
+      "Construction company website showcasing projects, services, gallery, and WhatsApp contact.",
+    image: "/projects/carrington.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
+    icon: <FiTool />,
   },
   {
     id: 5,
-    title: "Analytics Dashboard",
-    category: "Web App",
+    title: "Doctor on 14th",
+    category: "Website",
     description:
-      "Interactive dashboard for business analytics with real-time charts and data visualization.",
-    image: "/projects/dashboard.jpg",
-    techStack: ["React", "Chart.js", "Express", "PostgreSQL"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiCode />,
+      "Medical practice website for Dr. Wilna Lombaard with online appointment booking, services, and admin authentication.",
+    image: "/projects/doctor.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
+    github: "#",
+    liveDemo: "#",
+    icon: <FiHeart />,
   },
   {
     id: 6,
-    title: "Real Estate Platform",
-    category: "Website",
+    title: "Xamace",
+    category: "Mobile App",
     description:
-      "Property listing website with advanced search filters, maps integration, and agent profiles.",
-    image: "/projects/realestate.jpg",
-    techStack: ["Next.js", "Mapbox", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    icon: <FiLayout />,
+      "CAPS-aligned maths practice for Grade 7–12 with AI tutoring, timed past papers, and progress tracking.",
+    image: "/projects/xamace.jpg",
+    techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Ably"],
+    github: "#",
+    liveDemo: "https://xamace.netlify.app",
+    icon: <FiSmartphone />,
+  },
+  {
+    id: 7,
+    title: "Kapuka Tradings",
+    category: "Mobile App",
+    description:
+      "Driver services platform for fuel delivery, car wash, and cash loans with role-based access and real-time tracking.",
+    image: "/projects/kapuka.jpg",
+    techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Vercel"],
+    github: "#",
+    liveDemo: "https://kapuka.vercel.app",
+    icon: <FiSmartphone />,
   },
 ];
 
-const categories = ["All", "Website", "Web App"];
+const categories = ["All", "Website", "Mobile App"];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -111,11 +123,11 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold mb-4 text-navy dark:text-light">
-            Recent Client Work
+            Client Projects
           </h2>
           <p className="text-lg text-navy/60 dark:text-light/60 max-w-2xl mx-auto">
-            Here are some projects I&apos;ve built for clients. Each one is crafted
-            with care and attention to detail.
+            Websites and mobile apps built for real businesses — schools,
+            trades, medical, and more.
           </p>
         </div>
 

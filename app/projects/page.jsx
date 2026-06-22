@@ -5,15 +5,11 @@ import Link from "next/link";
 import {
   FiGithub,
   FiExternalLink,
-  FiCode,
-  FiGrid,
-  FiLayout,
-  FiShoppingCart,
-  FiMessageCircle,
-  FiBarChart2,
-  FiMapPin,
-  FiCalendar,
-  FiUsers,
+  FiBookOpen,
+  FiZap,
+  FiTool,
+  FiHeart,
+  FiSmartphone,
   FiSearch,
   FiFilter,
   FiX,
@@ -22,133 +18,105 @@ import {
 const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web App",
+    title: "Highveld Primary",
+    category: "Website",
     description:
-      "Full-featured online store with cart, payments, and admin dashboard. Built with Next.js, Stripe, and MongoDB.",
-    image: "/projects/ecommerce.jpg",
-    techStack: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
+      "School website with hero section, events calendar, extracurricular activities, gallery, and contact/apply forms.",
+    image: "/projects/highveld.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
     featured: true,
-    year: "2024",
-    icon: <FiShoppingCart />,
+    year: "2025",
+    icon: <FiBookOpen />,
   },
   {
     id: 2,
-    title: "Creative Portfolio",
+    title: "Learnmore Primary",
     category: "Website",
     description:
-      "Modern portfolio for a creative agency with smooth animations and responsive design.",
-    image: "/projects/portfolio.jpg",
-    techStack: ["React", "Framer Motion", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
+      "Primary school website with enrollment, subjects, teachers, events, fees, timetable, news, and FAQ.",
+    image: "/projects/learnmore.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
     featured: true,
-    year: "2024",
-    icon: <FiLayout />,
+    year: "2025",
+    icon: <FiBookOpen />,
   },
   {
     id: 3,
-    title: "TaskFlow Manager",
-    category: "Web App",
+    title: "BNT Electrical Solutions",
+    category: "Website",
     description:
-      "Collaborative task management tool with real-time updates, team workspaces, and file attachments.",
-    image: "/projects/taskapp.jpg",
-    techStack: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
+      "Electrical contracting company website with residential, commercial, and solar energy services and quote requests.",
+    image: "/projects/brilliant.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
     featured: false,
-    year: "2023",
-    icon: <FiGrid />,
+    year: "2025",
+    icon: <FiZap />,
   },
   {
     id: 4,
-    title: "Restaurant Booking",
+    title: "Carrington Construction",
     category: "Website",
     description:
-      "Elegant restaurant website with online ordering, reservation system, and menu management.",
-    image: "/projects/restaurant.jpg",
-    techStack: ["Next.js", "Tailwind CSS", "MongoDB"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    featured: true,
-    year: "2024",
-    icon: <FiMessageCircle />,
+      "Construction company website showcasing projects, services, gallery, and WhatsApp contact.",
+    image: "/projects/carrington.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: "#",
+    liveDemo: "#",
+    featured: false,
+    year: "2025",
+    icon: <FiTool />,
   },
   {
     id: 5,
-    title: "Analytics Dashboard",
-    category: "Web App",
+    title: "Doctor on 14th",
+    category: "Website",
     description:
-      "Interactive dashboard for business analytics with real-time charts and data visualization.",
-    image: "/projects/dashboard.jpg",
-    techStack: ["React", "Chart.js", "Express", "PostgreSQL"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
+      "Medical practice website for Dr. Wilna Lombaard with online appointment booking, services, and admin authentication.",
+    image: "/projects/doctor.jpg",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
+    github: "#",
+    liveDemo: "#",
     featured: false,
-    year: "2023",
-    icon: <FiBarChart2 />,
+    year: "2025",
+    icon: <FiHeart />,
   },
   {
     id: 6,
-    title: "Real Estate Hub",
-    category: "Website",
+    title: "Xamace",
+    category: "Mobile App",
     description:
-      "Property listing website with advanced search filters, maps integration, and agent profiles.",
-    image: "/projects/realestate.jpg",
-    techStack: ["Next.js", "Mapbox", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    featured: false,
-    year: "2024",
-    icon: <FiMapPin />,
+      "CAPS-aligned maths practice for Grade 7–12 with AI tutoring, timed past papers, and progress tracking.",
+    image: "/projects/xamace.jpg",
+    techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Ably"],
+    github: "#",
+    liveDemo: "https://xamace.netlify.app",
+    featured: true,
+    year: "2025",
+    icon: <FiSmartphone />,
   },
   {
     id: 7,
-    title: "Event Platform",
-    category: "Web App",
+    title: "Kapuka Tradings",
+    category: "Mobile App",
     description:
-      "Event management platform with ticketing, scheduling, and attendee management.",
-    image: "/projects/event.jpg",
-    techStack: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    featured: false,
-    year: "2023",
-    icon: <FiCalendar />,
-  },
-  {
-    id: 8,
-    title: "Social Community",
-    category: "Web App",
-    description:
-      "Social platform for niche communities with posts, comments, and user profiles.",
-    image: "/projects/social.jpg",
-    techStack: ["React", "Express", "PostgreSQL", "Socket.io"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    featured: false,
-    year: "2024",
-    icon: <FiUsers />,
-  },
-  {
-    id: 9,
-    title: "Job Board",
-    category: "Website",
-    description:
-      "Job listing platform with advanced search, filters, and application tracking.",
-    image: "/projects/jobs.jpg",
-    techStack: ["Next.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/",
-    liveDemo: "https://example.com",
-    featured: false,
-    year: "2023",
-    icon: <FiSearch />,
+      "Driver services platform for fuel delivery, car wash, and cash loans with role-based access and real-time tracking.",
+    image: "/projects/kapuka.jpg",
+    techStack: ["Next.js", "Expo", "React Native", "MongoDB", "Vercel"],
+    github: "#",
+    liveDemo: "https://kapuka.vercel.app",
+    featured: true,
+    year: "2025",
+    icon: <FiSmartphone />,
   },
 ];
 
-const categories = ["All", "Website", "Web App"];
+const categories = ["All", "Website", "Mobile App"];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -185,8 +153,8 @@ export default function ProjectsPage() {
             Client Projects
           </h1>
           <p className="text-lg text-navy/60 dark:text-light/60 max-w-2xl mx-auto">
-            Explore my recent freelance work showcasing modern web development,
-            clean design, and scalable solutions.
+            Websites and mobile apps built for real businesses — schools,
+            trades, medical practices, and more.
           </p>
         </div>
 
@@ -197,9 +165,9 @@ export default function ProjectsPage() {
           </div>
           <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-semibold text-cyan">
-              {projectsData.filter((p) => p.category === "Web App").length}
+              {projectsData.filter((p) => p.category === "Mobile App").length}
             </div>
-            <div className="text-sm text-navy/60 dark:text-light/60">Web Apps</div>
+            <div className="text-sm text-navy/60 dark:text-light/60">Mobile Apps</div>
           </div>
           <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">
@@ -400,7 +368,9 @@ export default function ProjectsPage() {
           </div>
         ) : (
           <div className="text-center py-20">
-            <div className="text-6xl mb-4">🔍</div>
+            <div className="text-5xl text-navy/30 dark:text-light/30 mb-4">
+              <FiSearch />
+            </div>
             <h3 className="text-xl font-semibold text-navy dark:text-light mb-2">
               No projects found
             </h3>

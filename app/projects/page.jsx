@@ -36,7 +36,7 @@ const projectsData = [
     category: "Website",
     description:
       "Primary school website with enrollment, subjects, teachers, events, fees, timetable, news, and FAQ.",
-    image: "/projects/learnmore.svg",
+    image: "/project-images/LearnMore-Primary-School.png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "https://learnmoremilton.netlify.app",
@@ -50,7 +50,7 @@ const projectsData = [
     category: "Website",
     description:
       "Electrical contracting company website with residential, commercial, and solar energy services and quote requests.",
-    image: "/projects/brilliant.svg",
+    image: "/project-images/BNT-Electrical-Solutions-Professional-Electrical-Services.png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "https://bntelectrical.netlify.app",
@@ -64,7 +64,7 @@ const projectsData = [
     category: "Website",
     description:
       "Construction company website showcasing projects, services, gallery, and WhatsApp contact.",
-    image: "/projects/carrington.svg",
+    image: "/project-images/Carringtons-Plumbing-Construction (1).png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "https://carringtonsconstruction.netlify.app",
@@ -78,7 +78,7 @@ const projectsData = [
     category: "Website",
     description:
       "Medical practice website with online appointment booking, services, and admin authentication.",
-    image: "/projects/doctor.svg",
+    image: "/project-images/Doctor-on-14th-—-Dr-Wilna-Lombaard-General-Practitioner-Northcliff.png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
     github: "#",
     liveDemo: "https://docmilton.netlify.app",
@@ -159,23 +159,23 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-md p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">{projectsData.length}</div>
             <div className="text-sm text-navy/60 dark:text-light/60">Total Projects</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-md p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-semibold text-cyan">
               {projectsData.filter((p) => p.category === "Mobile App").length}
             </div>
             <div className="text-sm text-navy/60 dark:text-light/60">Mobile Apps</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-md p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">
               {projectsData.filter((p) => p.category === "Website").length}
             </div>
             <div className="text-sm text-navy/60 dark:text-light/60">Websites</div>
           </div>
-          <div className="rounded-2xl p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
+          <div className="rounded-md p-4 bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl text-center">
             <div className="text-2xl font-bold text-cyan">
               {projectsData.filter((p) => p.featured).length}
             </div>
@@ -192,9 +192,9 @@ export default function ProjectsPage() {
               {featuredProjects.slice(0, 2).map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
+                  className="group relative rounded-md overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
                 >
-                  <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
+                  <div className="absolute -inset-0.5 rounded-md bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
                   <div className="flex flex-col sm:flex-row">
                     <div className="sm:w-2/5 h-48 sm:h-auto overflow-hidden">
                       <img
@@ -310,9 +310,9 @@ export default function ProjectsPage() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative rounded-2xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+                className="group relative rounded-md overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
               >
-                <div className="absolute -inset-0.5 rounded-2xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+                <div className="absolute -inset-0.5 rounded-md bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
                 <div className="relative h-48 overflow-hidden">
                   <img

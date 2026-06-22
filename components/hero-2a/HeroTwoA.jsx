@@ -10,10 +10,12 @@ const designShots = [
 
 export default function HeroTwoA() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [prevIdx, setPrevIdx] = useState(0);
 
   const next = useCallback(() => {
+    setPrevIdx(activeIdx);
     setActiveIdx((i) => (i + 1) % designShots.length);
-  }, []);
+  }, [activeIdx]);
 
   useEffect(() => {
     const timer = setInterval(next, 4500);
@@ -22,12 +24,25 @@ export default function HeroTwoA() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-light p-6">
-      <div className="mx-auto flex h-full w-full max-w-6xl items-center">
+      {/* Background image */}
+      <img
+        src="/web%20developer/campaign-creators-iEiUITs149M-unsplash.jpg"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      {/* Gradient overlay: more opaque on left, transparent on right */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to right, #1d2a4d 0%, #1d2a4d 25%, rgba(29,42,77,0.6) 50%, rgba(29,42,77,0) 100%)",
+        }}
+      />
+      <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center">
         <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Left: Text */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h1
-              className="leading-[1.1] tracking-[-0.02em] text-navy"
+              className="leading-[1.1] tracking-[-0.02em] text-white"
               style={{
                 fontSize: "clamp(2.2rem, 4.5vw, 3.125rem)",
                 fontFamily: "'Poppins', sans-serif",
@@ -44,7 +59,7 @@ export default function HeroTwoA() {
             <p
               className="mt-5 max-w-xs text-sm leading-relaxed sm:text-base"
               style={{
-                color: "rgba(29,42,77,0.6)",
+                color: "rgba(255,255,255,0.6)",
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 300,
               }}
@@ -66,7 +81,7 @@ export default function HeroTwoA() {
               </Link>
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-navy/20 px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] text-navy transition-all duration-300 hover:border-navy/60 hover:bg-navy hover:text-white hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] text-white transition-all duration-300 hover:border-white/60 hover:bg-white hover:text-navy hover:shadow-lg"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 View My Work
@@ -80,15 +95,26 @@ export default function HeroTwoA() {
               className="relative w-full overflow-hidden rounded-lg shadow-2xl"
               style={{ aspectRatio: "16/10" }}
             >
-              {designShots.map((src, i) => (
-                <img
-                  key={src}
-                  src={src}
-                  alt={`Design ${i + 1}`}
-                  className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
-                  style={{ opacity: i === activeIdx ? 1 : 0 }}
-                />
-              ))}
+              {designShots.map((src, i) => {
+                const isActive = i === activeIdx;
+                const isExiting = i === prevIdx && !isActive;
+                return (
+                  <img
+                    key={src}
+                    src={src}
+                    alt={`Design ${i + 1}`}
+                    className="absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out"
+                    style={{
+                      opacity: isActive ? 1 : 0,
+                      transform:
+                        isActive
+                          ? "scale(1) translateX(0)"
+                          : "scale(0.95) translateX(20px)",
+                      zIndex: isActive ? 1 : isExiting ? 0 : -1,
+                    }}
+                  />
+                );
+              })}
             </div>
 
             {/* Dots */}
@@ -104,7 +130,7 @@ export default function HeroTwoA() {
                     backgroundColor:
                       i === activeIdx
                         ? "#13c5dd"
-                        : "rgba(29,42,77,0.2)",
+                        : "rgba(255,255,255,0.3)",
                   }}
                   aria-label={`Show design ${i + 1}`}
                 />

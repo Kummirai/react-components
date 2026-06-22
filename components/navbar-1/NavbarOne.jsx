@@ -91,7 +91,7 @@ export default function NavbarOne({ links }) {
           {/* Contact Button */}
           <div>
             <Link
-              className="relative overflow-hidden group bg-cyan shadow-lg shadow-cyan/30 py-2.5 px-7 text-[15px] rounded-lg text-white hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl block text-center"
+              className="relative overflow-hidden group bg-white shadow-lg py-2.5 px-7 text-[15px] rounded-full text-navy hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl block text-center"
               href={"#contact"}
             >
               <span className="relative z-10">Contact Me</span>

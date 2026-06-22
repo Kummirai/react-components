@@ -34,7 +34,7 @@ export default function HeroTwoA() {
       <div
         className="fixed inset-0"
         style={{
-          background: "linear-gradient(to right, #1d2a4d 0%, #1d2a4d 25%, rgba(29,42,77,0.6) 50%, rgba(29,42,77,0) 100%)",
+          background: "linear-gradient(to right, #0f1a33 0%, #0f1a33 25%, rgba(15,26,51,0.6) 50%, rgba(15,26,51,0) 100%)",
         }}
       />
       <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center">
@@ -71,7 +71,7 @@ export default function HeroTwoA() {
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:items-start">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyan px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] text-navy transition-all duration-300 hover:brightness-110 hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] text-navy transition-all duration-300 hover:brightness-110 hover:shadow-lg"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Start a Project

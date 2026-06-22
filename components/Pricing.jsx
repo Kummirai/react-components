@@ -24,7 +24,6 @@ import Link from "next/link";
 
 function Pricing() {
   const [category, setCategory] = useState(1);
-  const [myPackageLabel, setMyPackageLabel] = useState("Website");
 
   const websitePlans = [
     {
@@ -161,14 +160,12 @@ function Pricing() {
   ];
 
   const tabs = [
-    { id: 1, title: "Website Packages", label: "Website" },
-    { id: 2, title: "Web App Packages", label: "Web App" },
+    { id: 1, title: "Website Packages" },
+    { id: 2, title: "Web App Packages" },
   ];
 
   const selectCategory = (id) => {
     setCategory(id);
-    const tab = tabs.find((t) => t.id === id);
-    if (tab) setMyPackageLabel(tab.label);
   };
 
   const handleGetStarted = (plan) => {
@@ -190,17 +187,12 @@ function Pricing() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
-      <section className="mx-auto flex flex-col items-center max-w-3xl pt-12 pb-5 gap-5">
+      <section className="mx-auto flex flex-col items-center max-w-3xl pt-12 pb-12 gap-8">
         <h2 className="text-3xl sm:text-[32px] text-center sm:leading-10 text-navy dark:text-light font-semibold max-w-2xl leading-6 p-3 rounded-lg">
-          Choose a
-          <span className="text-cyan mx-2">{myPackageLabel}</span>
-          plan that works for your business
+          Pick a plan
         </h2>
         <p className="text-center text-lg text-navy/60 dark:text-light/60 font-normal max-w-2xl leading-6">
-          Whether you need a simple online presence or a powerful web
-          application, I&apos;ve got you covered. Every plan includes custom
-          design, mobile responsiveness, and ongoing support. Hosting and domain
-          are quoted separately based on your needs.
+          Custom design, mobile responsiveness, and support on every plan.
         </p>
 
         <div className="flex flex-col sm:justify-center sm:flex-row w-3/4 gap-4">
@@ -224,7 +216,7 @@ function Pricing() {
       </section>
 
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8">
           {websitePlans.map((plan) => (
             <CardTwo
               key={plan.name}
@@ -234,7 +226,7 @@ function Pricing() {
           ))}
         </section>
       ) : (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-8">
           {webAppPlans.map((plan) => (
             <CardTwo
               key={plan.name}
@@ -244,6 +236,10 @@ function Pricing() {
           ))}
         </section>
       )}
+
+      <p className="text-center text-sm text-navy/40 dark:text-light/40 mt-12">
+        * Hosting and domain quoted separately
+      </p>
 
       <div className="text-center">
         <p className="text-navy/60 dark:text-light/60 mb-4">

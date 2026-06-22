@@ -46,20 +46,20 @@ export default function Contact() {
     {
       icon: <FiMapPin />,
       title: "Location",
-      details: ["Harare, Zimbabwe", "Available for remote work worldwide"],
+      details: ["Johannesburg, South Africa", "Available for remote work worldwide"],
       link: null,
     },
     {
       icon: <FiMail />,
       title: "Email",
-      details: ["hello@milton.dev", "support@milton.dev"],
-      link: "mailto:hello@milton.dev",
+      details: ["ajaxmilton@hotmail.com"],
+      link: "mailto:ajaxmilton@hotmail.com",
     },
     {
       icon: <FiPhone />,
       title: "Phone",
-      details: ["+263 77 123 4567", "+263 71 234 5678"],
-      link: "tel:+263771234567",
+      details: ["+27 68 829 4394", "+27 78 267 7436"],
+      link: "tel:+27688294394",
     },
     {
       icon: <FiClock />,

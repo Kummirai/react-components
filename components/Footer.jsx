@@ -39,13 +39,14 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: <FiMapPin />, text: "Harare, Zimbabwe", href: null },
+    { icon: <FiMapPin />, text: "Johannesburg, South Africa", href: null },
     {
       icon: <FiMail />,
-      text: "hello@milton.dev",
-      href: "mailto:hello@milton.dev",
+      text: "ajaxmilton@hotmail.com",
+      href: "mailto:ajaxmilton@hotmail.com",
     },
-    { icon: <FiPhone />, text: "+263 77 123 4567", href: "tel:+263771234567" },
+    { icon: <FiPhone />, text: "+27 68 829 4394", href: "tel:+27688294394" },
+    { icon: <FiPhone />, text: "+27 78 267 7436", href: "tel:+27782677436" },
   ];
 
   const socialLinks = [
@@ -53,7 +54,7 @@ export default function Footer() {
       icon: <FaGithub />,
       href: "https://github.com/",
       label: "GitHub",
-      color: "hover:text-navy dark:hover:text-light",
+      color: "hover:text-light/80",
     },
     {
       icon: <FaLinkedin />,
@@ -84,9 +85,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full overflow-hidden bg-white dark:bg-[#070b15]">
+    <footer className="relative w-full overflow-hidden bg-navy">
       {/* Top fade gradient */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-navy z-10 pointer-events-none" />
 
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>
@@ -100,11 +101,11 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="group inline-block">
               <h2 className="text-2xl font-bold">
-                <span className="text-navy dark:text-light">mil</span>
+                <span className="text-light">mil</span>
                 <span className="text-cyan">ton.</span>
               </h2>
             </Link>
-            <p className="text-sm text-navy/60 dark:text-light/60 leading-relaxed">
+            <p className="text-sm text-light/60 leading-relaxed">
               Freelance web developer building modern websites and applications.
               Let&apos;s create something amazing together.
             </p>
@@ -115,12 +116,12 @@ export default function Footer() {
                   {info.href ? (
                     <Link
                       href={info.href}
-                      className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors"
+                      className="text-light/60 hover:text-cyan transition-colors"
                     >
                       {info.text}
                     </Link>
                   ) : (
-                    <span className="text-navy/60 dark:text-light/60">{info.text}</span>
+                    <span className="text-light/60">{info.text}</span>
                   )}
                 </div>
               ))}
@@ -129,7 +130,7 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div>
-            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-light mb-4 relative inline-block">
               Quick Links
               <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
@@ -138,7 +139,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    className="text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-cyan rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.name}
@@ -150,7 +151,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-light mb-4 relative inline-block">
               Services
               <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
@@ -159,7 +160,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     href={service.href}
-                    className="text-navy/60 dark:text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
+                    className="text-light/60 hover:text-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-pink rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {service.name}
@@ -171,11 +172,11 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div>
-            <h3 className="text-lg font-semibold text-navy dark:text-light mb-4 relative inline-block">
+            <h3 className="text-lg font-semibold text-light mb-4 relative inline-block">
               Stay Updated
               <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-cyan rounded-full"></span>
             </h3>
-            <p className="text-sm text-navy/60 dark:text-light/60 mb-4">
+            <p className="text-sm text-light/60 mb-4">
               Subscribe to get the latest updates on my work and tech insights.
             </p>
             <form className="space-y-3">
@@ -183,18 +184,18 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full px-4 py-2 pr-12 rounded-xl bg-white/80 dark:bg-[#070b15] border border-navy/20 dark:border-light/20 text-navy dark:text-light placeholder-navy/40 dark:placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all text-sm"
+                   className="w-full px-4 py-2 pr-12 rounded-xl bg-white/10 border border-light/20 text-light placeholder-light/40 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-all text-sm"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-navy dark:bg-cyan text-white transition-all duration-300 hover:scale-105"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-cyan text-white transition-all duration-300 hover:scale-105"
                 >
                   <FiSend className="text-sm" />
                 </button>
               </div>
             </form>
             <div className="mt-6">
-              <h4 className="text-sm font-medium text-navy/80 dark:text-light/80 mb-3">
+              <h4 className="text-sm font-medium text-light/80 mb-3">
                 Follow Me
               </h4>
               <div className="flex gap-3">
@@ -203,7 +204,7 @@ export default function Footer() {
                     key={index}
                     href={social.href}
                     target="_blank"
-                    className={`group relative p-2 rounded-full bg-navy/5 dark:bg-light/5 border border-navy/10 dark:border-light/10 text-navy/60 dark:text-light/60 transition-all duration-300 hover:scale-110 ${social.color}`}
+                    className={`group relative p-2 rounded-full bg-light/10 border border-light/10 text-light/60 transition-all duration-300 hover:scale-110 ${social.color}`}
                     aria-label={social.label}
                   >
                     <span className="text-lg">{social.icon}</span>
@@ -215,19 +216,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 mt-8 border-t border-navy/10 dark:border-light/10">
+        <div className="pt-8 mt-8 border-t border-light/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-navy/50 dark:text-light/50 text-center sm:text-left">
+            <p className="text-xs text-light/50 text-center sm:text-left">
               &copy; {currentYear} Milton Kumirai. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-xs text-navy/50 dark:text-light/50">
+            <div className="flex items-center gap-2 text-xs text-light/50">
               <span>Made with</span>
               <FiHeart className="text-pink animate-pulse text-sm" />
               <span>in Zimbabwe</span>
             </div>
             <button
               onClick={scrollToTop}
-              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-navy/5 dark:bg-light/5 border border-navy/10 dark:border-light/10 text-navy/70 dark:text-light/70 transition-all duration-300 hover:scale-105 hover:bg-navy hover:text-white dark:hover:bg-cyan"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-light/10 border border-light/10 text-light/70 transition-all duration-300 hover:scale-105 hover:bg-navy hover:text-white dark:hover:bg-cyan"
             >
               <FiArrowUp className="transition-transform duration-300 group-hover:-translate-y-1" />
               Back to Top

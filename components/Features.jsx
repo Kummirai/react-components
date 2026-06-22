@@ -2,8 +2,8 @@ import React from "react";
 import {
   SiReact,
   SiFigma,
-  SiStripe,
 } from "react-icons/si";
+import { FiShoppingCart } from "react-icons/fi";
 import { MdSpeed, MdDevices, MdSupportAgent } from "react-icons/md";
 
 const services = [
@@ -26,7 +26,7 @@ const services = [
     title: "E-Commerce Solutions",
     description:
       "Sell online without the headache. A full online store handling carts, payments, and inventory — you focus on products, I handle the tech.",
-    icon: <SiStripe />,
+    icon: <FiShoppingCart />,
   },
   {
     id: 4,

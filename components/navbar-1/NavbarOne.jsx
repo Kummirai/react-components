@@ -96,11 +96,11 @@ export default function NavbarOne({ links }) {
           {/* Contact Button */}
           <div>
             <Link
-              className="relative overflow-hidden group bg-cyan shadow-lg shadow-cyan/30 py-2.5 px-7 text-[15px] rounded-lg text-white hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl block text-center"
+              className="relative overflow-hidden group bg-[#070b15] shadow-lg shadow-[#070b15]/30 py-2.5 px-7 text-[15px] rounded-full text-white hover:cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl block text-center"
               href={"#contact"}
             >
               <span className="relative z-10">Contact Me</span>
-              <div className="absolute inset-0 bg-pink opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute inset-0 rounded-lg bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
             </Link>
           </div>
@@ -148,7 +148,7 @@ export default function NavbarOne({ links }) {
                 </button>
               </div>
               <Link
-                className="bg-cyan py-2 px-5 text-sm rounded-lg text-white hover:scale-105 transition-all duration-300 shadow-lg"
+                className="bg-[#070b15] py-2 px-5 text-sm rounded-full text-white hover:scale-105 transition-all duration-300 shadow-lg"
                 href={"#contact"}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

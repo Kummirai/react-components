@@ -70,8 +70,8 @@ export default function Contact() {
   ];
 
   const socialLinks = [
-    { icon: <FaGithub />, href: "https://github.com/", label: "GitHub" },
-    { icon: <FaLinkedin />, href: "https://linkedin.com/", label: "LinkedIn" },
+    { icon: <FaGithub />, href: "https://github.com/Kummirai", label: "GitHub" },
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/miltonkumirai", label: "LinkedIn" },
     { icon: <FaTwitter />, href: "https://twitter.com/", label: "Twitter" },
     { icon: <FaFacebook />, href: "https://facebook.com/", label: "Facebook" },
   ];

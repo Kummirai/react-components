@@ -8,7 +8,6 @@ import {
   FiPhone,
   FiSend,
   FiArrowUp,
-  FiHeart,
 } from "react-icons/fi";
 import {
   FaGithub,
@@ -52,13 +51,13 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      href: "https://github.com/",
+      href: "https://github.com/Kummirai",
       label: "GitHub",
       color: "hover:text-light/80",
     },
     {
       icon: <FaLinkedin />,
-      href: "https://linkedin.com/",
+      href: "https://www.linkedin.com/in/miltonkumirai",
       label: "LinkedIn",
       color: "hover:text-cyan",
     },
@@ -221,11 +220,7 @@ export default function Footer() {
             <p className="text-xs text-light/50 text-center sm:text-left">
               &copy; {currentYear} Milton Kumirai. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-xs text-light/50">
-              <span>Made with</span>
-              <FiHeart className="text-pink animate-pulse text-sm" />
-              <span>in Zimbabwe</span>
-            </div>
+
             <button
               onClick={scrollToTop}
               className="group flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-light/10 border border-light/10 text-light/70 transition-all duration-300 hover:scale-105 hover:bg-navy hover:text-white dark:hover:bg-cyan"

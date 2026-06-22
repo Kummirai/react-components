@@ -195,30 +195,29 @@ export default function ProjectsPage() {
                   className="group relative rounded-xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-2xl shadow-cyan/10 transition-all duration-500 hover:scale-[1.02]"
                 >
                   <div className="absolute -inset-0.5 rounded-xl bg-cyan opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500 -z-10"></div>
-                  <div className="flex flex-col sm:flex-row">
-                    <div className="sm:w-2/5 h-48 sm:h-auto overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                    <div className="flex-1 p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl text-cyan">{project.icon}</div>
+                  <div className="relative h-80 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent" />
+                    <div className="relative z-10 flex flex-col justify-end h-full p-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="text-3xl text-cyan">{project.icon}</div>
                         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-cyan text-white">
                           Featured
                         </span>
                       </div>
-                      <h3 className="text-2xl font-semibold text-navy dark:text-light mb-2">
+                      <h3 className="text-2xl font-semibold text-white mb-1">
                         {project.title}
                       </h3>
-                      <p className="text-navy/60 dark:text-light/60 mb-4">{project.description}</p>
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <p className="text-white/70 text-sm mb-3">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-3">
                         {project.techStack.slice(0, 3).map((tech, idx) => (
                           <span
                             key={idx}
-                            className="text-xs px-2 py-1 rounded-full bg-navy/5 dark:bg-light/5 text-navy/60 dark:text-light/60"
+                            className="text-xs px-2 py-1 rounded-full bg-white/20 text-white/80"
                           >
                             {tech}
                           </span>
@@ -228,7 +227,7 @@ export default function ProjectsPage() {
                         <Link
                           href={project.github}
                           target="_blank"
-                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-navy dark:bg-cyan text-white hover:bg-navy/90 dark:hover:bg-cyan/90 transition-all duration-300 hover:scale-105"
+                          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                         >
                           <FiGithub /> Code
                         </Link>

@@ -1,6 +1,6 @@
 export default function PromoBanner() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0f1a33] py-16 lg:py-20">
+    <section className="relative w-full overflow-hidden bg-[#070b15] py-16 lg:py-20">
       {/* Subtle glow behind phone */}
       <div className="pointer-events-none absolute right-1/2 top-1/2 -translate-y-1/2 lg:right-[65%] lg:translate-x-0">
         <div className="h-72 w-72 rounded-full bg-cyan/10 blur-3xl lg:h-96 lg:w-96" />

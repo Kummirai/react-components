@@ -164,7 +164,7 @@ export default function Projects() {
                   alt={project.title}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-8">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 dark:from-[#070b15]/70 to-transparent p-4 pt-8">
                   <Link
                     href={project.liveDemo}
                     target="_blank"

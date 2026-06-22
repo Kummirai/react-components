@@ -17,7 +17,7 @@ export default function HeroTwoA() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top right, #242529 0%, #242529 25%, rgba(36,37,41,0.6) 50%, rgba(36,37,41,0) 75%)",
+            "linear-gradient(to top right, #070b15 0%, #070b15 25%, rgba(7,11,21,0.8) 50%, rgba(7,11,21,0) 75%)",
         }}
       />
       <div className="relative z-10 flex flex-1 items-center justify-center lg:justify-start">

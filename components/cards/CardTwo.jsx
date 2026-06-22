@@ -7,7 +7,7 @@ export default function CardTwo({ plan, onGetStarted }) {
       className={
         isPopular
           ? "border-2 border-cyan bg-white/80 dark:bg-[#070b15] flex flex-col justify-start gap-5 w-full sm:w-90 p-5 rounded-xl shadow-2xl shadow-cyan/30"
-          : "flex flex-col justify-start gap-5 w-full sm:w-90 bg-white/60 dark:bg-[#070b15] p-5 rounded-xl shadow-2xl"
+          : "flex flex-col justify-start gap-5 w-full sm:w-90 bg-white/60 dark:bg-[#070b15] p-5 rounded-xl shadow-2xl border border-navy/10 dark:border-light/10"
       }
     >
       <div>

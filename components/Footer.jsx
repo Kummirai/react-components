@@ -85,9 +85,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full overflow-hidden bg-navy">
+    <footer className="relative w-full overflow-hidden bg-navy dark:bg-[#070b15]">
       {/* Top fade gradient */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-navy z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-navy dark:to-[#070b15] z-10 pointer-events-none" />
 
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan/30 dark:bg-cyan/20 rounded-full blur-3xl"></div>

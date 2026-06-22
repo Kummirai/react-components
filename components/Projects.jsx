@@ -168,7 +168,7 @@ export default function Projects() {
                   <Link
                     href={project.liveDemo}
                     target="_blank"
-                    className="inline-flex items-center gap-2 bg-green text-white text-xs font-semibold px-4 py-2 rounded-full hover:brightness-110 transition-all duration-300"
+                    className="inline-flex items-center gap-2 bg-white text-[#070b15] text-xs font-semibold px-4 py-2 rounded-full hover:brightness-110 transition-all duration-300"
                   >
                     <FiExternalLink className="text-sm" />
                     Live Preview

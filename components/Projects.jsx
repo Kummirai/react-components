@@ -19,7 +19,7 @@ const projects = [
     category: "Website",
     description:
       "School website with hero section, events calendar, extracurricular activities, gallery, and contact/apply forms.",
-    image: "/projects/highveld.svg",
+    image: "/project-images/Highveld-Primary-School (1).png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
     liveDemo: "https://highveldmilton.netlify.app",

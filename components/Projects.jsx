@@ -46,7 +46,7 @@ const projects = [
     image: "/projects/brilliant.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://bntelectrical.netlify.app",
     icon: <FiZap />,
   },
   {
@@ -66,11 +66,11 @@ const projects = [
     title: "Doctor on 14th",
     category: "Website",
     description:
-      "Medical practice website for Dr. Wilna Lombaard with online appointment booking, services, and admin authentication.",
+      "Medical practice website with online appointment booking, services, and admin authentication.",
     image: "/projects/doctor.svg",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB"],
     github: "#",
-    liveDemo: "#",
+    liveDemo: "https://docmilton.netlify.app",
     icon: <FiHeart />,
   },
   {

@@ -63,7 +63,7 @@ export default function PromoBanner() {
               and Android from a single codebase.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-col items-center lg:flex-row lg:justify-start gap-3">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-cyan px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] text-navy transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-cyan/30"

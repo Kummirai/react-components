@@ -154,9 +154,9 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative rounded-md overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
+              className="group relative rounded-xl overflow-hidden bg-white/60 dark:bg-[#070b15]/80 border border-navy/10 dark:border-light/10 shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan/20"
             >
-              <div className="absolute -inset-0.5 rounded-md bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
+              <div className="absolute -inset-0.5 rounded-xl bg-cyan opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10"></div>
 
               <div className="relative h-48 overflow-hidden">
                 <img

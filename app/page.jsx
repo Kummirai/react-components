@@ -3,6 +3,7 @@ import Services from "@/components/Features";
 import HeroTwoA from "@/components/hero-2a/HeroTwoA";
 import Pricing from "@/components/Pricing";
 import Projects from "@/components/Projects";
+import PromoBanner from "@/components/PromoBanner";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="w-full flex flex-col">
         <HeroTwoA img={"/img/milton-2.webp"} />
         <Services />
+        <PromoBanner />
         <Pricing />
         <Projects />
         <Contact />

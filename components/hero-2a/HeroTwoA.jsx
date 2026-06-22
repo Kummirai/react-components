@@ -31,7 +31,7 @@ export default function HeroTwoA() {
                 fontWeight: 300,
               }}
             >
-              <span className="sm:hidden">Websites</span>
+              <span className="sm:hidden">Websites that</span>
               <span className="hidden sm:inline">Websites that</span>
               <br />
               bring in

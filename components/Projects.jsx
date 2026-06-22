@@ -98,7 +98,7 @@ export default function Projects() {
   );
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-[#070b15]" id="projects">
+    <section className="relative w-full py-16 overflow-hidden bg-white dark:bg-[#070b15]" id="projects">
       {/* Top fade gradient */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
 

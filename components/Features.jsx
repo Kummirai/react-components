@@ -53,7 +53,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white dark:bg-[#070b15]" id="services">
+    <section className="relative w-full py-16 overflow-hidden bg-white dark:bg-[#070b15]" id="services">
       {/* Top fade gradient for smooth hero transition */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
 
@@ -64,7 +64,7 @@ export default function Services() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex flex-col items-center max-w-2xl pt-24 pb-5 gap-3 sm:gap-5">
+        <div className="mx-auto flex flex-col items-center max-w-2xl pt-12 pb-5 gap-3 sm:gap-5">
           <h2 className="text-2xl sm:text-[32px] font-semibold text-center leading-7.5 sm:leading-10 text-navy dark:text-light">
             What I Can Do For You
           </h2>
@@ -74,7 +74,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.id}

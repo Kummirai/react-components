@@ -3,10 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
-const designShots = [
-  "/designs/5652262.jpg",
-  "/designs/7789078.jpg",
-];
+const designShots = ["/designs/5652262.jpg", "/designs/7789078.jpg"];
 
 export default function HeroTwoA() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -24,17 +21,18 @@ export default function HeroTwoA() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-light p-6">
-      {/* Background image — fixed to cover full viewport behind navbar too */}
+      {/* Background image */}
       <img
-        src="/web%20developer/campaign-creators-iEiUITs149M-unsplash.jpg"
+        src="/web%20developer/pakata-goh-EJMTKCZ00I0-unsplash.jpg"
         alt=""
-        className="fixed inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
-      {/* Gradient overlay — fixed to cover full viewport including navbar area */}
+      {/* Overlay focused behind text area */}
       <div
-        className="fixed inset-0"
+        className="absolute inset-y-0 left-0 w-1/2"
         style={{
-          background: "linear-gradient(to right, #0f1a33 0%, #0f1a33 25%, rgba(15,26,51,0.6) 50%, rgba(15,26,51,0) 100%)",
+          background:
+            "linear-gradient(to right, #0f1a33 0%, #0f1a33 30%, rgba(15,26,51,0.6) 60%, rgba(15,26,51,0) 100%)",
         }}
       />
       <div className="relative z-10 mx-auto flex h-full w-full max-w-6xl items-center">
@@ -75,7 +73,15 @@ export default function HeroTwoA() {
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 Start a Project
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -106,10 +112,9 @@ export default function HeroTwoA() {
                     className="absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out"
                     style={{
                       opacity: isActive ? 1 : 0,
-                      transform:
-                        isActive
-                          ? "scale(1) translateX(0)"
-                          : "scale(0.95) translateX(20px)",
+                      transform: isActive
+                        ? "scale(1) translateX(0)"
+                        : "scale(0.95) translateX(20px)",
                       zIndex: isActive ? 1 : isExiting ? 0 : -1,
                     }}
                   />
@@ -128,9 +133,7 @@ export default function HeroTwoA() {
                     width: i === activeIdx ? "24px" : "6px",
                     height: "6px",
                     backgroundColor:
-                      i === activeIdx
-                        ? "#13c5dd"
-                        : "rgba(255,255,255,0.3)",
+                      i === activeIdx ? "#13c5dd" : "rgba(255,255,255,0.3)",
                   }}
                   aria-label={`Show design ${i + 1}`}
                 />

@@ -180,7 +180,7 @@ function Pricing() {
   };
 
   return (
-    <section className="w-full relative overflow-hidden bg-white dark:bg-[#070b15]" id="services">
+    <section className="w-full relative overflow-hidden bg-white dark:bg-[#070b15] py-16" id="services">
       {/* Top fade gradient */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white dark:to-[#070b15] z-10 pointer-events-none" />
 
@@ -190,7 +190,7 @@ function Pricing() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan/10 dark:bg-cyan/[0.08] rounded-full blur-3xl"></div>
       </div>
 
-      <section className="mx-auto flex flex-col items-center max-w-3xl pt-24 pb-5 gap-5">
+      <section className="mx-auto flex flex-col items-center max-w-3xl pt-12 pb-5 gap-5">
         <h2 className="text-3xl sm:text-[32px] text-center sm:leading-10 text-navy dark:text-light font-semibold max-w-2xl leading-6 p-3 rounded-lg">
           Choose a
           <span className="text-cyan mx-2">{myPackageLabel}</span>
@@ -224,7 +224,7 @@ function Pricing() {
       </section>
 
       {category === 1 ? (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5 pb-20">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5">
           {websitePlans.map((plan) => (
             <CardTwo
               key={plan.name}
@@ -234,7 +234,7 @@ function Pricing() {
           ))}
         </section>
       ) : (
-        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5 pb-20">
+        <section className="max-w-6xl mx-auto flex items-stretch justify-center flex-wrap gap-5">
           {webAppPlans.map((plan) => (
             <CardTwo
               key={plan.name}
@@ -245,7 +245,7 @@ function Pricing() {
         </section>
       )}
 
-      <div className="text-center pb-20">
+      <div className="text-center">
         <p className="text-navy/60 dark:text-light/60 mb-4">
           Don&apos;t see exactly what you need?
         </p>

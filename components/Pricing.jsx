@@ -149,7 +149,7 @@ function Pricing() {
     const body = encodeURIComponent(
       `Hi Milton,\n\nI'm interested in the ${plan.name} plan (${plan.price}).\n\nCould we discuss this further?\n\nThanks!`,
     );
-    window.open(`mailto:hello@milton.dev?subject=${subject}&body=${body}`);
+    window.open(`mailto:ajaxmilton@hotmail.com?subject=${subject}&body=${body}`);
   };
 
   return (
